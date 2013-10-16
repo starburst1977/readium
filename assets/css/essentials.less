@@ -1,0 +1,130 @@
+
+/** Variables **/
+
+@rs: 16px; /** This is the Root Font Size **/
+
+
+/** Colors **/
+
+@color-black: #111;
+@color-black-light: #666;
+@color-black-lighter: #999;
+@color-white: #fff;
+@color-white-light: #f5f5f5;
+@color-white-dark: #ccc;
+@color-main: #F8CA00;
+@color-main-light: #f5e395;
+@color-main-dark: #E97F02;
+@color-secondary: #BD1550;
+@color-secondary-light: #e5a3ba;
+@color-secondary-lighter: #f2d2dd;
+@color-secondary-dark: #490A3D;
+
+/** Fonts **/
+
+@font-face {
+		 font-family: 'Andada';
+		 src: url('..fonts/Andada-Regular.otf') format('truetype');
+		 font-weight: normal;
+		 font-style: normal;
+}
+@font-face {
+		 font-family: 'Andada';
+		 src: url('..fonts/Andada-Italic.otf') format('truetype');
+		 font-weight: normal;
+		 font-style: italic;
+}
+@font-face {
+		 font-family: 'Andada';
+		 src: url('..fonts/Andada-Bold.otf') format('truetype');
+		 font-weight: bold;
+		 font-style: normal;
+}
+@font-face {
+		 font-family: 'Andada';
+		 src: url('..fonts/Andada-BoldItalic.otf') format('truetype');
+		 font-weight: bold;
+		 font-style: italic;
+}
+
+@font-serif: Andada, Georgia, serif;
+@font-sans: 'Lato', sans-serif;
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+}
+
+.cf:after {
+		clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+		*zoom: 1;
+}
+
+/* Import the font file with the icons in it */
+@font-face {
+		font-family: 'icons';
+		src:url('../fonts/icons.eot');
+		src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/icons.woff') format('woff'),
+				url('../fonts/icons.ttf') format('truetype'),
+				url('../fonts/icons.svg#icons') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+.icons-ghost, .icons-feed, .icons-twitter, .icons-google-plus, .icons-facebook {
+		font-family: 'icons';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		text-decoration: none;
+}
+
+/* Each icon is created by inserting the corret character into the
+	 content of the :before pseudo element. Like a boss. */
+.icons-ghost:before {
+		content: "\e000";
+}
+.icons-feed:before {
+		content: "\e001";
+}
+.icons-twitter:before {
+		content: "\e002";
+		font-size: 1.1em;
+}
+.icons-google-plus:before {
+		content: "\e003";
+}
+.icons-facebook:before {
+		content: "\e004";
+}
+
+/* Hides shit */
+.hidden {
+		text-indent: -9999px;
+		visibility: hidden;
+		display: none;
+}
