@@ -404,6 +404,10 @@ body {
   width: 22px;
   margin: 11px;
 }
+.contentpost .contentpost__logo a:visited,
+.contentpost .contentpost__logo a:focus {
+  color: #111111;
+}
 .contentpost .contentpost__inner {
   max-width: 700px;
   width: 50%;
