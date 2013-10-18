@@ -394,19 +394,22 @@ body {
   width: 44px;
   height: 44px;
   z-index: 99;
-  background-color: #ffffff;
   font-size: 16px;
   color: #111111;
   font-family: 'Lato', sans-serif;
   font-weight: 800;
 }
-.contentpost .contentpost__logo img {
+.contentpost .contentpost__logo a:visited,
+.contentpost .contentpost__logo a:focus,
+.contentpost .contentpost__logo a:active {
+  color: #111111;
+}
+.contentpost .contentpost__logo__img_black_background {
+  background-color: #111111;
+}
+.contentpost .contentpost__logo__img_black_background img {
   width: 22px;
   margin: 11px;
-}
-.contentpost .contentpost__logo a:visited,
-.contentpost .contentpost__logo a:focus {
-  color: #111111;
 }
 .contentpost .contentpost__inner {
   max-width: 700px;

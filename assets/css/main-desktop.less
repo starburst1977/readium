@@ -312,19 +312,20 @@ body {
 		width: 44px;
 		height: 44px;
 		z-index: 99;
-		background-color: @color-white;
-		img {
-			width: 22px;
-			margin: 11px;
-		}
 		font-size: @rs;
 		color: @color-black;
 		font-family: @font-sans;
 		font-weight: 800;
-		a:visited, a:focus {
+		a:visited, a:focus, a:active {
 			color: @color-black;
 		}
-
+	}
+	.contentpost__logo__img_black_background {
+		background-color: @color-black;
+		img {
+			width: 22px;
+			margin: 11px;
+		}
 	}
 	.contentpost__inner {
 		max-width: 700px;
