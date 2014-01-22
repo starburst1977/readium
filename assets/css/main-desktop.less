@@ -11,7 +11,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: @rs;
-	font-family: @font-serif;
+	font-family: @font-sans;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-webkit-hyphens: auto;
@@ -51,6 +51,16 @@ body {
 		position: absolute;
 		bottom: 0;
 		padding: 50px 10% 10%;
+		.sidebar__userimage {
+			width: @rs*5;
+			height: @rs*5;
+			border-radius: @rs*5;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			margin-bottom: @rs/2;
+		}
 		.sidebar__information__title {
 			font-size: @rs*2;
 			margin: 0;
@@ -66,15 +76,16 @@ body {
 			color: @color-white-dark;
 			font-weight: normal;
 		}
-		.sidebar__information__footer {
-			padding: @rs/2 0;
-			a {
-				text-decoration: none;
-				color: @color-main;
-				&:hover {
-					color: @color-main-light;
-				}
-			}
+		
+	}
+}
+.sidebar__information__footer {
+	padding: @rs/2 0;
+	a {
+		text-decoration: none;
+		color: @color-white;
+		&:hover {
+			color: @color-main-light;
 		}
 	}
 }
@@ -93,37 +104,9 @@ body {
 		-moz-box-sizing: border-box;
 		padding: 50px 85px;
 	}
-	.contentlist__header {
-		height: @rs*2.5;
-		line-height: @rs*2.5;
-		border-top: 1px solid #dededc;
-		border-bottom: 1px solid #dededc;
-		font-size: @rs;
-		font-family: @font-sans;
-		.pagination {
-			line-height: @rs*2.5;
-			font-size: @rs/4*3;
-			color: #b3b3b1;
-			text-transform: uppercase;
-			width: 50%;
-			float: right;
-			text-align: right;
-		}
-		h1 {
-			line-height: @rs*2.5;
-			font-size: @rs/4*3;
-			color: #b3b3b1;
-			text-transform: uppercase;
-			width: 50%;
-			float: left;
-			margin: 0;
-			padding: 0;
-		}
-	}
 	.contentlist__article {
 		padding: @rs*2 0;
 		display: block;
-		border-bottom: 1px solid #f2f2f0;
 		position: relative;
 		.contentlist__article__headline {
 			font-size: @rs*2;
@@ -156,7 +139,7 @@ body {
 	}
 	.contentlist__article__excerpt {
 		p {
-			font-size: @rs;
+			font-size: @rs*1.1;
 			line-height: @rs*1.5;
 			color: @color-black-light;
 			margin: 0;
@@ -181,6 +164,13 @@ body {
 		line-height: @rs*1.5;
 		color: @color-black-lighter;
 		font-family: @font-sans;
+		a {
+			padding: 0 @rs/2;
+			color: @color-black;
+			&:hover {
+				color: @color-main-dark;
+			}
+		}
 	}
 }
 
@@ -202,6 +192,15 @@ body {
 
 .site-footer a {
 		text-decoration: underline;
+}
+
+.side-menu {
+	li a {
+			font-family: arial;
+			&:hover {
+				color: @color-main !important;
+			}
+	}
 }
 
 .site-footer a:hover {
@@ -304,34 +303,37 @@ body {
 /** Post **/
 
 .contentpost {
-	padding: @rs*7.5 0;
+	padding: 0 0;
 	.contentpost__logo {
-		position: absolute;
+		position: fixed;
 		top: 10px;
 		left: 10px;
 		width: 44px;
 		height: 44px;
-		z-index: 99;
-		font-size: @rs;
-		color: @color-black;
-		font-family: @font-sans;
-		font-weight: 800;
-		a:visited, a:focus, a:active {
-			color: @color-black;
+		z-index: 1;
+		background-color: @color-black;
+		i {
+			width: 36px;
+			margin: 11px 0 0 13px;
+			color: #fff;
+			font-size: 21px;
 		}
 	}
-	.contentpost__logo__img_black_background {
-		background-color: @color-black;
-		img {
-			width: 22px;
-			margin: 11px;
-		}
+	#img-post-cover {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-top: 45%;
+		background-size: cover;
+		box-shadow: inset 0 -@rs*2 @rs*2 rgba(0,0,0,0.66);
 	}
 	.contentpost__inner {
 		max-width: 700px;
 		width: 50%;
 		min-width: 400px;
 		margin: 0 auto;
+		padding: @rs*5 0 0;
 		position: relative;
 	}
 	.contentpost__sidebar {
@@ -358,28 +360,27 @@ body {
 				border-radius: @rs*5;
 				overflow: hidden;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: 100%;
 				background-position: center;
 			}
 			h4 {
-				padding: @rs*6 0 0;
+				padding: @rs*6 0 @rs*0.5;
 				margin: 0;
 				text-align: right;
 				font-size: @rs;
-				line-height: @rs*1.5;
+				line-height: @rs*1.2;
 				color: @color-black;
 				font-family: @font-sans;
-				font-weight: 800;
+				font-weight: 700;
 			}
 			p {
 				padding: 0;
 				margin: 0;
-				font-size: @rs/8*7;
+				font-size: @rs;
 				line-height: @rs*1.2;
 				text-align: right;
-				font-style: italic;
 				color: @color-black-lighter;
-				font-family: @font-serif;
+				font-family: @font-sans;
 			}
 		}
 	}
@@ -390,10 +391,10 @@ body {
 		padding: @rs 0;
 		text-align: right;
 		h5 {
-			font-size: @rs/4*3;
-			line-height: @rs*1.5;
+			font-size: @rs;
+			line-height: @rs*1.2;
 			margin: 0;
-			padding: 0;
+			padding: 0 0 @rs*0.5;
 			font-weight: 800;
 			color: @color-black;
 			font-family: @font-sans;
@@ -401,11 +402,11 @@ body {
 		time {
 			padding: 0;
 			margin: 0;
-			font-size: @rs/4*3;
-			line-height: @rs;
+			font-size: @rs;
+			line-height: @rs*1.2;
 			text-align: right;
 			color: @color-black-lighter;
-			font-family: @font-serif;
+			font-family: @font-sans;
 		}
 	}
 	.contentpost__meta {
@@ -417,7 +418,7 @@ body {
 	.contentpost__headline {
 		font-size: @rs*4;
 		line-height: @rs*4;
-		padding: @rs 0 @rs*2;
+		padding: @rs/2 0 @rs*2;
 		margin: 0;
 		font-family: @font-sans;
 		letter-spacing: -2px;
@@ -435,13 +436,13 @@ body {
 			}
 		}
 		::-moz-selection {
-				color: #111;
+				color: @color-black;
 				background: @color-secondary-light;
 				text-shadow: none;
 		}
 		
 		::selection {
-				color: #111;
+				color: @color-black;
 				background: @color-secondary-lighter;
 				text-shadow: none;
 		}
@@ -452,7 +453,7 @@ body {
 				margin: 0 0;
 				padding: 0;
 				font-family: @font-sans;
-				font-weight: 800;
+				font-weight: 700;
 		}
 		
 		h1 {
@@ -479,16 +480,19 @@ body {
 		h4 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		h5 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		h6 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		img {
@@ -618,11 +622,13 @@ body {
 	}
 	.contentpost__footer {
 		text-align: right;
-		margin: @rs*4 0;
+		margin: @rs*4 0 0;
+		padding: 0 0 @rs*4;
 		a {
 			color: @color-white-dark;
 			font-size: @rs*1.4;
 			margin: 0 0 0 @rs;
+			text-decoration: none;
 			transition: color ease 0.3s;
 			&:hover {
 				color: @color-main-dark;

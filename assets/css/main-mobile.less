@@ -25,7 +25,7 @@ body {
 }
 
 .sidebar {
-	height: 40%;
+	height: @rs*20;
 	width: 100%;
 	background: #303538 no-repeat center center;
 	background-size: cover;
@@ -51,7 +51,7 @@ body {
 		width: 100%;
 		max-width: 810px;
 		box-sizing: border-box;
-		padding: @rs @rs @rs @rs*4.5;
+		padding: @rs @rs @rs @rs;
 		.sidebar__information__title {
 			font-size: @rs;
 			margin: 0;
@@ -176,6 +176,13 @@ body {
 		line-height: @rs*1.5;
 		color: @color-black-lighter;
 		font-family: @font-sans;
+		a {
+			padding: 0 @rs/2;
+			color: @color-black;
+			&:hover {
+				color: @color-main-dark;
+			}
+		}
 	}
 }
 
@@ -295,22 +302,43 @@ body {
 }
 
 
+.side-menu {
+	li a {
+			font-family: arial;
+			color: @color-white;
+			&:hover {
+				color: @color-main !important;
+			}
+	}
+}
+
 /** Post **/
 
 .contentpost {
-	padding: @rs*7.5 0 0;
+	padding: 0 0 0;
 	.contentpost__logo {
-		position: absolute;
+		position: fixed;
 		top: 10px;
 		left: 10px;
 		width: 44px;
 		height: 44px;
 		z-index: 99;
 		background-color: @color-black;
-		img {
-			width: 22px;
-			margin: 11px;
+		i {
+			width: 36px;
+			margin: 11px 0 0 13px;
+			color: #fff;
+			font-size: 21px;
 		}
+	}
+	#img-post-cover {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-top: 50%;
+		background-size: cover;
+		margin-bottom: @rs*3;
 	}
 	.contentpost__inner {
 		max-width: 550px;
@@ -325,6 +353,7 @@ body {
 		border-top: 1px @color-white-dark solid;
 		padding: @rs*2 0;
 		margin: @rs*2 0 0;
+		
 		.contentpost__userimage {
 			width: @rs*3;
 			height: @rs*3;
@@ -412,13 +441,13 @@ body {
 			}
 		}
 		::-moz-selection {
-				color: #111;
+				color: @color-black;
 				background: @color-secondary-light;
 				text-shadow: none;
 		}
 		
 		::selection {
-				color: #111;
+				color: @color-black;
 				background: @color-secondary-light;
 				text-shadow: none;
 		}
@@ -456,16 +485,19 @@ body {
 		h4 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		h5 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		h6 {
 				font-size: @rs/8*11;
 				line-height: @rs/8*15;
+				font-family: @font-serif;
 		}
 		
 		img {
@@ -600,6 +632,7 @@ body {
 			color: @color-white-dark;
 			font-size: @rs*1.4;
 			margin: 0 0 0 @rs;
+			text-decoration: none;
 			transition: color ease 0.3s;
 			&:hover {
 				color: @color-main-dark;
