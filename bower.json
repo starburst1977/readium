@@ -1,0 +1,17 @@
+{
+    "name": "Readium",
+    "version": "1.2.0",
+    "directory": "./vendor",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "components"
+    ],
+    "dependencies": {
+        "jquery": "1.9.x",
+        "requirejs": "2.1.x",
+        "Font-Awesome": "4.0.x",
+        "highlightjs": "7.5.0",
+        "jQuery.mmenu": "4.1.7"
+    }
+}

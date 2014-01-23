@@ -1,29 +1,14 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
-
-
 <main class="content contentpost" role="main">
-    
-    <div id="img-post-cover" style="background-image: url('{{@blog.cover}}')">
-        
-    </div>
-    
-    {{! Each post has the blog logo at the top, with a link back to the home page }}
+    <div id="img-post-cover" style="background-image: url('{{@blog.cover}}')"></div>
     <header class="post-header contentpost__logo">
         <a id="blog-logo" href="#side-menu">
             <i class="fa fa-bars"></i>
         </a>
     </header>
-    
     <article class="contentpost__inner {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-
-        {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
-
-        {{! Everything below outputs content of the the post which has been published }}
-        
         <div class="contentpost__sidebar">
             <section class="contentpost__author cf">
                 <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
@@ -35,20 +20,15 @@
             </div>
             <section class="contentpost__sidebar__meta cf">
                 <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                
+
             </section>
         </div>
-        
         {{#if tags}}<span class="contentpost__meta">On {{tags separator=" | "}}</span>{{/if}}
-
         <h1 class="contentpost__headline post-title" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</h1>
-
         <section class="contentpost__articlecontent post-content">
             {{content}}
         </section>
-
         <footer class="contentpost__footer post-footer">
-            
             <section class="share">
                 <a class="fa fa-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -63,7 +43,6 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-            
             <div class="contentpost__footerbar">
                 <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
                 <section class="contentpost__author cf">
@@ -74,23 +53,7 @@
                     <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                 </section>
             </div>
-
         </footer>
-
         {{/post}}
-
     </article>
-    <script type="text/javascript">
-      $(document).ready(function(){
-          imgPostCover = $('img[alt="img-post-cover"]');
-          if (imgPostCover.length > 0){
-              $('#img-post-cover').css('background-image', "url('" + imgPostCover.attr('src') + "')");
-              imgPostCover.remove();
-          } else {
-              $('#img-post-cover').remove();
-          }
-      });
-    </script>
-    
 </main>
-
