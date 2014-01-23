@@ -9,6 +9,9 @@ You can have a look at it here: [http://www.svenread.com/readium-ghost-theme/](h
 Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
 
 ## Install
+### Requirements
+- node >= 0.8.x
+
 ### Use dist files
 Upload the latest `readium-VERSION.zip` file to your ghost instance and restart it. Choose readium and enjoy!
 
