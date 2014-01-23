@@ -8,6 +8,13 @@ You can have a look at it here: [http://www.svenread.com/readium-ghost-theme/](h
 
 Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
 
+## Install
+### Use dist files
+Upload the latest `readium-VERSION.zip` file to your ghost instance and restart it. Choose readium and enjoy!
+
+### Compile
+Run `make` and do your changes. Once you are done, run `make release`. Enter the required data and pick the created zipfile out of your dist/ directory.
+
 ## Features
 - Mobile-First Design Aproach
 - Fully Responsive layout
@@ -26,7 +33,7 @@ Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiar
 - Theoretically ready for multiple users (Here is how to [hack Ghost for Mulit-User](http://lifewiththemacks.com/multi-user-support/)
 
 ## If your Ghost blog is self hosted:
-1. Copy the contents of the .zip file into /content/themes/. 
+1. Copy the contents of the .zip file into /content/themes/.
 2. You need to restart your Ghost instance. After that you can switch themes inside your Ghost admin (http://your.domain.com/ghost/settings/general/). Scroll down and choose "Chiara" from the theme dropdown.
 3. Now you can customize your logo, langing page image (if you choose to have one), as well as user images and texts to fit the theme.
 4. Have fun.
