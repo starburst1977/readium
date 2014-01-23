@@ -1,5 +1,4 @@
-# Readium Ghost Theme 1.2
-
+# Readium Ghost Theme
 Hey there, my name is Sven Read. I love building themes & I love [Ghost](https://en.ghost.org). And I always wanted to have a possibility to blog that's similar to Medium.com,
 but without the drawbacks (like no control over your data & loss of all rights to your content, etc.). So I made myself a theme for Ghost
 that takes the good parts from Medium.com & mixes them with stuff I would do differently. And this is what I ended up with.
