@@ -59,11 +59,21 @@ body {
 			line-height: @rs*1.5;
 			color: @color-white;
 		}
+		.sidebar__userimage {
+			width: @rs*5;
+			height: @rs*5;
+			border-radius: @rs*5;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			margin: 0 auto @rs;
+		}
 		.sidebar__information__description {
-			font-size: @rs/4*3;
+			font-size: @rs;
 			margin: 0;
 			padding: 0 0;
-			line-height: @rs;
+			line-height: @rs*1.5;
 			color: @color-white-dark;
 			font-weight: normal;
 		}
@@ -71,7 +81,7 @@ body {
 			padding: 0 0;
 			a {
 				text-decoration: none;
-				color: @color-main;
+				color: @color-white;
 				&:hover {
 					color: @color-main-light;
 				}
