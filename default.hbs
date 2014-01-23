@@ -14,71 +14,47 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{meta_title}}">
     <meta name="twitter:description" content="{{meta_description}}">
     <meta name="twitter:site" content="http://www.svenread.com">
     <meta name="twitter:creator" content="@starburst1977">
-    
+
     <meta name="google-site-verification" content="">
     <meta property="fb:admins" content="">
-    
+
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{meta_description}}">
-
-    {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width: 1000px)" href="/assets/css/main-mobile.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (min-width: 1001px)" href="/assets/css/main-desktop.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/mmenu/src/css/jquery.mmenu.css" />
-    <script type="text/javascript" src="/assets/js/jquery-2.0.3.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
-    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    
-    {{! Ghost outputs important style and meta data with this tag }}
+    <link rel="stylesheet" type="text/css" href="/vendor/jQuery.mmenu/src/css/jquery.mmenu.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/styles/default.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/Font-Awesome/css/font-awesome.min.css">
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
     <div>
-        
         <nav class="side-menu" id="side-menu">
             <ul>
                 <li><a href="/">Back to Home</a></li>
                 <li><a href="/aboutme/">About Me</a></li>
             </ul>
         </nav>
-        
-        {{! Everything else gets inserted here }}
         {{{body}}}
-    
-        {{! Ghost outputs important scripts and data with this tag }}
         {{ghost_foot}}
-    
     </div>
-
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="/assets/mmenu/src/js/jquery.mmenu.min.js"></script>
-    <script type="text/javascript">
-       $(function() {
-          $("#side-menu").mmenu({
-             classes: "mm-slide"
-          });
-       });
-    </script>
-    <script>hljs.initHighlightingOnLoad()</script>
     <script>
-        
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-XXXXXX-1', 'URL');
-      ga('send', 'pageview');
-    
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXXX-1', 'URL');
+        ga('send', 'pageview');
     </script>
+    <script data-main="/assets/js/readium" src="/vendor/requirejs/require.js"></script>
 </body>
 </html>

@@ -1,9 +1,5 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
-
-{{! The big featured header on the homepage, with the site logo and description }}
 <header class="sidebar" id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <div id="site-head-content" class="sidebar__inner">
         <section class="sidebar__information">
@@ -17,17 +13,11 @@
                 <a href="http://dribbble.com/Starburst1977" target="_blank"><i class="fa fa-dribbble"></i></a>
             </footer>
         </section>
-        
     </div>
 </header>
-
-{{! The main content area on the homepage }}
 <main class="contentlist" role="main">
     <section class="contentlist__inner">
-        
-        {{! Each post will be output using this markup }}
         {{#foreach posts}}
-        
         <article class="contentlist__article {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
             <header class="post-header">
                 <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
@@ -41,14 +31,10 @@
                 {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
             </span>
         </article>
-    
         {{/foreach}}
-        
-        {{!! After all the posts, we have the previous/next pagination links }}
         <div class="contentlist__pagination">
             {{pagination}}
         </div>
-        
         <footer class="footer site-footer">
             <a class="subscribe icons-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
             <div class="inner">
@@ -56,9 +42,5 @@
                  <section class="poweredby">Proudly published with <a class="icons-ghost" href="http://ghost.org" target="_blank">Ghost</a></section>
             </div>
         </footer>
-        
     </section>
-
-    
-
 </main>

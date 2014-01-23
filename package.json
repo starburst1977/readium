@@ -1,0 +1,7 @@
+{
+    "name": "Readium",
+    "version": "1.2.0",
+    "dependencies": {
+        "bower": "1.2.8"
+    }
+}
