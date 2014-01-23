@@ -4,6 +4,8 @@ Hey there, my name is Sven Read. I love building themes & I love [Ghost](https:/
 but without the drawbacks (like no control over your data & loss of all rights to your content, etc.). So I made myself a theme for Ghost
 that takes the good parts from Medium.com & mixes them with stuff I would do differently. And this is what I ended up with.
 
+You can have a look at it here: [http://www.svenread.com/readium-ghost-theme/](http://www.svenread.com/readium-ghost-theme/)
+
 Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
 
 ## Features
@@ -31,12 +33,12 @@ Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiar
 
 ## If your Ghost blog is hosted on the Ghost hosting platform:
 1. Upload your Zip file via the Ghost admin panel.
-2. Switch your theme to the Marisa theme.
+2. Switch your theme to the Readium theme.
 3. Have fun.
 
 ## Usage
 - If you want a big article image, just give it the this alt attribute -> alt="img-post-cover".
-- You should pay attention to image size. Don't go to wild.
+- You should pay attention to image size. Don't go to crazy.
 - Some style configuration possible inside essentials.less.
 
 ## Future Todo
