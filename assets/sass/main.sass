@@ -1,5 +1,10 @@
+@import config.sass
+@import clearfix.sass
+@import font.sass
+@import icon.sass
+
 body
-    background-color: $color-whit
+    background-color: $color-white
     position: absolut
     top: 0
     left: 0
@@ -13,8 +18,8 @@ body
     text-rendering: optimizeLegibility
     -webkit-font-smoothing: antialiased
     -webkit-hyphens: auto
-        -moz-hyphens: auto
-             hyphens: auto
+    -moz-hyphens: auto
+    hyphens: auto
     moz-font-feature-settings: "liga=1, dlig=1"
     -ms-font-feature-settings: "liga", "dlig"
     -webkit-font-feature-settings: "liga", "dlig"
@@ -218,10 +223,10 @@ body
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip
-    opacity:0
+    opacity: 0
     display: inline-block
     padding: 4px 8px 5px 8px
-        position:absolute
+    position: absolute
     top: -$rs*1.5
     left: -$rs*2
     color: rgba(255,255,255,0.9)
@@ -230,23 +235,23 @@ body
     line-height: $rs
     text-align: center
     background: #50585D
-    border-radius:20px
+    border-radius: 20px
     box-shadow: 0 1px 4px rgba(0,0,0,0.1)
     transition: opacity 0.3s ease, top 0.3s ease
     white-space: nowrap
 
 .tooltip:after
-    content:""
-    border-width:5px 5px 0 5px
-    border-style:solid
+    content: ""
+    border-width: 5px 5px 0 5px
+    border-style: solid
     border-color: #50585D transparent
-    display:block
-    position:absolute
-    bottom:-4px
-    left:50%
-    margin-left:-5px
+    display: block
+    position: absolute
+    bottom: -4px
+    left: 50%
+    margin-left: -5px
     z-index: 220
-    width:0
+    width: 0
 
 .subscribe:hover .tooltip
     opacity: 1
@@ -472,7 +477,7 @@ body
         blockquote small
             display: inline-block
             margin: 0.8em 0 0.8em 1.5em
-            font-size:0.9em
+            font-size: 0.9em
             color: #ccc
         kbd
             display: inline-block
@@ -490,7 +495,7 @@ body
             -moz-box-sizing: border-box
             box-sizing: border-box
             margin: 0 0 $rs
-            width:100%
+            width: 100%
             max-width: 100%
             background-color: transparent
         table th, table td
@@ -524,3 +529,7 @@ body
             transition: color ease 0.3s
             &:hover
                 color: $color-main-dark
+.hidden
+    text-indent: -9999px
+    visibility: hidden
+    display: none
