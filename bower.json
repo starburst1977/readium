@@ -12,6 +12,6 @@
         "requirejs": "2.1.x",
         "Font-Awesome": "4.0.x",
         "highlightjs": "7.5.0",
-        "jQuery.mmenu": "4.1.7"
+        "jQuery.mmenu": "4.1.8"
     }
 }

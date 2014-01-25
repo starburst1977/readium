@@ -1186,6 +1186,20 @@ body {
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
+.toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 44px;
+  height: 44px;
+  z-index: 1;
+  background-color: #111111; }
+  .toggle i {
+    width: 36px;
+    margin: 11px 0 0 13px;
+    color: white;
+    font-size: 21px; }
+
 .sidebar {
   position: absolute;
   left: 0;
@@ -1417,19 +1431,6 @@ body {
 
 .contentpost {
   padding: 0 0; }
-  .contentpost .contentpost__logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 44px;
-    height: 44px;
-    z-index: 1;
-    background-color: #111111; }
-    .contentpost .contentpost__logo i {
-      width: 36px;
-      margin: 11px 0 0 13px;
-      color: white;
-      font-size: 21px; }
   .contentpost #img-post-cover {
     position: relative;
     top: 0;

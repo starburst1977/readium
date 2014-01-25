@@ -20,9 +20,10 @@ define(['jquery', 'menu'], function($) {
 
     return {
         init: function init() {
+            console.log(config);
             button.on('click', onIconClick);
             container.show()
-                     .mmenu(config)
+                     .mmenu(config, config)
                      .on('open.mm close.mm', onStateChange);
         }
     };

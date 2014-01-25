@@ -22,8 +22,6 @@ require(['jquery', 'hljs', 'sidebar'], function($, hljs, sidebar) {
     var cover     = $('img[alt="img-post-cover"]'),
         container = $('#img-post-cover');
 
-    hljs.initHighlighting();
-
     if (cover.length > 0) {
         container = $('#img-post-cover');
         container.css('background-image', 'url(' + cover.attr('src') + ')');
@@ -32,6 +30,7 @@ require(['jquery', 'hljs', 'sidebar'], function($, hljs, sidebar) {
         return;
     }
 
+    hljs.initHighlighting();
     container.remove();
     sidebar.init();
 });
