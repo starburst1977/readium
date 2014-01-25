@@ -8,7 +8,7 @@
     +clearfix
 
 body
-    background-color: $color-white
+    background-color: $colorWhite
     position: absolut
     top: 0
     left: 0
@@ -17,8 +17,8 @@ body
     height: 100%
     margin: 0
     padding: 0
-    font-size: $rs
-    font-family: $font-sans
+    font-size: $rootSize
+    font-family: $fontSans
     text-rendering: optimizeLegibility
     -webkit-font-smoothing: antialiased
     -webkit-hyphens: auto
@@ -39,7 +39,7 @@ body
     max-width: 500px
     background: #303538 no-repeat center center
     background-size: cover
-    font-family: $font-sans
+    font-family: $fontSans
     .sidebar__logo
         position: absolute
         top: 10px
@@ -47,7 +47,7 @@ body
         width: 44px
         height: 44px
         z-index: 99
-        background-color: $color-black
+        background-color: $colorBlack
         .sidebar__logo__image
             width: 22px
             margin: 11px
@@ -56,35 +56,35 @@ body
         bottom: 0
         padding: 50px 10% 10%
         .sidebar__userimage
-            width: $rs*5
-            height: $rs*5
-            border-radius: $rs*5
+            width: $rootSize*5
+            height: $rootSize*5
+            border-radius: $rootSize*5
             overflow: hidden
             background-repeat: no-repeat
             background-size: 100%
             background-position: center
-            margin-bottom: $rs/2
+            margin-bottom: $rootSize/2
         .sidebar__information__title
-            font-size: $rs*2
+            font-size: $rootSize*2
             margin: 0
             padding: 0
-            line-height: $rs*3
-            color: $color-white
+            line-height: $rootSize*3
+            color: $colorWhite
         .sidebar__information__description
-            font-size: $rs
+            font-size: $rootSize
             margin: 0
-            padding: $rs/2 0
-            line-height: $rs*1.5
-            color: $color-white-dark
+            padding: $rootSize/2 0
+            line-height: $rootSize*1.5
+            color: $colorWhiteDark
             font-weight: normal
 
 .sidebar__information__footer
-    padding: $rs/2 0
+    padding: $rootSize/2 0
     a
         text-decoration: none
-        color: $color-white
+        color: $colorWhite
         &:hover
-            color: $color-main-light
+            color: $colorMainLight
 
 .contentlist
     position: absolute
@@ -100,27 +100,27 @@ body
         -moz-box-sizing: border-box
         padding: 50px 85px
     .contentlist__article
-        padding: $rs*2 0
+        padding: $rootSize*2 0
         display: block
         position: relative
         .contentlist__article__headline
-            font-size: $rs*2
-            line-height: $rs*2.2
+            font-size: $rootSize*2
+            line-height: $rootSize*2.2
             font-weight: 800
-            padding: 0 $rs*4 $rs/2 0
+            padding: 0 $rootSize*4 $rootSize/2 0
             margin: 0
-            font-family: $font-sans
+            font-family: $fontSans
             a
                 text-decoration: none
-                color: $color-black
+                color: $colorBlack
                 &:hover
-                    color: $color-main-dark
+                    color: $colorMainDark
         .contentlist__article__userimage
             position: absolute
             right: 0
-            margin: $rs/4
-            width: $rs*2
-            height: $rs*2
+            margin: $rootSize/4
+            width: $rootSize*2
+            height: $rootSize*2
             overflow: hidden
             background-color: #f2f2f0
             -webkit-border-radius: 100%
@@ -129,46 +129,46 @@ body
             background-size: 100%
     .contentlist__article__excerpt
         p
-            font-size: $rs*1.1
-            line-height: $rs*1.5
-            color: $color-black-light
+            font-size: $rootSize*1.1
+            line-height: $rootSize*1.5
+            color: $colorBlackLight
             margin: 0
-            padding: 0 0 $rs/2
-            font-family: $font-serif
+            padding: 0 0 $rootSize/2
+            font-family: $fontSerif
     .contentlist__article__meta
-        font-size: $rs/4*3
-        line-height: $rs*1.5
-        color: $color-black-lighter
-        font-family: $font-sans
+        font-size: $rootSize/4*3
+        line-height: $rootSize*1.5
+        color: $colorBlackLighter
+        font-family: $fontSans
 
 .contentlist__pagination
-    padding: $rs 0
+    padding: $rootSize 0
     nav
         display: block
         text-align: center
-        font-size: $rs/4*3
-        line-height: $rs*1.5
-        color: $color-black-lighter
-        font-family: $font-sans
+        font-size: $rootSize/4*3
+        line-height: $rootSize*1.5
+        color: $colorBlackLighter
+        font-family: $fontSans
         a
-            padding: 0 $rs/2
-            color: $color-black
+            padding: 0 $rootSize/2
+            color: $colorBlack
             &:hover
-                color: $color-main-dark
+                color: $colorMainDark
 
 .footer
     border-top: 1px solid #f2f2f0
-    padding: $rs 0
+    padding: $rootSize 0
     position: relative
-    margin: $rs*4 0 0 0
-    padding: $rs*4 0 $rs
-    line-height: $rs*1.5
-    font-size: $rs/4*3
-    color: $color-black-lighter
+    margin: $rootSize*4 0 0 0
+    padding: $rootSize*4 0 $rootSize
+    line-height: $rootSize*1.5
+    font-size: $rootSize/4*3
+    color: $colorBlackLighter
     text-align: center
-    font-family: $font-sans
+    font-family: $fontSans
     a
-        color: $color-black
+        color: $colorBlack
 
 .site-footer a
     text-decoration: underline
@@ -177,10 +177,10 @@ body
     li a
         font-family: arial
         &:hover
-            color: $color-main !important
+            color: $colorMain !important
 
 .site-footer a:hover
-    color: $color-main-dark
+    color: $colorMainDark
 
 .poweredby .icons-ghost
     font-weight: 700
@@ -195,23 +195,23 @@ body
 
 /* The subscribe icon on the footer */
 .subscribe
-    width: $rs*2
-    height: $rs*2
+    width: $rootSize*2
+    height: $rootSize*2
     position: absolute
-    top: -$rs
+    top: -$rootSize
     left: 50%
-    margin-left: -$rs
+    margin-left: -$rootSize
     border: #f2f2f0 1px solid
     text-align: center
-    line-height: $rs*2
+    line-height: $rootSize*2
     border-radius: 50px
     background: #fff
     transition: box-shadow 0.5s
 
 /* The RSS icon, inserted via icon font */
 .subscribe:before
-    color: $color-white-dark
-    font-size: $rs/4*3
+    color: $colorWhiteDark
+    font-size: $rootSize/4*3
     position: absolute
     top: -1px
     left: 11px
@@ -231,12 +231,12 @@ body
     display: inline-block
     padding: 4px 8px 5px 8px
     position: absolute
-    top: -$rs*1.5
-    left: -$rs*2
+    top: -$rootSize*1.5
+    left: -$rootSize*2
     color: rgba(255,255,255,0.9)
-    font-size: $rs
+    font-size: $rootSize
     font-weight: bold
-    line-height: $rs
+    line-height: $rootSize
     text-align: center
     background: #50585D
     border-radius: 20px
@@ -270,7 +270,7 @@ body
         width: 44px
         height: 44px
         z-index: 1
-        background-color: $color-black
+        background-color: $colorBlack
         i
             width: 36px
             margin: 11px 0 0 13px
@@ -283,14 +283,14 @@ body
         right: 0
         padding-top: 45%
         background-size: cover
-        box-shadow: inset 0 -$rs*2 $rs*2 rgba(0,0,0,0.66)
+        box-shadow: inset 0 -$rootSize*2 $rootSize*2 rgba(0,0,0,0.66)
 
     .contentpost__inner
         max-width: 700px
         width: 50%
         min-width: 400px
         margin: 0 auto
-        padding: $rs*5 0 0
+        padding: $rootSize*5 0 0
         position: relative
 
     .contentpost__sidebar
@@ -298,46 +298,46 @@ body
         width: 160px
         left: -230px
         hr
-            width: $rs*3
+            width: $rootSize*3
             height: 1px
-            background-color: $color-white-dark
-            margin: $rs 0 $rs/2
+            background-color: $colorWhiteDark
+            margin: $rootSize 0 $rootSize/2
             float: right
             border: 0px
 
         .contentpost__author
             position: relative
-            padding: 0 0 $rs
+            padding: 0 0 $rootSize
             .contentpost__userimage
-                width: $rs*5
-                height: $rs*5
+                width: $rootSize*5
+                height: $rootSize*5
                 position: absolute
                 right: 0
                 top: 0
-                border-radius: $rs*5
+                border-radius: $rootSize*5
                 overflow: hidden
                 background-repeat: no-repeat
                 background-size: 100%
                 background-position: center
 
             h4
-                padding: $rs*6 0 $rs*0.5
+                padding: $rootSize*6 0 $rootSize*0.5
                 margin: 0
                 text-align: right
-                font-size: $rs
-                line-height: $rs*1.2
-                color: $color-black
-                font-family: $font-sans
+                font-size: $rootSize
+                line-height: $rootSize*1.2
+                color: $colorBlack
+                font-family: $fontSans
                 font-weight: 700
 
             p
                 padding: 0
                 margin: 0
-                font-size: $rs
-                line-height: $rs*1.2
+                font-size: $rootSize
+                line-height: $rootSize*1.2
                 text-align: right
-                color: $color-black-lighter
-                font-family: $font-sans
+                color: $colorBlackLighter
+                font-family: $fontSans
 
 
 
@@ -345,108 +345,108 @@ body
         display: none
 
     .contentpost__sidebar__meta
-        padding: $rs 0
+        padding: $rootSize 0
         text-align: right
         h5
-            font-size: $rs
-            line-height: $rs*1.2
+            font-size: $rootSize
+            line-height: $rootSize*1.2
             margin: 0
-            padding: 0 0 $rs*0.5
+            padding: 0 0 $rootSize*0.5
             font-weight: 800
-            color: $color-black
-            font-family: $font-sans
+            color: $colorBlack
+            font-family: $fontSans
 
         time
             padding: 0
             margin: 0
-            font-size: $rs
-            line-height: $rs*1.2
+            font-size: $rootSize
+            line-height: $rootSize*1.2
             text-align: right
-            color: $color-black-lighter
-            font-family: $font-sans
+            color: $colorBlackLighter
+            font-family: $fontSans
 
 
     .contentpost__meta
-        font-size: $rs
-        line-height: $rs
-        color: $color-black-lighter
-        font-family: $font-sans
+        font-size: $rootSize
+        line-height: $rootSize
+        color: $colorBlackLighter
+        font-family: $fontSans
 
     .contentpost__headline
-        font-size: $rs*4
-        line-height: $rs*4
-        padding: $rs/2 0 $rs*2
+        font-size: $rootSize*4
+        line-height: $rootSize*4
+        padding: $rootSize/2 0 $rootSize*2
         margin: 0
-        font-family: $font-sans
+        font-family: $fontSans
         letter-spacing: -2px
         font-weight: 800
 
     .contentpost__articlecontent
-        font-size: $rs/8*11
-        line-height: $rs/8*15
-        font-family: $font-serif
+        font-size: $rootSize/8*11
+        line-height: $rootSize/8*15
+        font-family: $fontSerif
         a
-            color: $color-black
+            color: $colorBlack
             text-decoration: underline
             transition: color ease 0.3s
             &:hover
-                color: $color-main-dark
+                color: $colorMainDark
         ::-moz-selection
-            color: $color-black
-            background: $color-secondary-light
+            color: $colorBlack
+            background: $colorSecondaryLight
             text-shadow: none
         ::selection
-            color: $color-black
-            background: $color-secondary-lighter
+            color: $colorBlack
+            background: $colorSecondaryLighter
             text-shadow: none
         h1, h2, h3, h4, h5, h6
             text-rendering: optimizeLegibility
             margin: 0 0
             padding: 0
-            font-family: $font-sans
+            font-family: $fontSans
             font-weight: 700
         h1
-            font-size: $rs*3
-            line-height: $rs*3
+            font-size: $rootSize*3
+            line-height: $rootSize*3
             letter-spacing: -2px
             text-indent: -3px
-            margin: $rs/8*15 0
+            margin: $rootSize/8*15 0
         h2
-            font-size: $rs*2
-            line-height: $rs*2
+            font-size: $rootSize*2
+            line-height: $rootSize*2
             letter-spacing: -1px
             text-indent: -2px
-            margin: $rs/8*15 0
+            margin: $rootSize/8*15 0
         h3
-            font-size: $rs/8*11
-            line-height: $rs/8*15
+            font-size: $rootSize/8*11
+            line-height: $rootSize/8*15
         h4
-            font-size: $rs/8*11
-            line-height: $rs/8*15
-            font-family: $font-serif
+            font-size: $rootSize/8*11
+            line-height: $rootSize/8*15
+            font-family: $fontSerif
         h5
-            font-size: $rs/8*11
-            line-height: $rs/8*15
-            font-family: $font-serif
+            font-size: $rootSize/8*11
+            line-height: $rootSize/8*15
+            font-family: $fontSerif
         h6
-            font-size: $rs/8*11
-            line-height: $rs/8*15
-            font-family: $font-serif
+            font-size: $rootSize/8*11
+            line-height: $rootSize/8*15
+            font-family: $fontSerif
         img
             max-width: 100%
         p
-            padding: 0 0 $rs/8*15
+            padding: 0 0 $rootSize/8*15
             margin: 0
         code
-            background-color: $color-white-dark
-            border-color: $color-white-light
+            background-color: $colorWhiteDark
+            border-color: $colorWhiteLight
             font-family: Inconsolata, monospace, sans-serif
-            font-size: $rs
+            font-size: $rootSize
         pre > code
-            background-color: $color-white-light
-            border-color: $color-white-light
+            background-color: $colorWhiteLight
+            border-color: $colorWhiteLight
             padding: 12px 24px
-            color: $color-black-light
+            color: $colorBlackLight
             font-size: 1.1rem
             line-height: 1.5rem
             display: block
@@ -464,16 +464,16 @@ body
             padding: 0
             display: block
             width: 20%
-            margin: $rs auto $rs*3 auto
-            border: 1px solid $color-white-dark
+            margin: $rootSize auto $rootSize*3 auto
+            border: 1px solid $colorWhiteDark
         blockquote
             -moz-box-sizing: border-box
             box-sizing: border-box
-            margin: $rs -$rs*4 $rs*2 -$rs*4
+            margin: $rootSize -$rootSize*4 $rootSize*2 -$rootSize*4
             padding: 0 0
             text-align: center
-            font-size: $rs*2.2
-            line-height: $rs*3
+            font-size: $rootSize*2.2
+            line-height: $rootSize*3
             font-style: italic
         blockquote p
             margin: 0.8em 0
@@ -485,29 +485,29 @@ body
             color: #ccc
         kbd
             display: inline-block
-            margin-bottom: $rs/2
+            margin-bottom: $rootSize/2
             padding: 1px 8px
             border: #ccc 1px solid
-            color: $color-black-light
+            color: $colorBlackLight
             text-shadow: #fff 0 1px 0
             font-size: 0.9em
             font-weight: bold
-            background: $color-white-dark
+            background: $colorWhiteDark
             border-radius: 4px
             box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset
         table
             -moz-box-sizing: border-box
             box-sizing: border-box
-            margin: 0 0 $rs
+            margin: 0 0 $rootSize
             width: 100%
             max-width: 100%
             background-color: transparent
         table th, table td
             padding: 8px
-            line-height: $rs*1.5
+            line-height: $rootSize*1.5
             text-align: left
             vertical-align: top
-            border-top: 1px solid $color-white-dark
+            border-top: 1px solid $colorWhiteDark
         table th
             color: #000
         table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td
@@ -517,22 +517,22 @@ body
         table table table
             background-color: #fff
         table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th
-            background-color: $color-white-dark
+            background-color: $colorWhiteDark
         table.plain
             tbody > tr:nth-child(odd) > td, tbody > tr:nth-child(odd) > th
                 background: transparent
     .contentpost__footer
         text-align: right
-        margin: $rs*4 0 0
-        padding: 0 0 $rs*4
+        margin: $rootSize*4 0 0
+        padding: 0 0 $rootSize*4
         a
-            color: $color-white-dark
-            font-size: $rs*1.4
-            margin: 0 0 0 $rs
+            color: $colorWhiteDark
+            font-size: $rootSize*1.4
+            margin: 0 0 0 $rootSize
             text-decoration: none
             transition: color ease 0.3s
             &:hover
-                color: $color-main-dark
+                color: $colorMainDark
 .hidden
     text-indent: -9999px
     visibility: hidden
