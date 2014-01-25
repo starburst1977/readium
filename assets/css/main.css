@@ -1193,12 +1193,16 @@ body {
   width: 44px;
   height: 44px;
   z-index: 1;
-  background-color: #111111; }
+  background-color: #111111;
+  transition: all 1s ease-in-out; }
   .toggle i {
     width: 36px;
     margin: 11px 0 0 13px;
     color: white;
     font-size: 21px; }
+
+.mm-opened .toggle {
+  left: 450px; }
 
 .sidebar {
   position: absolute;
