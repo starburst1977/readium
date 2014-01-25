@@ -10,15 +10,15 @@
     <article class="contentpost__inner {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
         {{#post}}
         <div class="contentpost__sidebar">
-            <section class="contentpost__author cf">
+            <section class="contentpost__author clearfix">
                 <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
                 <h4 itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">{{author.name}}</h4>
                 <p itemprop="description">{{author.bio}}</p>
             </section>
-            <div class="cf">
+            <div class="clearfix">
                 <hr>
             </div>
-            <section class="contentpost__sidebar__meta cf">
+            <section class="contentpost__sidebar__meta clearfix">
                 <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
 
             </section>
@@ -45,11 +45,11 @@
             </section>
             <div class="contentpost__footerbar">
                 <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
-                <section class="contentpost__author cf">
+                <section class="contentpost__author clearfix">
                     <h4>{{author.name}}</h4>
                     <p>{{author.bio}}</p>
                 </section>
-                <section class="contentpost__sidebar__meta cf">
+                <section class="contentpost__sidebar__meta clearfix">
                     <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                 </section>
             </div>

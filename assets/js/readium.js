@@ -1,7 +1,7 @@
 'use strict';
 
 require.config({
-    baseUrl: 'assets/js',
+    baseUrl: '/assets/js',
     paths: {
         jquery: '/vendor/jquery/jquery',
         menu: '/vendor/jQuery.mmenu/src/js/jquery.mmenu.min',
@@ -18,15 +18,11 @@ require.config({
     }
 });
 
-require(['jquery', 'hljs', 'menu'], function($, hljs) {
+require(['jquery', 'hljs', 'sidebar'], function($, hljs, sidebar) {
     var cover     = $('img[alt="img-post-cover"]'),
         container = $('#img-post-cover');
 
     hljs.initHighlighting();
-
-    $('#side-menu').mmenu({
-        classes: 'mm-slide'
-    });
 
     if (cover.length > 0) {
         container = $('#img-post-cover');
@@ -37,4 +33,5 @@ require(['jquery', 'hljs', 'menu'], function($, hljs) {
     }
 
     container.remove();
+    sidebar.init();
 });
