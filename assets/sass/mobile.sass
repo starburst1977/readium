@@ -1,0 +1,509 @@
+@media only screen and (max-width: 1000px)
+    body
+        background-color: #fff
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        height: 100%
+        margin: 0
+        padding: 0
+        font-size: 16px
+        font-family: Vollkorn,Georgia,serif
+        text-rendering: optimizeLegibility
+        -webkit-font-smoothing: antialiased
+        -webkit-hyphens: auto
+        -moz-hyphens: auto
+        hyphens: auto
+        moz-font-feature-settings: "liga=1, dlig=1"
+        -ms-font-feature-settings: "liga","dlig"
+        -webkit-font-feature-settings: "liga","dlig"
+        -o-font-feature-settings: "liga","dlig"
+        font-feature-settings: "liga","dlig"
+    .sidebar
+        height: 320px
+        width: 100%
+        background: #303538 no-repeat center center
+        background-size: cover
+        font-family: SourceSansPro,sans-serif
+        position: relative
+        .sidebar__logo
+            position: absolute
+            top: 10px
+            left: 10px
+            width: 44px
+            height: 44px
+            z-index: 99
+            background-color: #111
+            .sidebar__logo__image
+                width: 22px
+                margin: 11px
+        .sidebar__information
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            max-width: 810px
+            box-sizing: border-box
+            padding: 16px
+            .sidebar__information__title
+                font-size: 16px
+                margin: 0
+                padding: 0
+                line-height: 24px
+                color: #fff
+            .sidebar__userimage
+                width: 80px
+                height: 80px
+                border-radius: 80px
+                overflow: hidden
+                background-repeat: no-repeat
+                background-size: 100%
+                background-position: center
+                margin: 0 auto 16px
+            .sidebar__information__description
+                font-size: 16px
+                margin: 0
+                padding: 0
+                line-height: 24px
+                color: #ccc
+                font-weight: 400
+            .sidebar__information__footer
+                padding: 0
+                a
+                    text-decoration: none
+                    color: #fff
+                    &:hover
+                        color: #f5e395
+
+    .contentlist
+        width: 100%
+        .contentlist__inner
+            width: 100%
+            max-width: 810px
+            box-sizing: border-box
+            padding: 50px 25px
+        .contentlist__header
+            height: 40px
+            line-height: 40px
+            border-top: 1px solid #dededc
+            border-bottom: 1px solid #dededc
+            font-size: 16px
+            font-family: SourceSansPro,sans-serif
+            .pagination
+                line-height: 40px
+                font-size: 12px
+                color: #b3b3b1
+                text-transform: uppercase
+                width: 50%
+                float: right
+                text-align: right
+            h1
+                line-height: 40px
+                font-size: 12px
+                color: #b3b3b1
+                text-transform: uppercase
+                width: 50%
+                float: left
+                margin: 0
+                padding: 0
+        .contentlist__article
+            padding: 32px 0
+            display: block
+            border-bottom: 1px solid #f2f2f0
+            position: relative
+            .contentlist__article__headline
+                font-size: 32px
+                line-height: 35.2px
+                font-weight: 800
+                padding: 0 64px 8px 0
+                margin: 0
+                font-family: SourceSansPro,sans-serif
+                a
+                    text-decoration: none
+                    color: #111
+                    &:hover
+                        color: #e97f02
+            .contentlist__article__userimage
+                position: absolute
+                right: 0
+                margin: 4px
+                width: 32px
+                height: 32px
+                overflow: hidden
+                background-color: #f2f2f0
+                -webkit-border-radius: 100%
+                -moz-border-radius: 100%
+                border-radius: 100%
+                background-size: 100%
+        .contentlist__article__excerpt p
+            font-size: 16px
+            line-height: 24px
+            color: #999
+            margin: 0
+            padding: 0 0 8px
+            font-family: Vollkorn,Georgia,serif
+        .contentlist__article__meta
+            font-size: 12px
+            line-height: 24px
+            color: #ccc
+            font-family: SourceSansPro,sans-serif
+
+    .contentlist__pagination
+        padding: 16px 0
+        nav
+            display: block
+            text-align: center
+            font-size: 12px
+            line-height: 24px
+            color: #ccc
+            font-family: SourceSansPro,sans-serif
+            a
+                padding: 0 8px
+                color: #111
+                &:hover
+                    color: #e97f02
+
+    .footer
+        border-top: 1px solid #f2f2f0
+        padding: 16px 0
+        position: relative
+        margin: 64px 0 0
+        padding: 64px 0 16px
+        line-height: 24px
+        font-size: 12px
+        color: #ccc
+        text-align: center
+        font-family: SourceSansPro,sans-serif
+        a
+            color: #111
+
+    .site-footer a
+        text-decoration: underline
+        &:hover
+            color: #e97f02
+
+    .poweredby .icons-ghost
+        font-weight: 700
+        text-decoration: none
+        &:hover
+            text-decoration: none
+        &:before
+            font-size: .6rem
+            margin-right: .3em
+
+    .subscribe
+        width: 32px
+        height: 32px
+        position: absolute
+        top: -16px
+        left: 50%
+        margin-left: -16px
+        border: #f2f2f0 1px solid
+        text-align: center
+        line-height: 32px
+        border-radius: 50px
+        background: #fff
+        transition: box-shadow .5s
+        &:before
+            color: #ccc
+            font-size: 12px
+            position: absolute
+            top: -1px
+            left: 11px
+            font-weight: 700
+            transition: color .5s ease
+        &:hover
+            box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px
+            transition: box-shadow .25s
+            &:before
+                color: #50585D
+
+    .tooltip
+        opacity: 0
+        display: inline-block
+        padding: 4px 8px 5px
+        position: absolute
+        top: -24px
+        left: -32px
+        color: rgba(255, 255, 255, 0.9)
+        font-size: 16px
+        font-weight: 700
+        line-height: 16px
+        text-align: center
+        background: #50585D
+        border-radius: 20px
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)
+        transition: opacity .3s ease,top .3s ease
+        &:after
+            content: ""
+            border-width: 5px 5px 0
+            border-style: solid
+            border-color: #50585D transparent
+            display: block
+            position: absolute
+            bottom: -4px
+            left: 50%
+            margin-left: -5px
+            z-index: 220
+            width: 0
+
+    .subscribe:hover .tooltip
+        opacity: 1
+        top: -33px
+
+    .side-menu li a
+        font-family: arial
+        color: #fff
+        &:hover
+            color: #75d50b!important
+
+    .contentpost
+        padding: 0
+        .contentpost__logo
+            position: fixed
+            top: 10px
+            left: 10px
+            width: 44px
+            height: 44px
+            z-index: 99
+            background-color: #111
+            i
+                width: 36px
+                margin: 11px 0 0 13px
+                color: #fff
+                font-size: 21px
+        #img-post-cover
+            position: relative
+            top: 0
+            left: 0
+            right: 0
+            padding-top: 50%
+            background-size: cover
+            margin-bottom: 48px
+        .contentpost__inner
+            max-width: 550px
+            width: 90%
+            margin: 0 auto
+            position: relative
+        .contentpost__sidebar
+            display: none
+        .contentpost__footerbar
+            border-top: 1px #ccc solid
+            padding: 32px 0
+            margin: 32px 0 0
+            .contentpost__userimage
+                width: 48px
+                height: 48px
+                border-radius: 48px
+                overflow: hidden
+                background-repeat: no-repeat
+                background-size: 100%
+                background-position: center
+                float: left
+                margin: 0 16px 0 0
+            .contentpost__author
+                position: relative
+                padding: 0 0 16px
+                width: 60%
+                float: left
+                text-align: left
+                h4
+                    padding: 0
+                    margin: 0
+                    font-size: 16px
+                    line-height: 24px
+                    color: #111
+                    font-family: SourceSansPro,sans-serif
+                    font-weight: 800
+                p
+                    padding: 0
+                    margin: 0
+                    font-size: 14px
+                    line-height: 19.2px
+                    font-style: italic
+                    color: #ccc
+                    font-family: Vollkorn,Georgia,serif
+        .contentpost__sidebar__meta
+            padding: 0
+            text-align: right
+            h5
+                font-size: 12px
+                line-height: 24px
+                margin: 0
+                padding: 0
+                font-weight: 800
+                color: #111
+                font-family: SourceSansPro,sans-serif
+            time
+                padding: 0
+                margin: 0
+                font-size: 12px
+                line-height: 16px
+                text-align: right
+                color: #ccc
+                font-family: Vollkorn,Georgia,serif
+        .contentpost__meta
+            font-size: 16px
+            line-height: 16px
+            color: #ccc
+            font-family: SourceSansPro,sans-serif
+        .contentpost__headline
+            font-size: 48px
+            line-height: 48px
+            padding: 16px 0 32px
+            margin: 0
+            font-family: SourceSansPro,sans-serif
+            letter-spacing: -2px
+            font-weight: 800
+        .contentpost__articlecontent
+            font-size: 22px
+            line-height: 30px
+            a
+                color: #111
+                text-decoration: underline
+                transition: color ease .3s
+                &:hover
+                    color: #e97f02
+            \::-moz-selection, ::selection
+                color: #111
+                background: #e5a3ba
+                text-shadow: none
+            h1, h2, h3, h4, h5, h6
+                text-rendering: optimizeLegibility
+                margin: 0
+                padding: 0
+                font-family: SourceSansPro,sans-serif
+                font-weight: 800
+            h1
+                font-size: 48px
+                line-height: 48px
+                letter-spacing: -2px
+                text-indent: -3px
+                margin: 30px 0
+            h2
+                font-size: 32px
+                line-height: 32px
+                letter-spacing: -1px
+                text-indent: -2px
+                margin: 30px 0
+            h3
+                font-size: 22px
+                line-height: 30px
+            h4, h5, h6
+                font-size: 22px
+                line-height: 30px
+                font-family: Vollkorn,Georgia,serif
+            img
+                max-width: 100%
+            p
+                padding: 0 0 30px
+                margin: 0
+            code
+                background-color: #ccc
+                border-color: #f5f5f5
+                font-family: Inconsolata,monospace,sans-serif
+                font-size: 16px
+            pre
+                > code
+                    background-color: #f5f5f5
+                    border-color: #f5f5f5
+                    padding: 12px 24px
+                    color: #999
+                    font-size: 1.1rem
+                    line-height: 1.5rem
+                    display: block
+                    white-space: pre
+                    overflow: auto
+                padding: 0
+                margin: 0 0 2rem
+                code
+                    white-space: -moz-pre-wrap
+                    white-space: pre-wrap
+                    border: 0
+            tt
+                white-space: -moz-pre-wrap
+                white-space: pre-wrap
+                border: 0
+            hr
+                border: 0
+                padding: 0
+                display: block
+                width: 20%
+                margin: 16px auto 48px
+                border: 1px solid #ccc
+            blockquote
+                -moz-box-sizing: border-box
+                box-sizing: border-box
+                margin: 16px -64px 32px -64px
+                padding: 0
+                text-align: center
+                font-size: 35.2px
+                line-height: 48px
+                font-style: italic
+                p
+                    margin: .8em 0
+                    font-style: italic
+                small
+                    display: inline-block
+                    margin: .8em 0 .8em 1.5em
+                    font-size: .9em
+                    color: #ccc
+            kbd
+                display: inline-block
+                margin-bottom: 8px
+                padding: 1px 8px
+                border: #ccc 1px solid
+                color: #999
+                text-shadow: #fff 0 1px 0
+                font-size: .9em
+                font-weight: 700
+                background: #ccc
+                border-radius: 4px
+                box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset
+            table
+                -moz-box-sizing: border-box
+                box-sizing: border-box
+                margin: 0 0 16px
+                width: 100%
+                max-width: 100%
+                background-color: transparent
+                th, td
+                    padding: 8px
+                    line-height: 24px
+                    text-align: left
+                    vertical-align: top
+                    border-top: 1px solid #ccc
+                th
+                    color: #000
+                caption + thead tr:first-child
+                    th, td
+                        border-top: 0
+                colgroup + thead tr:first-child
+                    th, td
+                        border-top: 0
+                thead:first-child tr:first-child
+                    th, td
+                        border-top: 0
+                tbody + tbody
+                    border-top: 2px solid #efefef
+                table table
+                    background-color: #fff
+                tbody > tr:nth-child(odd) >
+                    td, th
+                        background-color: #ccc
+                &.plain tbody > tr:nth-child(odd) >
+                    td, th
+                        background: transparent
+        .contentpost__footer
+            text-align: right
+            margin: 64px 0
+            a
+                color: #ccc
+                font-size: 22.4px
+                margin: 0 0 0 16px
+                text-decoration: none
+                transition: color ease .3s
+                &:hover
+                    color: #e97f02
