@@ -39,11 +39,15 @@ body
     height: 44px
     z-index: 1
     background-color: $colorBlack
+    transition: all 1s ease-in-out
     i
         width: 36px
         margin: 11px 0 0 13px
         color: #fff
         font-size: 21px
+
+.mm-opened .toggle
+    left: 450px
 
 .sidebar
     position: absolute
@@ -393,14 +397,6 @@ body
             transition: color ease 0.3s
             &:hover
                 color: $colorMainDark
-        ::-moz-selection
-            color: $colorBlack
-            background: $colorSecondaryLight
-            text-shadow: none
-        ::selection
-            color: $colorBlack
-            background: $colorSecondaryLighter
-            text-shadow: none
         h1, h2, h3, h4, h5, h6
             text-rendering: optimizeLegibility
             margin: 0 0

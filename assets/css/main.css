@@ -1193,12 +1193,16 @@ body {
   width: 44px;
   height: 44px;
   z-index: 1;
-  background-color: #111111; }
+  background-color: #111111;
+  transition: all 1s ease-in-out; }
   .toggle i {
     width: 36px;
     margin: 11px 0 0 13px;
     color: white;
     font-size: 21px; }
+
+.mm-opened .toggle {
+  left: 450px; }
 
 .sidebar {
   position: absolute;
@@ -1532,14 +1536,6 @@ body {
       transition: color ease 0.3s; }
       .contentpost .contentpost__articlecontent a:hover {
         color: #e97f02; }
-    .contentpost .contentpost__articlecontent ::-moz-selection {
-      color: #111111;
-      background: #e5a3ba;
-      text-shadow: none; }
-    .contentpost .contentpost__articlecontent ::selection {
-      color: #111111;
-      background: #f2d2dd;
-      text-shadow: none; }
     .contentpost .contentpost__articlecontent h1, .contentpost .contentpost__articlecontent h2, .contentpost .contentpost__articlecontent h3, .contentpost .contentpost__articlecontent h4, .contentpost .contentpost__articlecontent h5, .contentpost .contentpost__articlecontent h6 {
       text-rendering: optimizeLegibility;
       margin: 0 0;
