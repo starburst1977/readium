@@ -15,6 +15,8 @@ endif
 NODE_ENV = production
 
 install:
+	- git submodule init
+	- git submodule update
 	- $(NPM) install
 	- $(BOWER) install
 
