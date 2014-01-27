@@ -17,20 +17,47 @@
 </header>
 <main class="contentlist" role="main">
     <section class="contentlist__inner">
+        {{! Each post will be output using this markup }}
+        <div class="contentlist__featured">
+            <h4 class="contentlist__headline">Featured</h4>
+            {{#foreach posts}}
+                {{@key}}
+                {{#if featured}}
+                    <article class="contentlist__article {{post_class}} featured" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+                        <header class="post-header">
+                            <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
+                            <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
+                        </header>
+                        <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
+                            <p>{{excerpt characters="150"}}&hellip;</p>
+                        </section>
+                        <span class="contentlist__article__meta post-meta">
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                            {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
+                        </span>
+                    </article>
+                {{/if}}
+            {{/foreach}}
+        </div>
+        <h4 class="contentlist__headline">Regular</h4>
         {{#foreach posts}}
-        <article class="contentlist__article {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-            <header class="post-header">
-                <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
-                <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
-            </header>
-            <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
-                <p>{{excerpt characters="250"}}&hellip;</p>
-            </section>
-            <span class="contentlist__article__meta post-meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
-            </span>
-        </article>
+            {{@key}}
+            {{#if featured}}
+            {{else}}
+                <article class="contentlist__article {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+                    <header class="post-header">
+                        <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
+                        <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
+                    </header>
+                    <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
+                        <p>{{excerpt characters="250"}}&hellip;</p>
+                    </section>
+                    <span class="contentlist__article__meta post-meta">
+                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                        {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
+                    </span>
+                </article>
+            {{/if}}
         {{/foreach}}
         <div class="contentlist__pagination">
             {{pagination}}

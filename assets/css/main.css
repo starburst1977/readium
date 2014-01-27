@@ -1194,7 +1194,7 @@ body {
   height: 44px;
   z-index: 1;
   background-color: #111111;
-  transition: all 1s ease-in-out; }
+  transition: all 0.5s ease-in-out; }
   .toggle i {
     width: 36px;
     margin: 11px 0 0 13px;
@@ -1203,6 +1203,8 @@ body {
 
 .mm-opened .toggle {
   left: 450px; }
+  .mm-opened .toggle i {
+    color: #999999; }
 
 .sidebar {
   position: absolute;
@@ -1273,6 +1275,14 @@ body {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 50px 85px; }
+  .contentlist .contentlist__featured {
+    padding: 0 0 32px; }
+  .contentlist .contentlist__headline {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 32px;
+    border-bottom: 1px #eeeeee solid;
+    color: #bbbbbb; }
   .contentlist .contentlist__article {
     padding: 32px 0;
     display: block;
