@@ -20,7 +20,6 @@ define(['jquery', 'menu'], function($) {
 
     return {
         init: function init() {
-            console.log(config);
             button.on('click', onIconClick);
             container.show()
                      .mmenu(config, config)
