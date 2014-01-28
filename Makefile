@@ -1,5 +1,5 @@
 ifdef SystemRoot
-        WINDOWS = 1
+    WINDOWS = 1
 endif
 
 ifdef WINDOWS
