@@ -52,8 +52,9 @@ require(['jquery', 'hljs', 'sidebar', 'fluidbox'], function($, hljs, sidebar) {
         });
     }
 
-console.log($('a[data-fluidbox]').length);
-    $('a[data-fluidbox]').fluidbox();
+    $('a[data-fluidbox]').fluidbox({
+        viewportFill: 0.8
+    });
 
     hljs.initHighlighting();
     container.remove();
