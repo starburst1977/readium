@@ -50,11 +50,6 @@ Run `make` and do your changes. Once you are done, run `make release`. Enter the
 - You should pay attention to image size. Don't go to crazy.
 - Some style configuration possible inside essentials.less.
 
-## Future Todo
-- Implement [Fluidbox](http://terrymun.github.io/Fluidbox/)
-- Implement Featured Posts
-- Pimp Sidebar Navigation
-
 ## Thanks go to...
 - FontAwesome by Dave Gandy
 - Highlight JS by Ivan Sagalaev
