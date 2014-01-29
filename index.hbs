@@ -4,12 +4,16 @@
     <div id="site-head-content" class="sidebar__inner">
         <section class="sidebar__information">
             <div class="sidebar__userimage" style="background-image: url({{@blog.logo}})"></div>
+            
             <h1 class="sidebar__information__title">{{@blog.title}}</h1>
             <h2 class="sidebar__information__description">{{@blog.description}}</h2>
+            <div class="sidebar__customlinks">
+                <a href="/aboutme">About me</a> * <a href="/aboutme">Readium</a> * <a href="">Marisa</a> * <a href="">Chiara</a>
+            </div>
             <footer class="sidebar__information__footer">
-                <a href="https://twitter.com/StarBurst1977" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-                <a href="https://github.com/starburst1977" target="_blank"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
-                <a href="http://www.linkedin.com/in/svenread" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+                <a href="https://twitter.com/StarBurst1977" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/starburst1977" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/svenread" target="_blank"><i class="fa fa-linkedin"></i></a>
                 <a href="http://dribbble.com/Starburst1977" target="_blank"><i class="fa fa-dribbble"></i></a>
             </footer>
         </section>
@@ -29,7 +33,7 @@
                             <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                         </header>
                         <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
-                            <p>{{excerpt characters="150"}}&hellip;</p>
+                            <p>{{excerpt characters="150"}}&hellip; <a href="{{url}}" itemprop="url">&hellip;Read more.</a></p>
                         </section>
                         <span class="contentlist__article__meta post-meta">
                             <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
@@ -50,7 +54,7 @@
                         <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                     </header>
                     <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
-                        <p>{{excerpt characters="250"}}&hellip;</p>
+                        <p>{{excerpt characters="250"}}&hellip; <a href="{{url}}" itemprop="url">&hellip;Read more.</a></p>
                     </section>
                     <span class="contentlist__article__meta post-meta">
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>

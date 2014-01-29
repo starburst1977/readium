@@ -30,6 +30,7 @@
             <section class="contentpost__sidebar__meta clearfix">
                 <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
             </section>
+            
         </div>
         {{#if tags}}<span class="contentpost__meta">On {{tags separator=" | "}}</span>{{/if}}
         <h1 class="contentpost__headline post-title" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</h1>
@@ -51,6 +52,9 @@
                     <span class="hidden">Google+</span>
                 </a>
             </section>
+            <div class="contentpost__footer__back">
+                <a href=""><i class="fa fa-bars"></i>&nbsp;&nbsp;Back to Overview</a>
+            </div>
             <div class="contentpost__footerbar">
                 <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
                 <section class="contentpost__author clearfix">

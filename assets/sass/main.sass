@@ -77,6 +77,7 @@
                     line-height: $rootSize*3
                     padding: 0 $rootSize 2px
                     color: $colorMain
+                    transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorMain
                         color: #fff
@@ -98,6 +99,7 @@
                     text-decoration: none
                     line-height: $rootSize*3
                     padding: 0 $rootSize 2px
+                    transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorSecondary
     
@@ -134,28 +136,53 @@
                 background-repeat: no-repeat
                 background-size: 100%
                 background-position: center
-                margin-bottom: $rootSize/2
+                margin: 0 auto $rootSize/2
             .sidebar__information__title
-                font-size: $rootSize*2
+                font-size: $rootSize
                 margin: 0
-                padding: 0
-                line-height: $rootSize*3
+                padding: $rootSize*2 0 0
+                line-height: $rootSize*2
                 color: $colorWhite
+                font-weight: 800
+                text-align: left
             .sidebar__information__description
                 font-size: $rootSize
                 margin: 0
-                padding: $rootSize/2 0
-                line-height: $rootSize*1.5
-                color: $colorWhiteDark
+                padding: 0 0
+                line-height: $rootSize*1.35
+                color: rgba(255,255,255,0.5)
                 font-weight: normal
+            .sidebar__customlinks
+                line-height: $rootSize*1.35
+                padding: $rootSize/2 0 $rootSize/3
+                color: rgba(255,255,255,0.5)
+                a
+                    color: $colorWhite
+                    text-decoration: none
+                    transition: all 0.25s ease-in-out
+                    &:hover
+                        color: $colorMainLight
+                        text-decoration: underline
     
     .sidebar__information__footer
-        padding: $rootSize/2 0
+        padding: 0
+        text-align: center
+        height: $rootSize*2
+        margin-left: -$rootSize/2
         a
             text-decoration: none
             color: $colorWhite
+            margin: 0
+            line-height: $rootSize*2
+            transition: all 0.25s ease-in-out
+            display: block
+            float: left
+            width: $rootSize*2
+            height: $rootSize*2
             &:hover
                 color: $colorMainLight
+                font-size: $rootSize*2
+                line-height: $rootSize*2
     
     .contentlist
         position: absolute
@@ -192,8 +219,9 @@
                 a
                     text-decoration: none
                     color: $colorBlack
+                    transition: all 0.25s ease-in-out
                     &:hover
-                        color: $colorMainDark
+                        color: $colorMain
             .contentlist__article__userimage
                 position: absolute
                 right: 0
@@ -214,6 +242,13 @@
                 margin: 0
                 padding: 0 0 $rootSize/2
                 font-family: $fontSerif
+                a
+                    color: $colorBlackLighter
+                    text-decoration: none
+                    transition: all 0.25s ease-in-out
+                    &:hover
+                        color: $colorMain
+                        text-decoration: underline
         .contentlist__article__meta
             font-size: $rootSize/4*3
             line-height: $rootSize*1.5
@@ -409,7 +444,10 @@
     
         .contentpost__footerbar
             display: none
-    
+        .contentpost__footer__back
+            display: block
+            text-align: center
+            padding: $rootSize*3 0 $rootSize*2
         .contentpost__sidebar__meta
             padding: $rootSize 0
             text-align: right
@@ -588,9 +626,9 @@
                 font-size: $rootSize*1.4
                 margin: 0 0 0 $rootSize
                 text-decoration: none
-                transition: color ease 0.3s
+                transition: all 0.25s ease-in-out
                 &:hover
-                    color: $colorMainDark
+                    color: $colorMain
     .hidden
         text-indent: -9999px
         visibility: hidden

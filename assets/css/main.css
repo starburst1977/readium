@@ -709,9 +709,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           text-decoration: none;
           line-height: 32px;
           padding: 2px 16px 0;
-          color: #75d50b; }
+          color: #c02942; }
           #headroom .headroom__container .headroom__title a:hover {
-            background-color: #75d50b;
+            background-color: #c02942;
             color: white; }
       #headroom .headroom__container .headroom__custom__links {
         float: right;
@@ -735,7 +735,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           line-height: 32px;
           padding: 0 16px 3px; }
           #headroom .headroom__container .headroom__custom__links a:hover {
-            background-color: #bd1550; }
+            background-color: #53777a; }
 
   .sidebar {
     height: 320px;
@@ -767,8 +767,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         font-size: 16px;
         margin: 0;
         padding: 0;
-        line-height: 24px;
-        color: white; }
+        line-height: 32px;
+        color: white;
+        font-weight: 800; }
       .sidebar .sidebar__information .sidebar__userimage {
         width: 80px;
         height: 80px;
@@ -782,16 +783,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         font-size: 16px;
         margin: 0;
         padding: 0;
-        line-height: 24px;
+        line-height: 21.6px;
         color: #cccccc;
         font-weight: 400; }
+      .sidebar .sidebar__information .sidebar__customlinks {
+        line-height: 21.6px;
+        padding: 4px 0 2.66667px;
+        color: rgba(255, 255, 255, 0.5); }
+        .sidebar .sidebar__information .sidebar__customlinks a {
+          color: white;
+          text-decoration: none;
+          transition: all 0.25s ease-in-out; }
+          .sidebar .sidebar__information .sidebar__customlinks a:hover {
+            color: #d95b43;
+            text-decoration: underline; }
       .sidebar .sidebar__information .sidebar__information__footer {
-        padding: 0; }
+        padding: 0;
+        text-align: center;
+        height: 32px;
+        margin-left: -8px; }
         .sidebar .sidebar__information .sidebar__information__footer a {
           text-decoration: none;
-          color: white; }
+          color: white;
+          margin: 0;
+          line-height: 32px;
+          transition: all 0.25s ease-in-out;
+          display: block;
+          float: left;
+          width: 32px;
+          height: 32px; }
           .sidebar .sidebar__information .sidebar__information__footer a:hover {
-            color: #f5e395; }
+            color: #d95b43;
+            font-size: 32px;
+            line-height: 32px; }
 
   .contentlist {
     width: 100%; }
@@ -800,6 +824,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       max-width: 810px;
       box-sizing: border-box;
       padding: 50px 25px; }
+    .contentlist .contentlist__featured {
+      padding: 0 0 32px; }
+    .contentlist .contentlist__headline {
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 32px;
+      border-bottom: 1px #eeeeee solid;
+      color: #bbbbbb; }
     .contentlist .contentlist__header {
       height: 40px;
       line-height: 40px;
@@ -827,7 +859,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .contentlist .contentlist__article {
       padding: 32px 0;
       display: block;
-      border-bottom: 1px solid #f2f2f0;
       position: relative; }
       .contentlist .contentlist__article .contentlist__article__headline {
         font-size: 32px;
@@ -838,9 +869,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         font-family: SourceSansPro, sans-serif; }
         .contentlist .contentlist__article .contentlist__article__headline a {
           text-decoration: none;
-          color: #111111; }
+          color: #111111;
+          transition: all 0.25s ease-in-out; }
           .contentlist .contentlist__article .contentlist__article__headline a:hover {
-            color: #e97f02; }
+            color: #c02942; }
       .contentlist .contentlist__article .contentlist__article__userimage {
         position: absolute;
         right: 0;
@@ -860,6 +892,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       margin: 0;
       padding: 0 0 8px;
       font-family: Vollkorn, Georgia, serif; }
+      .contentlist .contentlist__article__excerpt p a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out; }
+        .contentlist .contentlist__article__excerpt p a:hover {
+          color: #c02942;
+          text-decoration: underline; }
     .contentlist .contentlist__article__meta {
       font-size: 12px;
       line-height: 24px;
@@ -1005,6 +1044,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       position: relative; }
     .contentpost .contentpost__sidebar {
       display: none; }
+    .contentpost .contentpost__footer__back {
+      display: block;
+      text-align: center;
+      padding: 48px 0 32px; }
     .contentpost .contentpost__footerbar {
       border-top: 1px #cccccc solid;
       padding: 32px 0;
@@ -1307,9 +1350,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           text-decoration: none;
           line-height: 48px;
           padding: 0 16px 2px;
-          color: #75d50b; }
+          color: #c02942;
+          transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__title a:hover {
-            background-color: #75d50b;
+            background-color: #c02942;
             color: white; }
       #headroom .headroom__container .headroom__custom__links {
         float: right;
@@ -1327,9 +1371,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           color: white;
           text-decoration: none;
           line-height: 48px;
-          padding: 0 16px 2px; }
+          padding: 0 16px 2px;
+          transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__custom__links a:hover {
-            background-color: #bd1550; }
+            background-color: #53777a; }
 
   .sidebar {
     position: absolute;
@@ -1364,28 +1409,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
-        margin-bottom: 8px; }
+        margin: 0 auto 8px; }
       .sidebar .sidebar__information .sidebar__information__title {
-        font-size: 32px;
+        font-size: 16px;
         margin: 0;
-        padding: 0;
-        line-height: 48px;
-        color: white; }
+        padding: 32px 0 0;
+        line-height: 32px;
+        color: white;
+        font-weight: 800;
+        text-align: left; }
       .sidebar .sidebar__information .sidebar__information__description {
         font-size: 16px;
         margin: 0;
-        padding: 8px 0;
-        line-height: 24px;
-        color: #cccccc;
+        padding: 0 0;
+        line-height: 21.6px;
+        color: rgba(255, 255, 255, 0.5);
         font-weight: normal; }
+      .sidebar .sidebar__information .sidebar__customlinks {
+        line-height: 21.6px;
+        padding: 8px 0 5.33333px;
+        color: rgba(255, 255, 255, 0.5); }
+        .sidebar .sidebar__information .sidebar__customlinks a {
+          color: white;
+          text-decoration: none;
+          transition: all 0.25s ease-in-out; }
+          .sidebar .sidebar__information .sidebar__customlinks a:hover {
+            color: #d95b43;
+            text-decoration: underline; }
 
   .sidebar__information__footer {
-    padding: 8px 0; }
+    padding: 0;
+    text-align: center;
+    height: 32px;
+    margin-left: -8px; }
     .sidebar__information__footer a {
       text-decoration: none;
-      color: white; }
+      color: white;
+      margin: 0;
+      line-height: 32px;
+      transition: all 0.25s ease-in-out;
+      display: block;
+      float: left;
+      width: 32px;
+      height: 32px; }
       .sidebar__information__footer a:hover {
-        color: #f5e395; }
+        color: #d95b43;
+        font-size: 32px;
+        line-height: 32px; }
 
   .contentlist {
     position: absolute;
@@ -1421,9 +1491,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         font-family: SourceSansPro, sans-serif; }
         .contentlist .contentlist__article .contentlist__article__headline a {
           text-decoration: none;
-          color: #111111; }
+          color: #111111;
+          transition: all 0.25s ease-in-out; }
           .contentlist .contentlist__article .contentlist__article__headline a:hover {
-            color: #62b209; }
+            color: #c02942; }
       .contentlist .contentlist__article .contentlist__article__userimage {
         position: absolute;
         right: 0;
@@ -1443,6 +1514,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       margin: 0;
       padding: 0 0 8px;
       font-family: Vollkorn, Georgia, serif; }
+      .contentlist .contentlist__article__excerpt p a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out; }
+        .contentlist .contentlist__article__excerpt p a:hover {
+          color: #c02942;
+          text-decoration: underline; }
     .contentlist .contentlist__article__meta {
       font-size: 12px;
       line-height: 24px;
@@ -1462,7 +1540,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         padding: 0 8px;
         color: #111111; }
         .contentlist__pagination nav a:hover {
-          color: #62b209; }
+          color: #542437; }
 
   .footer {
     border-top: 1px solid #f2f2f0;
@@ -1484,10 +1562,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .side-menu li a {
     font-family: arial; }
     .side-menu li a:hover {
-      color: #75d50b !important; }
+      color: #c02942 !important; }
 
   .site-footer a:hover {
-    color: #62b209; }
+    color: #542437; }
 
   .poweredby .icons-ghost {
     font-weight: 700;
@@ -1629,6 +1707,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           font-family: SourceSansPro, sans-serif; }
     .contentpost .contentpost__footerbar {
       display: none; }
+    .contentpost .contentpost__footer__back {
+      display: block;
+      text-align: center;
+      padding: 48px 0 32px; }
     .contentpost .contentpost__sidebar__meta {
       padding: 16px 0;
       text-align: right; }
@@ -1670,7 +1752,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         text-decoration: underline;
         transition: color ease 0.3s; }
         .contentpost .contentpost__articlecontent a:hover {
-          color: #62b209; }
+          color: #542437; }
       .contentpost .contentpost__articlecontent h1, .contentpost .contentpost__articlecontent h2, .contentpost .contentpost__articlecontent h3, .contentpost .contentpost__articlecontent h4, .contentpost .contentpost__articlecontent h5, .contentpost .contentpost__articlecontent h6 {
         text-rendering: optimizeLegibility;
         margin: 0 0;
@@ -1801,9 +1883,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         font-size: 22.4px;
         margin: 0 0 0 16px;
         text-decoration: none;
-        transition: color ease 0.3s; }
+        transition: all 0.25s ease-in-out; }
         .contentpost .contentpost__footer a:hover {
-          color: #62b209; }
+          color: #c02942; }
 
   .hidden {
     text-indent: -9999px;

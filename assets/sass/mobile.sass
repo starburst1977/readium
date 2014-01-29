@@ -106,11 +106,12 @@
             box-sizing: border-box
             padding: 16px
             .sidebar__information__title
-                font-size: 16px
+                font-size: $rootSize
                 margin: 0
                 padding: 0
-                line-height: 24px
+                line-height: $rootSize*2
                 color: #fff
+                font-weight: 800
             .sidebar__userimage
                 width: 80px
                 height: 80px
@@ -121,19 +122,42 @@
                 background-position: center
                 margin: 0 auto 16px
             .sidebar__information__description
-                font-size: 16px
+                font-size: $rootSize
                 margin: 0
                 padding: 0
-                line-height: 24px
+                line-height: $rootSize*1.35
                 color: #ccc
                 font-weight: 400
+            .sidebar__customlinks
+                line-height: $rootSize*1.35
+                padding: $rootSize/4 0 $rootSize/6
+                color: rgba(255,255,255,0.5)
+                a
+                    color: $colorWhite
+                    text-decoration: none
+                    transition: all 0.25s ease-in-out
+                    &:hover
+                        color: $colorMainLight
+                        text-decoration: underline
             .sidebar__information__footer
                 padding: 0
+                text-align: center
+                height: $rootSize*2
+                margin-left: -$rootSize/2
                 a
                     text-decoration: none
-                    color: #fff
+                    color: $colorWhite
+                    margin: 0
+                    line-height: $rootSize*2
+                    transition: all 0.25s ease-in-out
+                    display: block
+                    float: left
+                    width: $rootSize*2
+                    height: $rootSize*2
                     &:hover
-                        color: #f5e395
+                        color: $colorMainLight
+                        font-size: $rootSize*2
+                        line-height: $rootSize*2
 
     .contentlist
         width: 100%
@@ -142,6 +166,14 @@
             max-width: 810px
             box-sizing: border-box
             padding: 50px 25px
+        .contentlist__featured
+            padding: 0 0 $rootSize*2
+        .contentlist__headline
+            text-transform: uppercase
+            font-size: $rootSize/4*3
+            line-height: $rootSize*2
+            border-bottom: 1px #eee solid
+            color: #bbb
         .contentlist__header
             height: 40px
             line-height: 40px
@@ -169,7 +201,6 @@
         .contentlist__article
             padding: 32px 0
             display: block
-            border-bottom: 1px solid #f2f2f0
             position: relative
             .contentlist__article__headline
                 font-size: 32px
@@ -180,9 +211,10 @@
                 font-family: SourceSansPro,sans-serif
                 a
                     text-decoration: none
-                    color: #111
+                    color: $colorBlack
+                    transition: all 0.25s ease-in-out
                     &:hover
-                        color: #e97f02
+                        color: $colorMain
             .contentlist__article__userimage
                 position: absolute
                 right: 0
@@ -202,6 +234,13 @@
             margin: 0
             padding: 0 0 8px
             font-family: Vollkorn,Georgia,serif
+            a
+                color: $colorBlackLighter
+                text-decoration: none
+                transition: all 0.25s ease-in-out
+                &:hover
+                    color: $colorMain
+                    text-decoration: underline
         .contentlist__article__meta
             font-size: 12px
             line-height: 24px
@@ -347,6 +386,10 @@
             position: relative
         .contentpost__sidebar
             display: none
+        .contentpost__footer__back
+            display: block
+            text-align: center
+            padding: $rootSize*3 0 $rootSize*2
         .contentpost__footerbar
             border-top: 1px #ccc solid
             padding: 32px 0
