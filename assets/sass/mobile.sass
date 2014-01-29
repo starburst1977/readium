@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 920px)
     body
         background-color: #fff
         position: absolute
@@ -10,17 +10,75 @@
         margin: 0
         padding: 0
         font-size: 16px
-        font-family: Vollkorn,Georgia,serif
+        font-size: $rootSize
+        font-family: $fontSans
         text-rendering: optimizeLegibility
         -webkit-font-smoothing: antialiased
         -webkit-hyphens: auto
         -moz-hyphens: auto
         hyphens: auto
         moz-font-feature-settings: "liga=1, dlig=1"
-        -ms-font-feature-settings: "liga","dlig"
-        -webkit-font-feature-settings: "liga","dlig"
-        -o-font-feature-settings: "liga","dlig"
-        font-feature-settings: "liga","dlig"
+        -ms-font-feature-settings: "liga", "dlig"
+        -webkit-font-feature-settings: "liga", "dlig"
+        -o-font-feature-settings: "liga", "dlig"
+        font-feature-settings: "liga", "dlig"
+    #headroom
+        background-color: #333
+        color: #fff
+        .headroom__container
+            width: 100%
+            margin: 0 auto
+            +clearfix
+            .headroom__custom__info
+                float: left
+                width: 100%
+                line-height: $rootSize*2
+                padding: 0 $rootSize
+                color: #999
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap
+            .headroom__title
+                float: left
+                width: 100%
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap
+                a
+                    display: block
+                    text-align: left
+                    color: #fff
+                    text-decoration: none
+                    line-height: $rootSize*2
+                    padding: 2px $rootSize 0
+                    color: $colorMain
+                    &:hover
+                        background-color: $colorMain
+                        color: #fff
+            .headroom__custom__links
+                float: right
+                width: 100%
+                padding: 0
+                box-sizing: border-box
+                ul
+                    padding: 0
+                    margin: 0
+                    width: 100%
+                li
+                    float: left
+                    padding: 0
+                    margin: 0
+                    
+                a
+                    display: block
+                    text-align: center
+                    width: auto
+                    color: #fff
+                    text-decoration: none
+                    line-height: $rootSize*2
+                    padding: 0 $rootSize 3px
+                    &:hover
+                        background-color: $colorSecondary
     .sidebar
         height: 320px
         width: 100%
@@ -507,3 +565,7 @@
                 transition: color ease .3s
                 &:hover
                     color: #e97f02
+    .hidden
+        text-indent: -9999px
+        visibility: hidden
+        display: none
