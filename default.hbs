@@ -23,14 +23,12 @@
 
     <meta name="google-site-verification" content="">
     <meta property="fb:admins" content="">
-    
     <script src="/assets/js/headroom.js"></script>
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{meta_description}}">
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/vendor/jQuery.mmenu/src/css/jquery.mmenu.css" />
     <link rel="stylesheet" type="text/css" href="/vendor/highlightjs/styles/default.css">
     <link rel="stylesheet" type="text/css" href="/vendor/Font-Awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/vendor/fluidbox/css/fluidbox.css">
@@ -38,7 +36,6 @@
 </head>
 <body class="{{body_class}}">
     <div>
-        
         {{{body}}}
         {{ghost_foot}}
     </div>
@@ -50,15 +47,7 @@
 
         ga('create', 'UA-XXXXXX-1', 'URL');
         ga('send', 'pageview');
-        
-        // grab an element
-        var myElement = document.querySelector("#headroom");
-        // construct an instance of Headroom, passing the element
-        var headroom  = new Headroom(myElement);
-        // initialise
-        headroom.init();
     </script>
     <script data-main="/assets/js/readium" src="/vendor/requirejs/require.js"></script>
-    
 </body>
 </html>

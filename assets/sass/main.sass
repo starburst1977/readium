@@ -30,7 +30,6 @@
         -webkit-font-feature-settings: "liga", "dlig"
         -o-font-feature-settings: "liga", "dlig"
         font-feature-settings: "liga", "dlig"
-    
     .toggle
         position: fixed
         top: 10px
@@ -45,15 +44,22 @@
             margin: 11px 0 0 13px
             color: #fff
             font-size: 21px
-    
+
     .mm-opened .toggle
         left: 450px
         i
             color: #999
-            
+
     #headroom
+        position: fixed
         background-color: #333
         color: #fff
+        width: 100%
+        z-index: 500
+        &.pinned
+            position: fixed
+        &.unpinned
+            position: static
         .headroom__container
             max-width: 700px
             margin: 0 auto
@@ -90,7 +96,6 @@
                     padding: 0
                 li
                     float: right
-                    
                 a
                     display: block
                     text-align: center
@@ -102,7 +107,7 @@
                     transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorSecondary
-    
+
     .sidebar
         position: absolute
         left: 0
@@ -163,7 +168,7 @@
                     &:hover
                         color: $colorMainLight
                         text-decoration: underline
-    
+
     .sidebar__information__footer
         padding: 0
         text-align: center
@@ -183,7 +188,7 @@
                 color: $colorMainLight
                 font-size: $rootSize*2
                 line-height: $rootSize*2
-    
+
     .contentlist
         position: absolute
         top: 0
@@ -254,7 +259,7 @@
             line-height: $rootSize*1.5
             color: $colorBlackLighter
             font-family: $fontSans
-    
+
     .contentlist__pagination
         padding: $rootSize 0
         nav
@@ -269,7 +274,7 @@
                 color: $colorBlack
                 &:hover
                     color: $colorMainDark
-    
+
     .footer
         border-top: 1px solid #f2f2f0
         padding: $rootSize 0
@@ -283,30 +288,30 @@
         font-family: $fontSans
         a
             color: $colorBlack
-    
+
     .site-footer a
         text-decoration: underline
-    
+
     .side-menu
         li a
             font-family: arial
             &:hover
                 color: $colorMain !important
-    
+
     .site-footer a:hover
         color: $colorMainDark
-    
+
     .poweredby .icons-ghost
         font-weight: 700
         text-decoration: none
-    
+
     .poweredby .icons-ghost:hover
         text-decoration: none
-    
+
     .poweredby .icons-ghost:before
         font-size: 0.6rem
         margin-right: 0.3em
-    
+
     /* The subscribe icon on the footer */
     .subscribe
         width: $rootSize*2
@@ -321,7 +326,7 @@
         border-radius: 50px
         background: #fff
         transition: box-shadow 0.5s
-    
+
     /* The RSS icon, inserted via icon font */
     .subscribe:before
         color: $colorWhiteDark
@@ -331,14 +336,14 @@
         left: 11px
         font-weight: bold
         transition: color 0.5s ease
-    
+
     .subscribe:hover
         box-shadow: rgba(0,0,0,0.05) 0 0 0 3px
         transition: box-shadow 0.25s
-    
+
     .subscribe:hover:before
         color: #50585D
-    
+
     /* CSS tooltip saying "Subscribe!" - initially hidden */
     .tooltip
         opacity: 0
@@ -357,7 +362,7 @@
         box-shadow: 0 1px 4px rgba(0,0,0,0.1)
         transition: opacity 0.3s ease, top 0.3s ease
         white-space: nowrap
-    
+
     .tooltip:after
         content: ""
         border-width: 5px 5px 0 5px
@@ -370,11 +375,11 @@
         margin-left: -5px
         z-index: 220
         width: 0
-    
+
     .subscribe:hover .tooltip
         opacity: 1
         top: -33px
-    
+
     .contentpost
         padding: 0 0
         #img-post-cover
@@ -385,7 +390,7 @@
             padding-top: 45%
             background-size: cover
             box-shadow: inset 0 -2px 1px rgba(0,0,0,0.66)
-    
+
         .contentpost__inner
             max-width: 700px
             width: 50%
@@ -393,7 +398,7 @@
             margin: 0 auto
             padding: $rootSize*5 0 0
             position: relative
-    
+
         .contentpost__sidebar
             position: absolute
             width: 160px
@@ -405,7 +410,7 @@
                 margin: $rootSize 0 $rootSize/2
                 float: right
                 border: 0px
-    
+
             .contentpost__author
                 position: relative
                 padding: 0 0 $rootSize
@@ -420,7 +425,7 @@
                     background-repeat: no-repeat
                     background-size: 100%
                     background-position: center
-    
+
                 h4
                     padding: $rootSize*6 0 $rootSize*0.5
                     margin: 0
@@ -430,7 +435,7 @@
                     color: $colorBlack
                     font-family: $fontSans
                     font-weight: 700
-    
+
                 p
                     padding: 0
                     margin: 0
@@ -439,9 +444,9 @@
                     text-align: right
                     color: $colorBlackLighter
                     font-family: $fontSans
-    
-    
-    
+
+
+
         .contentpost__footerbar
             display: none
         .contentpost__footer__back
@@ -459,7 +464,7 @@
                 font-weight: 800
                 color: $colorBlack
                 font-family: $fontSans
-    
+
             time
                 padding: 0
                 margin: 0
@@ -468,14 +473,14 @@
                 text-align: right
                 color: $colorBlackLighter
                 font-family: $fontSans
-    
-    
+
+
         .contentpost__meta
             font-size: $rootSize
             line-height: $rootSize
             color: $colorBlackLighter
             font-family: $fontSans
-    
+
         .contentpost__headline
             font-size: $rootSize*4
             line-height: $rootSize*4
@@ -484,11 +489,14 @@
             font-family: $fontSans
             letter-spacing: -2px
             font-weight: 800
-    
+
         .contentpost__articlecontent
+            z-index: 1
             font-size: $rootSize/8*11
             line-height: $rootSize/8*15
             font-family: $fontSerif
+            .fluidbox
+                z-index: 1 !important
             figure
                 position: relative
                 sup

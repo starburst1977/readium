@@ -11,9 +11,7 @@
             <li><a href="/">Home</a></li>
         </ul>
     </div>
-    
 </div>
-
 <main class="content contentpost" role="main">
     <div id="img-post-cover" style="background-image: url()"></div>
     <article class="contentpost__inner {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
@@ -30,7 +28,7 @@
             <section class="contentpost__sidebar__meta clearfix">
                 <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
             </section>
-            
+
         </div>
         {{#if tags}}<span class="contentpost__meta">On {{tags separator=" | "}}</span>{{/if}}
         <h1 class="contentpost__headline post-title" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</h1>

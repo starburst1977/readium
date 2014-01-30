@@ -1338,8 +1338,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       color: #999999; }
 
   #headroom {
+    position: fixed;
     background-color: #333333;
-    color: white; }
+    color: white;
+    width: 100%;
+    z-index: 500; }
+    #headroom.pinned {
+      position: fixed; }
+    #headroom.unpinned {
+      position: static; }
     #headroom .headroom__container {
       max-width: 700px;
       margin: 0 auto;
@@ -1762,9 +1769,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       letter-spacing: -2px;
       font-weight: 800; }
     .contentpost .contentpost__articlecontent {
+      z-index: 1;
       font-size: 22px;
       line-height: 30px;
       font-family: Vollkorn, Georgia, serif; }
+      .contentpost .contentpost__articlecontent .fluidbox {
+        z-index: 1 !important; }
       .contentpost .contentpost__articlecontent figure {
         position: relative; }
         .contentpost .contentpost__articlecontent figure sup {

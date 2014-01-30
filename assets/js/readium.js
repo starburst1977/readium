@@ -4,12 +4,13 @@ require.config({
     baseUrl: '/assets/js',
     paths: {
         jquery: '/vendor/jquery/jquery',
-        menu: '/vendor/jQuery.mmenu/src/js/jquery.mmenu.min',
         hljs: '/vendor/highlightjs/highlight.pack',
         fluidbox: '/vendor/fluidbox/jquery.fluidbox',
         imagesloaded: '/vendor/imagesloaded/imagesloaded',
         'eventEmitter/EventEmitter': '/vendor/eventEmitter/EventEmitter',
-        'eventie/eventie': '/vendor/eventie/eventie'
+        'eventie/eventie': '/vendor/eventie/eventie',
+        headroomBase: '/vendor/headroom.js/dist/headroom',
+        headroom: '/vendor/headroom.js/dist/jQuery.headroom'
     },
     shim: {
         fluidbox: {
@@ -17,19 +18,20 @@ require.config({
             exports: 'jQuery.fn.fluidbox'
         },
         imagesloaded: {
+            deps: ['jquery'],
             exports: 'jQuery.fn.imagesloaded'
         },
         hljs: {
             exports: 'hljs'
         },
-        menu: {
-            deps: ['jquery'],
-            exports: 'jQuery.fn.mmenu'
+        headroom: {
+            deps: ['jquery', 'headroomBase'],
+            exports: 'jQuery.fn.headroom'
         }
     }
 });
 
-require(['jquery', 'hljs', 'sidebar', 'fluidbox'], function($, hljs, sidebar) {
+require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
     var cover     = $('img[alt="img-post-cover"]'),
         container = $('#img-post-cover'),
         imageList = $('img');
@@ -58,5 +60,12 @@ require(['jquery', 'hljs', 'sidebar', 'fluidbox'], function($, hljs, sidebar) {
 
     hljs.initHighlighting();
     container.remove();
-    sidebar.init();
+
+    $('#headroom').headroom({
+        classes: {
+            initial : 'headroom',
+            pinned : 'pinned',
+            unpinned : 'unpinned'
+        }
+    });
 });
