@@ -1118,17 +1118,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       font-weight: 800; }
     .contentpost .contentpost__articlecontent {
       font-size: 22px;
-      line-height: 30px; }
+      line-height: 30px;
+      font-family: Vollkorn, Georgia, serif; }
+      .contentpost .contentpost__articlecontent figure {
+        position: relative; }
+        .contentpost .contentpost__articlecontent figure sup {
+          font-size: 16px;
+          color: #999999;
+          padding: 0 4px;
+          background-color: whitesmoke;
+          border-radius: 4px;
+          margin: 0 4px; }
+        .contentpost .contentpost__articlecontent figure figcaption {
+          padding: 16px 0;
+          font-size: 16px;
+          line-height: 19.2px;
+          color: #cccccc;
+          font-family: SourceSansPro, sans-serif; }
+          .contentpost .contentpost__articlecontent figure figcaption sup {
+            margin: 0 8px 0 0;
+            vertical-align: baseline;
+            font-size: 12px; }
+          .contentpost .contentpost__articlecontent figure figcaption p {
+            padding: 0 0; }
       .contentpost .contentpost__articlecontent a {
         color: #111111;
         text-decoration: underline;
         transition: color ease 0.3s; }
         .contentpost .contentpost__articlecontent a:hover {
           color: #e97f02; }
-      .contentpost .contentpost__articlecontent ::-moz-selection, .contentpost .contentpost__articlecontent ::selection {
-        color: #111111;
-        background: #e5a3ba;
-        text-shadow: none; }
       .contentpost .contentpost__articlecontent h1, .contentpost .contentpost__articlecontent h2, .contentpost .contentpost__articlecontent h3, .contentpost .contentpost__articlecontent h4, .contentpost .contentpost__articlecontent h5, .contentpost .contentpost__articlecontent h6 {
         text-rendering: optimizeLegibility;
         margin: 0;
@@ -1747,6 +1765,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       font-size: 22px;
       line-height: 30px;
       font-family: Vollkorn, Georgia, serif; }
+      .contentpost .contentpost__articlecontent figure {
+        position: relative; }
+        .contentpost .contentpost__articlecontent figure sup {
+          font-size: 16px;
+          color: #999999;
+          padding: 0 4px;
+          background-color: whitesmoke;
+          border-radius: 4px;
+          margin: 0 4px; }
+        .contentpost .contentpost__articlecontent figure figcaption {
+          position: absolute;
+          right: -230px;
+          width: 160px;
+          top: 0;
+          margin-top: 0;
+          font-size: 16px;
+          line-height: 19.2px;
+          color: #cccccc;
+          font-family: SourceSansPro, sans-serif; }
+          .contentpost .contentpost__articlecontent figure figcaption sup {
+            margin: 0 8px 0 0;
+            vertical-align: baseline;
+            font-size: 12px; }
+          .contentpost .contentpost__articlecontent figure figcaption::before {
+            width: 48px;
+            content: "";
+            height: 1px;
+            background-color: #cccccc;
+            margin: 0 0 24px;
+            border: 0px;
+            display: block; }
       .contentpost .contentpost__articlecontent a {
         color: #111111;
         text-decoration: underline;

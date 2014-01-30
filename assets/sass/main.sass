@@ -489,6 +489,37 @@
             font-size: $rootSize/8*11
             line-height: $rootSize/8*15
             font-family: $fontSerif
+            figure
+                position: relative
+                sup
+                    font-size: $rootSize
+                    color: $colorBlackLight
+                    padding: 0 $rootSize/4
+                    background-color: $colorWhiteLight
+                    border-radius: $rootSize/4
+                    margin: 0 $rootSize/4
+                figcaption
+                    position: absolute
+                    right: -230px
+                    width: 160px
+                    top: 0
+                    margin-top: 0
+                    font-size: $rootSize
+                    line-height: $rootSize*1.2
+                    color: $colorBlackLighter
+                    font-family: $fontSans
+                    sup
+                        margin: 0 $rootSize/2 0 0
+                        vertical-align: baseline
+                        font-size: $rootSize/4*3
+                    &::before
+                        width: $rootSize*3
+                        content: ""
+                        height: 1px
+                        background-color: $colorWhiteDark
+                        margin: 0 0 $rootSize*1.5
+                        border: 0px
+                        display: block
             a
                 color: $colorBlack
                 text-decoration: underline

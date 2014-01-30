@@ -461,16 +461,34 @@
         .contentpost__articlecontent
             font-size: 22px
             line-height: 30px
+            font-family: $fontSerif
+            figure
+                position: relative
+                sup
+                    font-size: $rootSize
+                    color: $colorBlackLight
+                    padding: 0 $rootSize/4
+                    background-color: $colorWhiteLight
+                    border-radius: $rootSize/4
+                    margin: 0 $rootSize/4
+                figcaption
+                    padding: $rootSize 0
+                    font-size: $rootSize
+                    line-height: $rootSize*1.2
+                    color: $colorBlackLighter
+                    font-family: $fontSans
+                    sup
+                        margin: 0 $rootSize/2 0 0
+                        vertical-align: baseline
+                        font-size: $rootSize/4*3
+                    p
+                        padding: 0 0
             a
                 color: #111
                 text-decoration: underline
                 transition: color ease .3s
                 &:hover
                     color: #e97f02
-            \::-moz-selection, ::selection
-                color: #111
-                background: #e5a3ba
-                text-shadow: none
             h1, h2, h3, h4, h5, h6
                 text-rendering: optimizeLegibility
                 margin: 0
