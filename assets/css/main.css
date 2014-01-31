@@ -1346,11 +1346,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     background-color: #333333;
     color: white;
     width: 100%;
-    z-index: 500; }
+    z-index: 500;
+    top: 0; }
     #headroom.pinned {
-      position: fixed; }
+      top: 0; }
     #headroom.unpinned {
-      position: static; }
+      top: -32px; }
     #headroom .headroom__container {
       max-width: 700px;
       margin: 0 auto;
@@ -1364,7 +1365,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       #headroom .headroom__container .headroom__custom__info {
         float: left;
         width: 30%;
-        line-height: 48px;
+        line-height: 32px;
         padding: 0 16px 2px;
         color: #999999;
         box-sizing: border-box; }
@@ -1377,7 +1378,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           text-align: center;
           color: white;
           text-decoration: none;
-          line-height: 48px;
+          line-height: 32px;
           padding: 0 16px 2px;
           color: #c02942;
           transition: all 0.25s ease-in-out; }
@@ -1399,7 +1400,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           width: auto;
           color: white;
           text-decoration: none;
-          line-height: 48px;
+          line-height: 32px;
           padding: 0 16px 2px;
           transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__custom__links a:hover {

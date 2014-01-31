@@ -62,10 +62,11 @@
         color: #fff
         width: 100%
         z-index: 500
+        top: 0
         &.pinned
-            position: fixed
+            top: 0
         &.unpinned
-            position: static
+            top: -$rootSize*2
         .headroom__container
             max-width: 700px
             margin: 0 auto
@@ -73,7 +74,7 @@
             .headroom__custom__info
                 float: left
                 width: 30%
-                line-height: $rootSize*3
+                line-height: $rootSize*2
                 padding: 0 $rootSize 2px
                 color: #999
                 box-sizing: border-box
@@ -86,7 +87,7 @@
                     text-align: center
                     color: #fff
                     text-decoration: none
-                    line-height: $rootSize*3
+                    line-height: $rootSize*2
                     padding: 0 $rootSize 2px
                     color: $colorMain
                     transition: all 0.25s ease-in-out
@@ -108,7 +109,7 @@
                     width: auto
                     color: #fff
                     text-decoration: none
-                    line-height: $rootSize*3
+                    line-height: $rootSize*2
                     padding: 0 $rootSize 2px
                     transition: all 0.25s ease-in-out
                     &:hover

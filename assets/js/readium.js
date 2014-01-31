@@ -71,8 +71,8 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
     $('#headroom').headroom({
         classes: {
             initial : 'headroom',
-            pinned : 'pinned slideInDown',
-            unpinned : 'unpinned slideOutUp'
+            pinned : 'pinned animated slideInDown',
+            unpinned : 'unpinned animated slideOutUp'
         }
     });
 });
