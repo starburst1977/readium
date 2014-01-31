@@ -51,14 +51,6 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         location.href = '/';
     });
 
-    if (cover.length > 0) {
-        container = $('#img-post-cover');
-        container.css('background-image', 'url(' + cover.attr('src') + ')');
-
-        cover.remove();
-        return;
-    }
-
     if (imageList.length > 0) {
         imageList.each(function() {
             $(this).wrap(function() {
@@ -74,5 +66,14 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
     });
 
     hljs.initHighlighting();
+
+    if (cover.length > 0) {
+        container = $('#img-post-cover');
+        container.css('background-image', 'url(' + cover.attr('src') + ')');
+
+        cover.remove();
+        return;
+    }
+
     container.remove();
 });
