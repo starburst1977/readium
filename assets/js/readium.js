@@ -39,6 +39,14 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         container = $('#img-post-cover'),
         imageList = $('img');
 
+    $('#headroom').headroom({
+        classes: {
+            initial : 'headroom',
+            pinned : 'pinned',
+            unpinned : 'unpinned'
+        }
+    });
+
     $('.sidebar__userimage').on('click', function() {
         location.href = '/';
     });
@@ -67,12 +75,4 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
 
     hljs.initHighlighting();
     container.remove();
-
-    $('#headroom').headroom({
-        classes: {
-            initial : 'headroom',
-            pinned : 'pinned',
-            unpinned : 'unpinned'
-        }
-    });
 });
