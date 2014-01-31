@@ -1680,6 +1680,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     opacity: 1;
     top: -33px; }
 
+  .tag-bigimage .contentpost__inner {
+    padding-top: 80px !important; }
+  .tag-bigimage #img-post-cover {
+    display: block !important; }
+
   .contentpost {
     padding: 0 0; }
     .contentpost #img-post-cover {
@@ -1695,7 +1700,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       width: 50%;
       min-width: 400px;
       margin: 0 auto;
-      padding: 80px 0 0;
+      padding: 160px 0 0;
       position: relative; }
     .contentpost .contentpost__sidebar {
       position: absolute;
