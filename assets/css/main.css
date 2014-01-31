@@ -1599,6 +1599,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     bottom: 0;
     width: 70%;
     overflow-x: auto; }
+    .contentlist .contentlist__full {
+      display: none; }
     .contentlist .contentlist__inner {
       width: 100%;
       max-width: 810px;
