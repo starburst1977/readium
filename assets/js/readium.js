@@ -61,10 +61,6 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         });
     }
 
-    $('a[data-fluidbox]').fluidbox({
-        viewportFill: 0.8
-    });
-
     hljs.initHighlighting();
 
     if (cover.length > 0) {
@@ -72,8 +68,11 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         container.css('background-image', 'url(' + cover.attr('src') + ')');
 
         cover.remove();
-        return;
+    } else {
+        container.remove();
     }
 
-    container.remove();
+    $('a[data-fluidbox]').fluidbox({
+        viewportFill: 0.8
+    });
 });
