@@ -1723,6 +1723,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       margin: 0 auto;
       padding: 160px 0 0;
       position: relative; }
+      .contentpost .contentpost__inner img[alt="img-post-cover"]:first {
+        display: none; }
     .contentpost .contentpost__sidebar {
       position: absolute;
       width: 160px;
