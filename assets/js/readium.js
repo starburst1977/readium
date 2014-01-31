@@ -51,16 +51,6 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         location.href = '/';
     });
 
-    if (imageList.length > 0) {
-        imageList.each(function() {
-            $(this).wrap(function() {
-                var image = $(this);
-
-                return '<a data-fluidbox href="' + image.attr('src') + '"><img src="' + image.attr('src') + '"></a>';
-            });
-        });
-    }
-
     hljs.initHighlighting();
 
     if (cover.length > 0) {
@@ -70,6 +60,16 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         cover.remove();
     } else {
         container.remove();
+    }
+
+    if (imageList.length > 0) {
+        imageList.each(function() {
+            $(this).wrap(function() {
+                var image = $(this);
+
+                return '<a data-fluidbox href="' + image.attr('src') + '"><img src="' + image.attr('src') + '"></a>';
+            });
+        });
     }
 
     $('a[data-fluidbox]').fluidbox({
