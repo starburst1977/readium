@@ -674,12 +674,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig"; }
 
+  .page-template #headroom, .post-template #headroom {
+    display: block; }
+
   #headroom {
+    display: none;
+    position: fixed;
     background-color: #333333;
-    color: white; }
+    color: white;
+    width: 100%;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    right: 0; }
     #headroom .headroom__container {
       width: 100%;
-      margin: 0 auto;
+      margin: 0;
       *zoom: 1; }
       #headroom .headroom__container:before, #headroom .headroom__container:after {
         content: "";
@@ -687,45 +697,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         line-height: 0; }
       #headroom .headroom__container:after {
         clear: both; }
-      #headroom .headroom__container .headroom__custom__info {
-        float: left;
-        width: 100%;
-        line-height: 32px;
-        padding: 0 16px;
-        color: #999999;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; }
       #headroom .headroom__container .headroom__title {
         float: left;
-        width: 100%;
+        width: 40%;
+        box-sizing: border-box;
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; }
+        text-overflow: ellipsis; }
         #headroom .headroom__container .headroom__title a {
           display: block;
           text-align: left;
           color: white;
+          padding: 0 16px;
           text-decoration: none;
           line-height: 32px;
-          padding: 2px 16px 0;
-          color: #c02942; }
+          padding: 0 16px 2px;
+          color: #d95b43;
+          transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__title a:hover {
             background-color: #c02942;
             color: white; }
       #headroom .headroom__container .headroom__custom__links {
         float: right;
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box; }
+        width: 58%;
+        box-sizing: border-box;
+        height: 32px;
+        overflow: hidden;
+        display: block; }
         #headroom .headroom__container .headroom__custom__links ul {
-          padding: 0;
           margin: 0;
-          width: 100%; }
+          padding: 0; }
         #headroom .headroom__container .headroom__custom__links li {
-          float: left;
-          padding: 0;
-          margin: 0; }
+          float: right; }
         #headroom .headroom__container .headroom__custom__links a {
           display: block;
           text-align: center;
@@ -733,7 +735,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           color: white;
           text-decoration: none;
           line-height: 32px;
-          padding: 0 16px 3px; }
+          padding: 0 16px 2px;
+          transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__custom__links a:hover {
             background-color: #53777a; }
 
@@ -1436,11 +1439,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       color: white;
       font-size: 21px; }
 
-  .mm-opened .toggle {
-    left: 450px; }
-    .mm-opened .toggle i {
-      color: #999999; }
-
   .page-template #headroom, .post-template #headroom {
     display: block; }
 
@@ -1473,23 +1471,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         box-sizing: border-box; }
       #headroom .headroom__container .headroom__title {
         float: left;
-        width: 20%;
-        box-sizing: border-box; }
+        width: 30%;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis; }
         #headroom .headroom__container .headroom__title a {
-          display: block;
-          text-align: center;
+          display: inline-block;
+          text-align: left;
+          padding: 0 16px;
           color: white;
+          width: auto;
           text-decoration: none;
           line-height: 32px;
-          padding: 0 16px 2px;
-          color: #c02942;
+          padding: 0 24px 2px;
+          color: #d95b43;
           transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__title a:hover {
             background-color: #c02942;
             color: white; }
       #headroom .headroom__container .headroom__custom__links {
         float: right;
-        width: 50%;
+        width: 70%;
         box-sizing: border-box; }
         #headroom .headroom__container .headroom__custom__links ul {
           margin: 0;
@@ -1503,7 +1505,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           color: white;
           text-decoration: none;
           line-height: 32px;
-          padding: 0 16px 2px;
+          padding: 0 24px 2px;
           transition: all 0.25s ease-in-out; }
           #headroom .headroom__container .headroom__custom__links a:hover {
             background-color: #53777a; }

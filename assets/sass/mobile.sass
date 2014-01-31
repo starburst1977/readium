@@ -22,53 +22,54 @@
         -webkit-font-feature-settings: "liga", "dlig"
         -o-font-feature-settings: "liga", "dlig"
         font-feature-settings: "liga", "dlig"
+    .page-template, .post-template
+        #headroom
+            display: block
     #headroom
+        display: none
+        position: fixed
         background-color: #333
         color: #fff
+        width: 100%
+        z-index: 500
+        top: 0
+        left: 0
+        right: 0
         .headroom__container
             width: 100%
-            margin: 0 auto
+            margin: 0
             +clearfix
-            .headroom__custom__info
-                float: left
-                width: 100%
-                line-height: $rootSize*2
-                padding: 0 $rootSize
-                color: #999
-                overflow: hidden
-                text-overflow: ellipsis
-                white-space: nowrap
             .headroom__title
                 float: left
-                width: 100%
+                width: 40%
+                box-sizing: border-box
                 overflow: hidden
                 text-overflow: ellipsis
-                white-space: nowrap
                 a
                     display: block
                     text-align: left
                     color: #fff
+                    padding: 0 $rootSize
                     text-decoration: none
                     line-height: $rootSize*2
-                    padding: 2px $rootSize 0
-                    color: $colorMain
+                    padding: 0 $rootSize 2px
+                    color: $colorMainLight
+                    transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorMain
                         color: #fff
             .headroom__custom__links
                 float: right
-                width: 100%
-                padding: 0
+                width: 58%
                 box-sizing: border-box
+                height: $rootSize*2
+                overflow: hidden
+                display: block
                 ul
-                    padding: 0
                     margin: 0
-                    width: 100%
+                    padding: 0
                 li
-                    float: left
-                    padding: 0
-                    margin: 0
-                    
+                    float: right
                 a
                     display: block
                     text-align: center
@@ -76,7 +77,8 @@
                     color: #fff
                     text-decoration: none
                     line-height: $rootSize*2
-                    padding: 0 $rootSize 3px
+                    padding: 0 $rootSize 2px
+                    transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorSecondary
     .sidebar

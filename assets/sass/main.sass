@@ -148,11 +148,6 @@
             color: #fff
             font-size: 21px
 
-    .mm-opened .toggle
-        left: 450px
-        i
-            color: #999
-
     .page-template, .post-template
         #headroom
             display: block
@@ -180,23 +175,27 @@
                 box-sizing: border-box
             .headroom__title
                 float: left
-                width: 20%
+                width: 30%
                 box-sizing: border-box
+                overflow: hidden
+                text-overflow: ellipsis
                 a
-                    display: block
-                    text-align: center
+                    display: inline-block
+                    text-align: left
+                    padding: 0 $rootSize
                     color: #fff
+                    width: auto
                     text-decoration: none
                     line-height: $rootSize*2
-                    padding: 0 $rootSize 2px
-                    color: $colorMain
+                    padding: 0 $rootSize*1.5 2px
+                    color: $colorMainLight
                     transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorMain
                         color: #fff
             .headroom__custom__links
                 float: right
-                width: 50%
+                width: 70%
                 box-sizing: border-box
                 ul
                     margin: 0
@@ -210,7 +209,7 @@
                     color: #fff
                     text-decoration: none
                     line-height: $rootSize*2
-                    padding: 0 $rootSize 2px
+                    padding: 0 $rootSize*1.5 2px
                     transition: all 0.25s ease-in-out
                     &:hover
                         background-color: $colorSecondary
