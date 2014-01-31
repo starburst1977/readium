@@ -8,6 +8,20 @@
 .cf
     +clearfix
 
+@keyframes slideInDown
+    0%
+        opacity: 0
+        transform: translateY(-2000px)
+    100%
+        transform: translateY(0)
+
+@keyframes slideOutUp
+    0%
+        transform: translateY(0)
+    100%
+        opacity: 0
+        transform: translateY(-2000px)
+
 @media only screen and (min-width: 921px)
     body
         background-color: $colorWhite
@@ -63,10 +77,14 @@
         width: 100%
         z-index: 500
         top: 0
+        animation-duration: 1s
+        animation-fill-mode: both
         &.pinned
             top: 0
+            animation-name: slideInDown
         &.unpinned
-            top: -$rootSize*2
+            top: -$rootSize * 2 + 1px
+            animation-name: slideOutUp
         .headroom__container
             max-width: 700px
             margin: 0 auto
