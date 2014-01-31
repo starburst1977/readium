@@ -36,6 +36,10 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         container = $('#img-post-cover'),
         imageList = $('img');
 
+    $('.sidebar__userimage').on('click', function() {
+        location.href = '/';
+    });
+
     if (cover.length > 0) {
         container = $('#img-post-cover');
         container.css('background-image', 'url(' + cover.attr('src') + ')');

@@ -1337,7 +1337,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .mm-opened .toggle i {
       color: #999999; }
 
-  .page-template #headroom, .post-template #headroom {
+  .template-page #headroom, .template-post #headroom {
     display: block; }
 
   #headroom {
@@ -1431,6 +1431,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       bottom: 0;
       padding: 50px 10% 10%; }
       .sidebar .sidebar__information .sidebar__userimage {
+        cursor: pointer;
         width: 80px;
         height: 80px;
         border-radius: 80px;
