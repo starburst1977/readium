@@ -7,7 +7,108 @@
 
 .cf
     +clearfix
+.animated
+    -webkit-animation-duration: .5s
+    -moz-animation-duration: .5s
+    -o-animation-duration: .5s
+    animation-duration: .5s
+    -webkit-animation-fill-mode: both
+    -moz-animation-fill-mode: both
+    -o-animation-fill-mode: both
+    animation-fill-mode: both
+    &.slideDown
+        -webkit-animation-name: slideDown
+        -moz-animation-name: slideDown
+        -o-animation-name: slideDown
+        animation-name: slideDown
+    &.slideUp
+        -webkit-animation-name: slideUp
+        -moz-animation-name: slideUp
+        -o-animation-name: slideUp
+        animation-name: slideUp
 
+@-webkit-keyframes slideDown
+    0%
+        -webkit-transform: translateY(-4em)
+    100%
+        -webkit-transform: translateY(0)
+
+
+@-moz-keyframes slideDown
+    0%
+        -moz-transform: translateY(-4em)
+    100%
+        -moz-transform: translateY(0)
+
+
+@-o-keyframes slideDown
+    0%
+        -o-transform: translateY(-4em)
+    100%
+        -o-transform: translateY(0)
+
+
+@keyframes slideDown
+    0%
+        transform: translateY(-4em)
+    100%
+        transform: translateY(0)
+
+
+@-webkit-keyframes slideUp
+    0%
+        -webkit-transform: translateY(0)
+    100%
+        -webkit-transform: translateY(-4em)
+
+
+@-moz-keyframes slideUp
+    0%
+        -moz-transform: translateY(0)
+    100%
+        -moz-transform: translateY(-4em)
+
+
+@-o-keyframes slideUp
+    0%
+        -o-transform: translateY(0)
+    100%
+        -o-transform: translateY(-4em)
+
+
+@keyframes slideUp
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-4em)
+
+
+@-webkit-keyframes swingInX
+    0%
+        -webkit-transform: perspective(400px) rotateX(-90deg)
+    100%
+        -webkit-transform: perspective(400px) rotateX(0deg)
+
+
+@-moz-keyframes swingInX
+    0%
+        -moz-transform: perspective(400px) rotateX(-90deg)
+    100%
+        -moz-transform: perspective(400px) rotateX(0deg)
+
+
+@-o-keyframes swingInX
+    0%
+        -o-transform: perspective(400px) rotateX(-90deg)
+    100%
+        -o-transform: perspective(400px) rotateX(0deg)
+
+
+@keyframes swingInX
+    0%
+        transform: perspective(400px) rotateX(-90deg)
+    100%
+        transform: perspective(400px) rotateX(0deg)
 
 @media only screen and (min-width: 921px)
     body
