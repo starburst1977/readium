@@ -409,7 +409,6 @@
             padding-top: 45%
             background-size: cover
             box-shadow: inset 0 -2px 1px rgba(0,0,0,0.66)
-
         .contentpost__inner
             max-width: 700px
             width: 50%
@@ -417,7 +416,8 @@
             margin: 0 auto
             padding: $rootSize*10 0 0
             position: relative
-
+            img[alt="img-post-cover"]:first
+                display: none
         .contentpost__sidebar
             position: absolute
             width: 160px
