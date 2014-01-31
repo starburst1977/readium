@@ -1497,6 +1497,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
       padding: 50px 85px; }
     .contentlist .contentlist__featured {
       padding: 0 0 32px; }
+      .contentlist .contentlist__featured .contentlist__headline {
+        display: none; }
+        .contentlist .contentlist__featured .contentlist__headline:first-child {
+          display: block; }
     .contentlist .contentlist__headline {
       text-transform: uppercase;
       font-size: 12px;

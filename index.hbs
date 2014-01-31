@@ -20,12 +20,10 @@
 </header>
 <main class="contentlist" role="main">
     <section class="contentlist__inner">
-        {{! Each post will be output using this markup }}
         <div class="contentlist__featured">
-            <h4 class="contentlist__headline">Featured</h4>
             {{#foreach posts}}
-                {{@key}}
                 {{#if featured}}
+                    <h4 class="contentlist__headline">Featured</h4>
                     <article class="contentlist__article {{post_class}} featured" itemscope itemtype="http://schema.org/BlogPosting" role="article">
                         <header class="post-header">
                             <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
@@ -44,7 +42,6 @@
         </div>
         <h4 class="contentlist__headline">Regular</h4>
         {{#foreach posts}}
-            {{@key}}
             {{#if featured}}
             {{else}}
                 <article class="contentlist__article {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
