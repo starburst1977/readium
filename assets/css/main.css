@@ -1347,11 +1347,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     color: white;
     width: 100%;
     z-index: 500;
-    top: 0; }
-    #headroom.pinned {
-      top: 0; }
-    #headroom.unpinned {
-      top: -31px; }
+    top: 0;
+    left: 0;
+    right: 0; }
     #headroom .headroom__container {
       max-width: 700px;
       margin: 0 auto;

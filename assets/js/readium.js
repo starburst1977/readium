@@ -42,8 +42,8 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
     $('#headroom').headroom({
         classes: {
             initial : 'animated',
-            pinned : 'slideOutUp',
-            unpinned : 'slideInOut'
+            pinned : 'slideInDown',
+            unpinned : 'slideOutUp'
         }
     });
 
