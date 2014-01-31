@@ -1337,7 +1337,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     .mm-opened .toggle i {
       color: #999999; }
 
-  .template-page #headroom, .template-post #headroom {
+  .page-template #headroom, .post-template #headroom {
     display: block; }
 
   #headroom {

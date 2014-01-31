@@ -1,7 +1,10 @@
 'use strict';
 
 require.config({
+    name: 'readium',
+    out: 'readium.min.js',
     baseUrl: '/assets/js',
+    dir: '../../../readium',
     paths: {
         jquery: '/vendor/jquery/jquery',
         hljs: '/vendor/highlightjs/highlight.pack',
