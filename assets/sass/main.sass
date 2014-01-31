@@ -7,6 +7,7 @@
 
 .cf
     +clearfix
+
 @media only screen and (min-width: 921px)
     body
         background-color: $colorWhite
@@ -50,7 +51,12 @@
         i
             color: #999
 
+    .page-template, .post-template
+        #headroom
+            display: block
+
     #headroom
+        display: none
         position: fixed
         background-color: #333
         color: #fff
