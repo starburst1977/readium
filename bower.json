@@ -14,7 +14,6 @@
         "highlightjs": "7.5.0",
         "imagesloaded": "3.1.4",
         "fluidbox": "https://github.com/terrymun/Fluidbox.git",
-        "headroom.js": "0.4.0",
-        "animate.css": "3.0.0"
+        "headroom.js": "0.4.0"
     }
 }
