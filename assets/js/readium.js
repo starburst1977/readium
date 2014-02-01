@@ -2,7 +2,6 @@
 
 require.config({
     name: 'readium',
-    out: 'readium.min.js',
     baseUrl: '/assets/js',
     dir: '../../../readium',
     paths: {

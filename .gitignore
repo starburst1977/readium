@@ -3,3 +3,4 @@
 .svn
 vendor
 node_modules
+.sass-cache
