@@ -3,6 +3,15 @@ module.exports = function Gruntfile(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'assets/js/readium-built.js',
+                dest: 'assets/js/readium-built.js'
+            }
+        },
         requirejs: {
             compile: {
                 options: {
@@ -47,13 +56,26 @@ module.exports = function Gruntfile(grunt) {
                     'assets/css/main.css': 'assets/sass/main.sass'
                 }
             }
+        },
+        watch: {
+            css: {
+                files: 'assets/sass/main.sass',
+                dest: 'assets/css/main.css',
+                tasks: ['sass'],
+                options: {
+                    livereload: true,
+                },
+            },
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('listen', ['watch']);
+    grunt.registerTask('build', ['sass', 'requirejs', 'uglify']);
     grunt.registerTask('default', ['requirejs']);
 
 };
