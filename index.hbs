@@ -36,9 +36,9 @@
                             {{content}}
                         </section>
                         <span class="contentlist__article__meta post-meta">
-                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>&nbsp;&nbsp;·&nbsp;&nbsp;<span class="ttr"></span>
                             {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
-                            <span class="ttr"></span>
+                            
                         </span>
                     </article>
                 {{/if}}
@@ -60,9 +60,8 @@
                         {{body}}
                     </section>
                     <span class="contentlist__article__meta post-meta">
-                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>&nbsp;&nbsp;·&nbsp;&nbsp;<span class="ttr"></span>
                         {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
-                        <span class="ttr"></span>
                     </span>
                 </article>
             {{/if}}
