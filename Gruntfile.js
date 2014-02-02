@@ -65,6 +65,9 @@ module.exports = function Gruntfile(grunt) {
             }
         },
         sass: {
+            options: {
+                style: 'compressed'
+            },
             dist: {
                 files: {
                     'assets/css/main.css': 'assets/sass/main.sass'
@@ -89,8 +92,8 @@ module.exports = function Gruntfile(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-release-it');
 
+    grunt.registerTask('collect', require('./lib/collect')(grunt));
     grunt.registerTask('listen', ['watch']);
-    grunt.registerTask('build', ['sass', 'requirejs', 'uglify']);
-    grunt.registerTask('default', ['requirejs']);
+    grunt.registerTask('build', ['sass', 'requirejs', 'uglify', 'collect']);
 
 };
