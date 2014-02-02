@@ -11,11 +11,8 @@ Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiar
 ### Requirements
 - node >= 0.8.x
 
-### Use dist files
-Upload the latest `readium-VERSION.zip` file to your ghost instance and restart it. Choose readium and enjoy!
-
 ### Compile
-Run `make` and do your changes. Once you are done, run `make release`. Enter the required data and pick the created zipfile out of your dist/ directory.
+Run `npm install` and do your changes. Once you are done, run `grunt build`. Once the script is done pick your data out of `dist/`.
 
 ## Features
 - Mobile-First Design Aproach
