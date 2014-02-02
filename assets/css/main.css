@@ -1230,6 +1230,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           margin: 0.8em 0 0.8em 1.5em;
           font-size: 0.9em;
           color: #cccccc; }
+      .contentpost .contentpost__articlecontent ul, .contentpost .contentpost__articlecontent ol {
+        padding: 0 0 32px; }
+        .contentpost .contentpost__articlecontent ul li, .contentpost .contentpost__articlecontent ol li {
+          margin-left: 32px;
+          list-style-type: disc; }
       .contentpost .contentpost__articlecontent kbd {
         display: inline-block;
         margin-bottom: 8px;
