@@ -3,6 +3,15 @@ module.exports = function Gruntfile(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        'release-it': {
+            options: {
+                pkgFiles: ['package.json'],
+                commitMessage: 'Release %s',
+                tagName: '%s',
+                tagAnnotation: 'Release %s',
+                buildCommand: false
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -73,6 +82,7 @@ module.exports = function Gruntfile(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-release-it');
 
     grunt.registerTask('listen', ['watch']);
     grunt.registerTask('build', ['sass', 'requirejs', 'uglify']);
