@@ -93,7 +93,7 @@ module.exports = function Gruntfile(grunt) {
             css: {
                 files: 'assets/sass/main.sass',
                 dest: 'assets/css/main.css',
-                tasks: ['sass'],
+                tasks: ['sass', 'cssmin'],
                 options: {
                     livereload: true,
                 },
