@@ -25,9 +25,9 @@ module.exports = function Gruntfile(grunt) {
                 files: {
                     'assets/css/main.css': [
                         'assets/css/main.css',
-                        '/vendor/highlightjs/styles/default.css',
-                        '/vendor/Font-Awesome/css/font-awesome.min.css',
-                        '/vendor/fluidbox/css/fluidbox.css'
+                        'vendor/highlightjs/styles/default.css',
+                        'vendor/Font-Awesome/css/font-awesome.min.css',
+                        'vendor/fluidbox/css/fluidbox.css'
                     ]
                 }
             }
