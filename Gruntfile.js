@@ -17,6 +17,21 @@ module.exports = function Gruntfile(grunt) {
                 publish: false
             }
         },
+        cssmin: {
+            add_banner: {
+                options: {
+                    banner: '/* Readium Ghost Theme */'
+                },
+                files: {
+                    'assets/css/main.css': [
+                        'assets/css/main.css',
+                        '/vendor/highlightjs/styles/default.css',
+                        '/vendor/Font-Awesome/css/font-awesome.min.css',
+                        '/vendor/fluidbox/css/fluidbox.css'
+                    ]
+                }
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -91,9 +106,10 @@ module.exports = function Gruntfile(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-release-it');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.registerTask('collect', require('./lib/collect')(grunt));
     grunt.registerTask('listen', ['watch']);
-    grunt.registerTask('build', ['sass', 'requirejs', 'uglify', 'collect']);
+    grunt.registerTask('build', ['sass', 'cssmin', 'requirejs', 'uglify', 'collect']);
 
 };

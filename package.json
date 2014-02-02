@@ -1,6 +1,6 @@
 {
   "name": "Readium",
-  "version": "1.4.0-rc1",
+  "version": "1.2.1",
   "dependencies": {
     "adm-zip": "~0.4.2",
     "archiver": "~0.5.2",
@@ -12,6 +12,7 @@
     "grunt-contrib-requirejs": "~0.4.0",
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-release-it": "~0.1.0"
+    "grunt-release-it": "~0.1.0",
+    "grunt-contrib-cssmin": "~0.7.0"
   }
 }

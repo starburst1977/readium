@@ -1,0 +1,54 @@
+{{!< default}}
+
+<main class="content contentpost" role="main">
+    <div id="img-post-cover" style="display: none; background-image: url('{{@blog.cover}}')"></div>
+    <article class="contentpost__inner {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+        {{#post}}
+        <div class="contentpost__sidebar">
+            <section class="contentpost__author clearfix">
+                <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
+                <h4 itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">{{author.name}}</h4>
+                <p itemprop="description">{{author.bio}}</p>
+            </section>
+            <div class="clearfix">
+                <hr>
+            </div>
+            <section class="contentpost__sidebar__meta clearfix">
+                <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+
+            </section>
+        </div>
+        {{#if tags}}<span class="contentpost__meta">On {{tags separator=" | "}}</span>{{/if}}
+        <h1 class="contentpost__headline post-title" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</h1>
+        <section class="contentpost__articlecontent post-content">
+            {{content}}
+        </section>
+        <footer class="contentpost__footer post-footer">
+            <section class="share">
+                <a class="fa fa-twitter" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="fa fa-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+            <div class="contentpost__footerbar">
+                <div class="contentpost__userimage" style="background-image: url({{author.image}})"></div>
+                <section class="contentpost__author clearfix">
+                    <h4>{{author.name}}</h4>
+                    <p>{{author.bio}}</p>
+                </section>
+                <section class="contentpost__sidebar__meta clearfix">
+                    <h5>Published:</h5><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                </section>
+            </div>
+        </footer>
+        {{/post}}
+    </article>
+</main>
