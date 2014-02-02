@@ -9,7 +9,12 @@ module.exports = function Gruntfile(grunt) {
                 commitMessage: 'Release %s',
                 tagName: '%s',
                 tagAnnotation: 'Release %s',
-                buildCommand: false
+                buildCommand: 'grunt build',
+                distRepo: false,
+                distStageDir: '.stage',
+                distFiles: ['dist/**/*'],
+                distBase: 'dist',
+                publish: false
             }
         },
         uglify: {
