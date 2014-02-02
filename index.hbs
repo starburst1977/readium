@@ -32,9 +32,13 @@
                         <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
                             <p>{{excerpt characters="200"}}&hellip; <a href="{{url}}" itemprop="url">Read more.</a></p>
                         </section>
+                        <section class="contentlist__full">
+                            {{content}}
+                        </section>
                         <span class="contentlist__article__meta post-meta">
                             <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                             {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
+                            <span class="ttr"></span>
                         </span>
                     </article>
                 {{/if}}
@@ -50,11 +54,15 @@
                         <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                     </header>
                     <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
-                        <p>{{excerpt characters="250"}}&hellip; <a href="{{url}}" itemprop="url">&hellip;Read more.</a></p>
+                        <p>{{excerpt characters="250"}}&hellip; <a href="{{url}}" itemprop="url">Read more.</a></p>
+                    </section>
+                    <section class="contentlist__full">
+                        {{body}}
                     </section>
                     <span class="contentlist__article__meta post-meta">
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                         {{#if tags}}&nbsp;&nbsp;·&nbsp;&nbsp;{{author.name}} on {{tags}}{{/if}}
+                        <span class="ttr"></span>
                     </span>
                 </article>
             {{/if}}

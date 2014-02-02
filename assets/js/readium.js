@@ -2,7 +2,6 @@
 
 require.config({
     name: 'readium',
-    out: 'readium.min.js',
     baseUrl: '/assets/js',
     dir: '../../../readium',
     paths: {
@@ -34,10 +33,11 @@ require.config({
     }
 });
 
-require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
-    var cover     = $('img[alt="img-post-cover"]'),
-        container = $('#img-post-cover'),
-        imageList = $('img');
+require(['jquery', 'hljs', 'ttr', 'fluidbox', 'headroom'], function($, hljs, ttr) {
+    var cover       = $('img[alt="img-post-cover"]'),
+        container   = $('#img-post-cover'),
+        imageList   = $('img'),
+        articleList = $('.contentlist__article');
 
     $('#headroom').headroom({
         classes: {
@@ -60,6 +60,15 @@ require(['jquery', 'hljs', 'fluidbox', 'headroom'], function($, hljs) {
         cover.remove();
     } else {
         container.remove();
+    }
+
+    if (articleList.length > 0) {
+        articleList.each(function() {
+            var article              = $(this),
+                estimatedReadingTime = ttr(article.find('.contentlist__full').text());
+
+            article.find('.ttr').html(estimatedReadingTime + ' min to read');
+        });
     }
 
     if (imageList.length > 0) {

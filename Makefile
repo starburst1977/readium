@@ -22,9 +22,10 @@ install:
 
 release:
 	mkdir -p dist
+	./node_modules/.bin/r.js -o build.js
 	@while [ -z "$$VERSION" ]; do \
 		read -r -p "Version name: " VERSION;\
 	done && \
-	zip "./dist/readium-$$VERSION.zip" -x /dist/* -r ./
+	zip "./dist/readium-$$VERSION.zip" -x /vendor/* -x /dist/* -r ./
 
 .PHONY: install
