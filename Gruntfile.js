@@ -20,7 +20,8 @@ module.exports = function Gruntfile(grunt) {
         cssmin: {
             add_banner: {
                 options: {
-                    banner: '/* Readium Ghost Theme */'
+                    banner: '/* Readium Ghost Theme */',
+                    keepSpecialComments: 0
                 },
                 files: {
                     'assets/css/main.css': [
@@ -95,7 +96,7 @@ module.exports = function Gruntfile(grunt) {
                 dest: 'assets/css/main.css',
                 tasks: ['sass', 'cssmin'],
                 options: {
-                    livereload: true,
+                    livereload: true
                 },
             },
         }
