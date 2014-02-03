@@ -634,6 +634,10 @@
                     line-height: $rootSize*1.2
                     color: $colorBlackLighter
                     font-family: $fontSans
+                    a
+                        color: inherit
+                        &:hover
+                            color: $colorMain
                     sup
                         margin: 0 $rootSize/2 0 0
                         vertical-align: baseline
@@ -743,6 +747,8 @@
                     list-style-type: disc
             ol li
                 list-style-type: decimal
+            strong, b
+                font-weight: bolder
             kbd
                 display: inline-block
                 margin-bottom: $rootSize/2
@@ -1162,6 +1168,12 @@
         &:hover
             color: #75d50b!important
     
+    .tag-bigimage .contentpost
+        .contentpost__inner
+            padding-top: $rootSize !important
+        #img-post-cover
+            display: block !important
+    
     .contentpost
         padding: 0
         .contentpost__logo
@@ -1189,6 +1201,7 @@
             max-width: 550px
             width: 90%
             margin: 0 auto
+            padding-top: $rootSize*5 !important
             position: relative
         .contentpost__sidebar
             display: none
@@ -1289,6 +1302,10 @@
                         font-size: $rootSize/4*3
                     p
                         padding: 0 0
+                    a
+                        color: inherit
+                        &:hover
+                            color: $colorMain
             a
                 color: #111
                 text-decoration: underline
