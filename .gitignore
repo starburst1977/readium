@@ -4,3 +4,8 @@
 vendor
 node_modules
 .sass-cache
+assets/fonts/FontAwesome.otf
+assets/fonts/fontawesome-webfont.eot
+assets/fonts/fontawesome-webfont.svg
+assets/fonts/fontawesome-webfont.ttf
+assets/fonts/fontawesome-webfont.woff
