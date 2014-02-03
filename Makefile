@@ -6,9 +6,13 @@ links = FontAwesome.otf fontawesome-webfont.eot fontawesome-webfont.svg fontawes
 
 all: install link
 
-install:
-	-$(NPM) install
-	-$(BOWER) install
+install: install_npm install_bower link
+
+install_npm:
+	$(NPM) install
+
+install_bower:
+	$(BOWER) install
 
 link:
 	for i in $(links); \

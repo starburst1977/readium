@@ -8,11 +8,7 @@ You can have a look at it here: [http://www.svenread.com/readium-ghost-theme/](h
 Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
 
 ## Install
-### Requirements
-- node >= 0.8.x
-
-### Compile
-Run `npm install` and do your changes. Once you are done, run `grunt build`. Once the script is done pick your data out of `dist/`.
+    make
 
 ## Features
 - Mobile-First Design Aproach
