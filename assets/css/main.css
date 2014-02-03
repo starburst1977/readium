@@ -1921,7 +1921,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           font-size: 16px;
           line-height: 19.2px;
           color: #cccccc;
-          font-family: SourceSansPro, sans-serif; }
+          font-family: SourceSansPro, sans-serif;
+          font-weight: 400 !important; }
           .contentpost .contentpost__articlecontent figure figcaption a {
             color: inherit; }
             .contentpost .contentpost__articlecontent figure figcaption a:hover {
@@ -1943,7 +1944,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         text-decoration: underline;
         transition: color ease 0.3s; }
         .contentpost .contentpost__articlecontent a:hover {
-          color: #542437; }
+          color: #c02942; }
       .contentpost .contentpost__articlecontent h1, .contentpost .contentpost__articlecontent h2, .contentpost .contentpost__articlecontent h3, .contentpost .contentpost__articlecontent h4, .contentpost .contentpost__articlecontent h5, .contentpost .contentpost__articlecontent h6 {
         text-rendering: optimizeLegibility;
         margin: 0 0;
@@ -2585,7 +2586,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
           font-size: 16px;
           line-height: 19.2px;
           color: #cccccc;
-          font-family: SourceSansPro, sans-serif; }
+          font-family: SourceSansPro, sans-serif;
+          font-weight: 400 !important; }
           .contentpost .contentpost__articlecontent figure figcaption sup {
             margin: 0 8px 0 0;
             vertical-align: baseline;
@@ -2601,7 +2603,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
         text-decoration: underline;
         transition: color ease 0.3s; }
         .contentpost .contentpost__articlecontent a:hover {
-          color: #e97f02; }
+          color: #c02942; }
       .contentpost .contentpost__articlecontent h1, .contentpost .contentpost__articlecontent h2, .contentpost .contentpost__articlecontent h3, .contentpost .contentpost__articlecontent h4, .contentpost .contentpost__articlecontent h5, .contentpost .contentpost__articlecontent h6 {
         text-rendering: optimizeLegibility;
         margin: 0;
