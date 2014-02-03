@@ -1,5 +1,6 @@
 # Readium Ghost Theme
-Hey there, my name is Sven Read. I love building themes & I love [Ghost](https://en.ghost.org). And I always wanted to have a possibility to blog that's similar to Medium.com,
+![](https://raw.github.com/mystically/readium/master/assets/img/readium-1.png)
+We love building themes & We also love [Ghost](https://en.ghost.org). And we always wanted to have a possibility to blog that's similar to Medium.com,
 but without the drawbacks (like no control over your data & loss of all rights to your content, etc.). So I made myself a theme for Ghost
 that takes the good parts from Medium.com & mixes them with stuff I would do differently. And this is what I ended up with.
 
@@ -30,7 +31,7 @@ Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiar
 ## If your Ghost blog is self hosted:
 1. Copy the contents of the .zip file into /content/themes/.
 2. You need to restart your Ghost instance. After that you can switch themes inside your Ghost admin (http://your.domain.com/ghost/settings/general/). Scroll down and choose "Chiara" from the theme dropdown.
-3. Now you can customize your logo, langing page image (if you choose to have one), as well as user images and texts to fit the theme.
+3. Now you can customize your logo, langing page image (if you choose to have one), as well as user images and texts to fit the theme)
 4. Have fun.
 
 ## If your Ghost blog is hosted on the Ghost hosting platform:
