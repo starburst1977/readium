@@ -1,15 +1,12 @@
-# Readium Ghost Theme
 ![](https://raw.github.com/mystically/readium/master/assets/img/readium-1.png)
+
 We love building themes & We also love [Ghost](https://en.ghost.org). And we always wanted to have a possibility to blog that's similar to Medium.com,
-but without the drawbacks (like no control over your data & loss of all rights to your content, etc.). So I made myself a theme for Ghost
-that takes the good parts from Medium.com & mixes them with stuff I would do differently. And this is what I ended up with.
+but without the drawbacks (like no control over your data & loss of all rights to your content, etc.). So we made a theme for Ghost
+that takes the good parts from Medium.com & mixes them with stuff I would do differently.
 
 You can have a look at it here: [http://www.svenread.com/readium-ghost-theme/](http://www.svenread.com/readium-ghost-theme/)
 
-Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
-
-## Install
-    make
+Don't forget to check out our other themes [Marisa](http://crtv.mk/eOTs) & [Chiara](http://crtv.mk/tSYt).
 
 ## Features
 - Mobile-First Design Aproach
@@ -43,14 +40,6 @@ Don't forget to check out my other themes [Marisa](http://crtv.mk/eOTs) & [Chiar
 - If you want a big article image, just give it the this alt attribute -> alt="img-post-cover".
 - You should pay attention to image size. Don't go to crazy.
 - Some style configuration possible inside essentials.less.
-
-## Thanks go to...
-- FontAwesome by Dave Gandy
-- Highlight JS by Ivan Sagalaev
-- Friedrich Althausen for Vollkorn & Adobe for Source Sans Pro
-- Marc Binder & Kevin Read for helping with JS
-- The awesome guys that make Ghost
-- The really rad guys that design Medium
 
 ## License
 The MIT License (MIT)
