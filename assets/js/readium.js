@@ -55,7 +55,8 @@ require(['jquery', 'hljs', 'ttr', 'fluidbox', 'headroom'], function($, hljs, ttr
 
     if (cover.length > 0) {
         container = $('#img-post-cover');
-        container.css('background-image', 'url(' + cover.attr('src') + ')');
+        container.css('background-image', 'url(' + cover.attr('src') + ')')
+                 .show();
 
         cover.remove();
     } else {
