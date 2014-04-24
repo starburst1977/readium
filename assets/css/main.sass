@@ -10,6 +10,10 @@ $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
 
 @include font-face(icons, '../fonts/icons', normal, normal)
 
+@mixin respond-to($breakpoint)
+	@media only screen and (max-width: $breakpoint + px)
+		@content
+
 /* Apply these base styles to all icons */
 .icon-ghost:before,
 .icon-feed:before,
@@ -97,6 +101,9 @@ body
 	margin: 0 auto
 	position: relative
 	padding: 0
+	@include box-sizing(border-box)
+	@include respond-to(800)
+		padding: 0 $rs
 	.blog-logo
 		width: $rs*7.5
 		height: $rs*7.5
@@ -137,6 +144,9 @@ body
 	width: 100%
 	max-width: 640px
 	margin: 0 auto
+	@include box-sizing(border-box)
+	@include respond-to(800)
+		padding: 0 $rs*2
 	article
 		padding: 40px 0
 		border-bottom: 1px solid #f2f2f0
@@ -259,6 +269,10 @@ body
 			right: 30%
 			z-index: 999
 			font-family: $font-sans
+			@include box-sizing(border-box)
+			@include respond-to(800)
+				left: $rs
+				right: $rs
 		.post-title
 			font-weight: 700
 			font-style: normal
@@ -462,6 +476,10 @@ body
 		.isLeft
 			float: left
 			width: 47%
+			@include box-sizing(border-box)
+			@include respond-to(800)
+				width: 100%
+				padding-bottom: $rs*2
 			.index-headline
 				padding-bottom: 32px
 			.author-image
@@ -491,6 +509,9 @@ body
 		.isRight
 			float: right
 			width: 47%
+			@include box-sizing(border-box)
+			@include respond-to(800)
+				width: 100%
 			.index-headline
 				padding-bottom: 32px
 			.site-footer

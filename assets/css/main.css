@@ -94,7 +94,13 @@ body {
   max-width: 640px;
   margin: 0 auto;
   position: relative;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .blog-header {
+      padding: 0 16px; } }
   .blog-header .blog-logo {
     width: 120px;
     height: 120px;
@@ -134,7 +140,13 @@ body {
 .content {
   width: 100%;
   max-width: 640px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 800px) {
+    .content {
+      padding: 0 32px; } }
   .content article {
     padding: 40px 0;
     border-bottom: 1px solid #f2f2f0; }
@@ -257,7 +269,14 @@ body {
     left: 30%;
     right: 30%;
     z-index: 999;
-    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+    font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .article-image .post-meta {
+        left: 16px;
+        right: 16px; } }
   .post .article-image .post-title {
     font-weight: 700;
     font-style: normal;
@@ -463,7 +482,14 @@ body {
     border-top: 1px solid #dddddd; }
   .post .bottom-teaser .isLeft {
     float: left;
-    width: 47%; }
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isLeft {
+        width: 100%;
+        padding-bottom: 32px; } }
     .post .bottom-teaser .isLeft .index-headline {
       padding-bottom: 32px; }
     .post .bottom-teaser .isLeft .author-image {
@@ -492,7 +518,13 @@ body {
         color: #999999; }
   .post .bottom-teaser .isRight {
     float: right;
-    width: 47%; }
+    width: 47%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      .post .bottom-teaser .isRight {
+        width: 100%; } }
     .post .bottom-teaser .isRight .index-headline {
       padding-bottom: 32px; }
     .post .bottom-teaser .isRight .site-footer {
