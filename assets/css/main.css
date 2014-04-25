@@ -453,6 +453,17 @@ body {
     margin: 30px auto;
     border: 0px solid #dddddd;
     border-top: 1px solid #dddddd; }
+  .post .post-content blockquote {
+    margin: 0 0 30px;
+    border: none; }
+    .post .post-content blockquote p {
+      letter-spacing: 0.01rem;
+      font-weight: 400;
+      font-style: italic;
+      border-left: 3px solid #57ad68;
+      padding-left: 20px;
+      margin-left: -26px;
+      padding-bottom: 3px; }
   .post .post-content ul, .post .post-content ol {
     padding: 0 0 30px;
     margin: 0; }
