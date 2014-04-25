@@ -314,12 +314,16 @@ body {
     letter-spacing: -0.02em;
     font-weight: 400;
     font-style: normal;
-    text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 0px 0px 1px rgba(0, 0, 0, 0.5);
     font-size: 14px;
     overflow: hidden;
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
     white-space: nowrap;
     text-overflow: ellipsis; }
+    .post .article-image .post-meta-text a {
+      color: rgba(255, 255, 255, 0.75); }
+      .post .article-image .post-meta-text a:hover {
+        color: white; }
   .post .article-image .fa-angle-down {
     font-size: 32px;
     margin: 64px auto 0;
