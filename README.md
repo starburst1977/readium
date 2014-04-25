@@ -1,10 +1,12 @@
-# Readium
+# Readium 2.0
 
-The Medium-like theme for [Ghost](https://github.com/TryGhost).
+**The Medium-like theme for [Ghost](https://github.com/TryGhost)**. Reduced to the core design of Medium (without the cluttered
+stuff, like the sidebar) to bring you a similar user experience
+while giving you the freedom to host it on your own servers and on your own terms.
 
 ![Readium 2.0](http://cl.ly/VBX3/readium2.jpg)
 
-Check out [Mark Reads Blog](http://mark-read.info) as an good example.
+**Check out [Mark Reads Blog](http://mark-read.info) as an good example**.
 
 Just drop this theme in your Ghost theme folder and choose it in your Ghost admin dashboard (after restarting Ghost).
 
