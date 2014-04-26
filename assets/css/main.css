@@ -402,11 +402,7 @@ body {
     hyphens: auto; }
   .post .post-content a {
     color: #333333;
-    text-decoration: none;
-    background-image: linear, to bottom, white 75%, #333332 75%;
-    background-repeat: repeat-x;
-    background-size: 2px 2px;
-    background-position: 0 24px; }
+    text-decoration: underline; }
   .post .post-content img {
     max-width: 100%;
     margin: 0 auto; }
