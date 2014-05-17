@@ -4,7 +4,9 @@
   margin: 0 auto;
   position: relative;
   padding: 0;
-  @include box-sizing(border-box);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   @include breakpoint(800) {
     padding: 0 $rs;
   }

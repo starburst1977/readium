@@ -25,7 +25,9 @@
       right: 30%;
       z-index: 999;
       font-family: $font-sans;
-      @include box-sizing(border-box);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       @include breakpoint(800) {
         left: $rs;
         right: $rs;
@@ -204,7 +206,9 @@
     pre > code {
       background-color: #333333;
       border-color: #333333;
-      @include box-sizing(border-box);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       padding: modular-scale(1rem, 1, 1.33) modular-scale(1rem, 2, 1.33);
       color: white;
       line-height: 1.4;
@@ -217,8 +221,9 @@
     pre {
       padding: 0;
       margin: 0 0 2rem;
-      @include box-sizing(border-box);
-    }
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;    }
     pre code, tt {
       white-space: -moz-pre-wrap;
       white-space: pre-wrap;
@@ -282,7 +287,9 @@
     .isLeft {
       float: left;
       width: 47%;
-      @include box-sizing(border-box);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       @include breakpoint(800) {
         width: 100%;
         padding-bottom: $rs * 2;
@@ -323,7 +330,9 @@
     .isRight {
       float: right;
       width: 47%;
-      @include box-sizing(border-box);
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       @include breakpoint(800) {
         width: 100%;
       }
