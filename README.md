@@ -23,7 +23,7 @@ If you give your images an alt text, it gets added automatically as figcaption b
 - Valid HTML5/CSS3
 - WAI-ARIA & Rich Snippets(microdata) roles
 - Minimal design
-- Compatible with Ghost 0.4.2
+- Compatible with Ghost 0.5 (Added Multi-User-Support)
 - Designed for Readability & Sharability
 - Works with the Ghost Hosting platform
 - Handles static pages
