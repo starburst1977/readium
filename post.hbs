@@ -22,7 +22,7 @@
                 <h1 class="post-title">{{{title}}}</h1>
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author.name}}</h4> on
+                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author}}</h4> on
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                     {{tags prefix=", tagged on " separator=", "}}
                 </div>
@@ -90,7 +90,7 @@
                 <h1 class="post-title">{{{title}}}</h1>
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author.name}}</h4> on
+                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author}}</h4> on
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
                     {{tags prefix=", tagged on " separator=", "}}
                 </div>
@@ -135,7 +135,7 @@
                     <h5 class="index-headline featured"><span>Written by</span></h5>
                     <section class="author">
                         <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                        <h4>{{author.name}}</h4>
+                        <h4>{{author}}</h4>
                         <p class="bio">{{author.bio}}</p>
                         <hr>
                         <p class="published">Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>

@@ -513,6 +513,12 @@ body {
         padding-bottom: 32px; } }
     .post .bottom-teaser .isLeft .index-headline {
       padding-bottom: 32px; }
+    .post .bottom-teaser .isLeft a {
+      color: black;
+      text-decoration: none; }
+      .post .bottom-teaser .isLeft a:hover {
+        color: #333333;
+        text-decoration: underline; }
     .post .bottom-teaser .isLeft .author-image {
       display: block;
       width: 80px;
