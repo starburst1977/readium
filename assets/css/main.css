@@ -647,3 +647,5 @@ body {
       border-radius: 999em;
       line-height: 44px;
       padding: 0 18px; }
+#disqus_thread {
+  margin-top: 50px; }
