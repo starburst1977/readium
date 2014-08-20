@@ -23,8 +23,7 @@
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
                     <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author.name}}</h4> on
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                    {{tags prefix=", tagged on " separator=", "}}
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
                 </div>
                 <center><a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a></center>
             </div>
@@ -60,7 +59,7 @@
 
                     var height = $('.article-image').height();
                         $('.post-content').css('padding-top', height + 'px');
-                    
+
                     $(function() {
                       $('a[href*=#]:not([href=#])').click(function() {
                         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -91,8 +90,7 @@
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
                     <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author.name}}</h4> on
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                    {{tags prefix=", tagged on " separator=", "}}
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
                 </div>
             </div>
         </div>
