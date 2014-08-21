@@ -30,31 +30,31 @@
 <script>
     (function ($) {
         "use strict";
-    
+
         $(document).ready(function(){
-    
+
             var $window = $(window),
                 $image = $('.teaserimage-image');
             $window.on('scroll', function() {
                 var top = $window.scrollTop();
-    
+
                 if (top < 0 || top > 1500) { return; }
                 $image
                     .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
                     .css('opacity', 1-Math.max(top/700, 0));
             });
             $window.trigger('scroll');
-    
+
         });
-    
+
     }(jQuery));
 </script>
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-    
+
     <h5 class="index-headline featured"><span>Featured</span></h5>
-    
+
     <div class="container featured">
         {{#foreach posts}}
             {{#if featured}}
@@ -66,16 +66,16 @@
                         <section class="post-excerpt" itemprop="description">
                             <p>{{excerpt characters="130"}}&hellip;</p>
                         </section>
-                        <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> <span class="post-tags-set">{{tags prefix="on "}}</span></div>
+                        <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span></div>
                     </div>
                 </article>
             {{/if}}
         {{/foreach}}
     </div>
-    
-    
+
+
     <h5 class="index-headline normal"><span>Regular</span></h5>
-    
+
     <div class="cf frame">
     {{#foreach posts}}
         {{#if featured}}
@@ -88,7 +88,7 @@
                     <section class="post-excerpt" itemprop="description">
                         <p>{{excerpt characters="130"}}&hellip;</p>
                     </section>
-                    <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> <span class="post-tags-set">{{tags prefix="on "}}</span></div>
+                    <div class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span></div>
                 </div>
             </article>
         {{/if}}
