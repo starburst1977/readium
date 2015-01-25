@@ -9,6 +9,17 @@ header .custom-links a[href="https://www.npmjs.com/~pigulla"] i {
 header .custom-links a[href="https://www.npmjs.com/~pigulla"] i:hover {
   background-image: url("/assets/img/npm_hover.png");
 }
-header.blog-header .blog-logo {
+header .blog-logo {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.bottom-closer.n3rd {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.bottom-closer.n3rd .inner .btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  transition: background-color 0.2s ease;
+}
+.bottom-closer.n3rd .inner .btn:hover {
+  background-color: #000000;
 }
