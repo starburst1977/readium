@@ -1,3 +1,6 @@
+body > .teaserimage {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
 header .custom-links a[href="https://www.npmjs.com/~pigulla"] i {
   width: 18px;
   height: 16px;
@@ -5,4 +8,7 @@ header .custom-links a[href="https://www.npmjs.com/~pigulla"] i {
 }
 header .custom-links a[href="https://www.npmjs.com/~pigulla"] i:hover {
   background-image: url("/assets/img/npm_hover.png");
+}
+header.blog-header .blog-logo {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
