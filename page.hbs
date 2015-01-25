@@ -88,9 +88,9 @@
             <div class="post-meta">
                 <h1 class="post-title">{{{title}}}</h1>
                 <div class="cf post-meta-text">
-                    <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
+                    <!--<div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>-->
                     <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author.name}}</h4> on
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>{{#if tags}}, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}{{/if}}
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
                         <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org"> Ghost</a></section>
                         <a class="subscribe" href="{{@blog.url}}/rss/"><span class="tooltip">You should subscribe to my RSS feed.</span></a>
                         <div class="inner">
-                             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}}<br>All rights reserved.</section>
+                             <section class="copyright">All content copyright <a href="{{@blog.url}}/">Raphael Pigulla</a> &copy; {{date format="YYYY"}}<br>All rights reserved.</section>
 
                         </div>
                     </footer>
@@ -153,7 +153,7 @@
 
 </main>
 
-<div class="bottom-closer">
+<div class="bottom-closer n3rd">
     <div class="background-closer-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         Image
     </div>

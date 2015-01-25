@@ -8,6 +8,10 @@
 {{! The big featured header on the homepage, with the site logo and description }}
 
 
+<!--
+    image by drkzin
+    http://drkzin.deviantart.com/art/Space-Planetary-Scenery-Photoshop-File-270919715
+-->
 <div class="teaserimage">
     <div class="teaserimage-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         Teaser Image
@@ -73,11 +77,13 @@
 </main>
 
 <footer class="site-footer">
-    <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-    <div class="inner">
-         <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-         <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
-    </div>
+    <a class="subscribe icon-feed" href="{{@blog.url}}/rss/" title="RSS feed"></a>
+    <!--
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+        </div>
+    -->
 </footer>
 
 
