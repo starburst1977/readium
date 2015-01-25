@@ -62,7 +62,13 @@ body {
   height: 48px;
   background-color: black;
   overflow: hidden;
+  opacity: 0.3;
+  transition: opacity .25s ease-in-out;
   z-index: 99; }
+
+.logo-readium:hover {
+    opacity: 1.0;
+}
   .logo-readium .logo {
     display: block;
     position: absolute;
