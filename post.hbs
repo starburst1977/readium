@@ -3,7 +3,7 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="content" role="main">
+<main class="content" role="main" itemscope itemtype="http://schema.org/Article">
 
     <article class="{{post_class}}">
 
@@ -13,17 +13,18 @@
         {{#has tag="articleImage"}}
 
         <div class="article-image">
-            <div class="post-image-image">
+            <meta name="twitter:card" content="summary_large_image">
+            <div class="post-image-image" itemprop="image" content="">
 
                 Article Image
 
             </div>
             <div class="post-meta">
-                <h1 class="post-title">{{{title}}}</h1>
+                <h1 class="post-title" itemprop="headline">{{{title}}}</h1>
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author}}</h4> on
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
+                    <h4 class="author-name">{{author}}</h4> on
+                    <time datetime="{{date format="YYYY-MM-DD"}}" content="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span itemprop="keywords" class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
                 </div>
                 <center><a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a></center>
             </div>
@@ -40,7 +41,7 @@
                             img = $this.find('img:first'),
                             url = img.attr('src');
 
-                        $(".post-image-image").css('background-image', 'url('+url+')');
+                        $(".post-image-image").css('background-image', 'url('+url+')').attr('content', url);
 
                         img.remove();
                     });
@@ -86,11 +87,11 @@
 
         <div class="noarticleimage">
             <div class="post-meta">
-                <h1 class="post-title">{{{title}}}</h1>
+                <h1 class="post-title" itemprop="name">{{{title}}}</h1>
                 <div class="cf post-meta-text">
                     <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                    <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{author}}</h4> on
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
+                    <h4 class="author-name">{{author}}</h4> on
+                    <time datetime="{{date format="YYYY-MM-DD"}}" content="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time>, tagged on {{#foreach tags}}<span itemprop="keywords" class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}
                 </div>
             </div>
         </div>
@@ -102,11 +103,15 @@
 
 
             <section class="post-content">
+                <meta itemprop="url" content="{{url absolute="true"}}">
                 <div class="post-reading">
                     <span class="post-reading-time"></span> read
                 </div>
                 <a name="topofpage"></a>
-                {{content}}
+                <meta name="twitter:description" content="{{excerpt characters="140"}}">
+                <span itemprop="description">
+                    {{content}}
+                </span>
             </section>
             <footer class="post-footer">
                 <section class="share">
@@ -128,9 +133,9 @@
             <div class="bottom-teaser cf">
                 <div class="isLeft">
                     <h5 class="index-headline featured"><span>Written by</span></h5>
-                    <section class="author">
+                    <section class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
                         <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                        <h4>{{author}}</h4>
+                        <h4 itemprop="name">{{author}}</h4>
                         <p class="bio">{{author.bio}}</p>
                         <hr>
                         <p class="published">Published <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></p>
@@ -154,13 +159,13 @@
 
 </main>
 
-<div class="bottom-closer">
-    <div class="background-closer-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+<div class="bottom-closer" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <div class="background-closer-image" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})" itemprop="logo" content="{{@blog.cover}}"{{/if}}>
         Image
     </div>
     <div class="inner">
-        <h1 class="blog-title">{{@blog.title}}</h1>
-        <h2 class="blog-description">{{@blog.description}}</h2>
+        <h1 itemprop="name" class="blog-title">{{@blog.title}}</h1>
+        <h2 itemprop="description" class="blog-description">{{@blog.description}}</h2>
         <a href="/" class="btn">Back to Overview</a>
     </div>
 </div>
