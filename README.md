@@ -38,7 +38,7 @@ If you give your images an alt text, it gets added automatically as figcaption b
 To enable the disqus support open the file partials/comment-list.hbs and follow the instruction.
 
 #### If your Ghost blog is self hosted:
-1. Copy the contents of the .zip file into /content/themes/.
+1. Copy the contents of the .zip file into /content/themes/ and unzip it.
 2. You need to restart your Ghost instance. After that you can switch themes inside your Ghost admin (http://your.domain.com/ghost/settings/general/). Scroll down and choose "Readium" from the theme dropdown.
 3. Now you can customize your logo, langing page image (if you choose to have one), as well as user images and texts to fit the theme.
 4. Have fun.
