@@ -1,0 +1,249 @@
+.tag-template, .author-template
+	.content
+		width: 100%
+		max-width: none
+	.wrapper-background
+		background-image: radial-gradient(ellipse at top center, lighten($yellow, 25%), rgba(255,255,255,0.38) 62%), radial-gradient(ellipse at top right, lighten($green, 15%), rgba(255,255,255,0.38) 38%), radial-gradient(ellipse at top left, lighten($blue, 15%), rgba(255,255,255,0.38) 38%)
+
+.tag-template, .author-template
+	.nav
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 9999
+	.wrapper-content
+		width: 90%
+		max-width: 900px
+		margin: 0 auto
+		padding: 0 0 3rem
+	#content-paged
+		padding-top: 0
+	.author
+		width: 90%
+		max-width: 600px
+		margin: 0 auto
+		padding: 1.8rem 0
+		.author-image
+			width: 100%
+			margin: 0.25rem 0 1rem
+			padding: 0 0 0
+			@include respond-to(800)
+				float: left
+				width: 7rem
+				margin: 0.25rem 0 0
+				padding: 0
+			a
+				display: block
+				width: 100%
+				padding: 50% 0 0
+				border-radius: 0.5rem
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+				text-indent: -9999px
+				@include respond-to(800)
+					width: 5rem
+					height: 5rem
+					padding: 0
+		.author
+			padding: 0
+			@include respond-to(800)
+				padding-left: 7rem
+			h4
+				font-size: 1.25rem
+				line-height: 2rem
+				padding: 0
+				margin: 0
+				font-weight: 700
+				a
+					color: #000
+					text-decoration: none
+					&:hover
+						color: darken($green, 15%)
+			p
+				font-size: 1rem
+				line-height: 1.5rem
+				color: #999
+				margin: 0
+				padding: 0
+			.author-meta
+				font-size: 1rem
+				line-height: 1.5rem
+				color: #999
+				margin: 0
+				padding: 0
+				a
+					color: #666
+					&:hover
+						color: darken($green, 15%)
+	.post-meta
+		color: #bbb
+		@include clearfix
+		font-size: 0.9rem
+		line-height: 1.2rem
+		padding: 0 0 1.8rem
+		font-family: $font-headline
+		text-align: center
+		a
+			color: $blue
+			text-decoration: none
+	.post-header
+		margin: 0 auto
+		h1
+			text-align: center
+			font-size: 3.6rem
+			font-family: $font-headline
+			font-weight: 700
+			line-height: 4rem
+			padding: 3.6rem 0 1.8rem
+			margin: 0
+			letter-spacing: -0.1rem
+			@include respond-to(800)
+				font-size: 4.8rem
+				line-height: 5rem
+				padding: 6rem 0 1.8rem
+	.imaged
+		@include clearfix
+		padding: 1.8rem 0 0
+		.post-image
+			width: 100%
+			padding-top: 38%
+			text-indent: -9999px
+			border-radius: 0.5rem
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			margin-bottom: 1.8rem
+		.post-content
+			width: 100%
+			.post-header
+				h2
+					font-size: 1.8rem
+					line-height: 2.1rem
+					padding: 0
+					margin: 0
+					font-family: $font-headline
+					font-weight: 600
+					a
+						text-decoration: none
+						color: #000
+						&:hover
+							color: darken($blue, 15%)
+			.post-excerpt
+				margin-bottom: 1.8rem
+				p
+					font-size: 1.2rem
+					line-height: 1.8rem
+					color: #999
+					&.read
+						font-family: $font-headline
+						font-size: 0.9rem
+						line-height: 1.2rem
+						.featured
+							color: darken($green, 15%)
+						.read-more
+							color: darken($blue, 15%)
+							text-decoration: none
+							&:hover
+								color: darken($blue, 5%)
+		.post-meta
+			color: #bbb
+			@include clearfix
+			font-size: 0.9rem
+			line-height: 1.2rem
+			padding: 0 0 1.8rem
+			font-family: $font-headline
+			text-align: left
+			.author-thumb
+				width: 2.4rem
+				height: 2.5rem
+				border-radius: 0.25rem
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				text-indent: -9999px
+				float: left
+				margin-right: 0.6rem
+			a
+				color: $blue
+				text-decoration: none
+			.tags
+				float: right
+				width: 38%
+				text-align: right
+	.post
+		@include clearfix
+		width: 100%
+		padding: 1.8rem 0 0
+		.post-header
+			h2
+				font-size: 1.8rem
+				line-height: 2.1rem
+				padding: 0
+				margin: 0
+				font-family: $font-headline
+				font-weight: 600
+				a
+					text-decoration: none
+					color: #000
+					&:hover
+						color: darken($blue, 15%)
+		.post-excerpt
+			margin-bottom: 1.8rem
+			p
+				font-size: 1.2rem
+				line-height: 1.8rem
+				color: #999
+				&.read
+					font-family: $font-headline
+					font-size: 0.9rem
+					line-height: 1.2rem
+					.featured
+						color: darken($green, 15%)
+					.read-more
+						color: darken($blue, 15%)
+						text-decoration: none
+						&:hover
+							color: darken($blue, 5%)
+		.post-meta
+			color: #bbb
+			@include clearfix
+			font-size: 0.9rem
+			line-height: 1.2rem
+			padding: 0 0 1.8rem
+			font-family: $font-headline
+			text-align: left
+			.author-thumb
+				width: 2.4rem
+				height: 2.5rem
+				border-radius: 0.25rem
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				text-indent: -9999px
+				float: left
+				margin-right: 0.6rem
+			a
+				color: $blue
+				text-decoration: none
+		.tags
+			float: right
+			width: 38%
+			text-align: right
+		article:last-child
+			.article-spacer
+				display: none
+	.pagination
+		text-align: center
+		color: #999
+		font-family: $font-headline
+		padding: 0.9rem 0 1.8rem
+		a
+			text-decoration: none
+			color: #000
+			font-size: 0.9rem
+			line-height: 1.2rem
+			&:hover
+				color: darken($blue, 15%)
+	

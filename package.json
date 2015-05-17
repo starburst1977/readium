@@ -1,7 +1,4 @@
 {
-    "name": "Readium",
-    "version": "2.0.0",
-    "description": "Just a medium-like blogging platform.",
-    "author": "Sven Read",
-    "homepage": "http://www.svenread.com/readium"
+  "name": "Readium",
+  "version": "2.0.0"
 }

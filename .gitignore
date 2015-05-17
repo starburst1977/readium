@@ -3,6 +3,8 @@
 .svn
 vendor
 node_modules
+bower_components
+.codekit
 .sass-cache
 assets/fonts/FontAwesome.otf
 assets/fonts/fontawesome-webfont.eot

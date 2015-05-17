@@ -1,0 +1,163 @@
+    {{! The main content area on the homepage }}
+    
+    <!--<h2 class="section-headline green"><span>Information sharing</span></h2>-->
+    
+    {{! The main content area on the index page }}
+    <main id="content-index" class="content" role="main">
+        <h2 class="section-headline"><span>Writing</span></h2>
+        {{! This is the post loop - each post will be output using this markup }}
+        {{#foreach posts}}
+            {{#if featured}}
+                {{#if image}}
+                   <article class="imaged">
+                        <div class="cf">
+                            <footer class="post-meta">
+                                 
+                                 <div class="tags">
+                                    {{tags prefix="Posted on <br>"}}
+                                 </div>
+                                 
+                                 {{#if author.image}}
+                                    <div class="author-thumb" style="background-image: url({{author.image}})" title="Author image">
+                                        {{author}}
+                                    </div>
+                                 {{/if}}
+                                 {{author}}<br>
+                                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                                 
+                            </footer>
+                            
+                            <div class="post-image" style="background-image: url({{image}})">
+                                {{{title}}}
+                            </div>
+                            
+                            <div class="post-content">
+                                <header class="post-header">
+                                     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                                 </header>
+                                 <section class="post-excerpt">
+                                    <p>{{excerpt words="40"}} </p>
+                                    <p class="read">
+                                        <a class="read-more" href="{{url}}">Continue reading</a>
+                                        &nbsp;&nbsp;·&nbsp;&nbsp;
+                                        <span class="featured"><i class="fa fa-diamond"></i>&nbsp;&nbsp;Recommended</span>
+                                    </p>
+                                 </section>
+                            </div>
+                            
+                        </div>
+                        
+                        <h2 class="article-spacer"><span>&#10020;</span></h2>
+                   </article>
+                {{else}}
+                    <article class="{{post_class}}">
+                         
+                         <footer class="post-meta">
+                              
+                              <div class="tags">
+                                 {{tags prefix="Posted on <br>"}}
+                              </div>
+                              
+                              {{#if author.image}}
+                                 <div class="author-thumb" style="background-image: url({{author.image}})" title="Author image">
+                                     {{author}}
+                                 </div>
+                              {{/if}}
+                              {{author}}<br>
+                              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                              
+                         </footer>
+                         
+                         <header class="post-header">
+                             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                         </header>
+                         
+                         <section class="post-excerpt">
+                             <p>{{excerpt words="80"}} </p>
+                             <p class="read">
+                                 <a class="read-more" href="{{url}}">Continue reading</a>
+                                 &nbsp;&nbsp;·&nbsp;&nbsp;
+                                 <span class="featured"><i class="fa fa-diamond"></i>&nbsp;&nbsp;Recommended</span>
+                             </p>
+                         </section>
+                         
+                         <h2 class="article-spacer"><span>&#10020;</span></h2>
+                    </article>
+                {{/if}}
+            {{else}}
+                {{#if image}}
+                   <article class="imaged{{#if @last}} last{{/if}}">
+                        <div class="cf">
+                            <footer class="post-meta">
+                                 
+                                 <div class="tags">
+                                    {{tags prefix="Posted on <br>"}}
+                                 </div>
+                                 
+                                 {{#if author.image}}
+                                    <div class="author-thumb" style="background-image: url({{author.image}})" title="Author image">
+                                        {{author}}
+                                    </div>
+                                 {{/if}}
+                                 {{author}}<br>
+                                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                                 
+                            </footer>
+                            <div class="post-image" style="background-image: url({{image}})">
+                                {{{title}}}
+                            </div>
+                            <div class="post-content">
+                                <header class="post-header">
+                                     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                                 </header>
+                                 <section class="post-excerpt">
+                                     <p>{{excerpt words="40"}}</p>
+                                     <p class="read">
+                                         <a class="read-more" href="{{url}}">Continue reading</a>
+                                     </p>
+                                 </section>
+                                 
+                            </div>
+                        </div>
+                        <h2 class="article-spacer"><span>&#10020;</span></h2>
+                   </article>
+                {{else}}
+                    <article class="{{post_class}}{{#if @last}} last{{/if}}">
+                         
+                         <footer class="post-meta">
+                              
+                              <div class="tags">
+                                 {{tags prefix="Posted on <br>"}}
+                              </div>
+                              
+                              {{#if author.image}}
+                                 <div class="author-thumb" style="background-image: url({{author.image}})" title="Author image">
+                                     {{author}}
+                                 </div>
+                              {{/if}}
+                              {{author}}<br>
+                              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                              
+                         </footer>
+                         
+                         <header class="post-header">
+                             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                         </header>
+                         <section class="post-excerpt">
+                             <p>{{excerpt words="80"}}</p>
+                             <p class="read">
+                                 <a class="read-more" href="{{url}}">Continue reading</a>
+                             </p>
+                         </section>
+                        <h2 class="article-spacer"><span>&#10020;</span></h2>
+                    </article>
+                {{/if}}
+            {{/if}}
+        {{/foreach}}
+        
+        {{^is "author"}}
+            {{! Previous/next page links - displayed on every page }}
+            {{pagination}}
+        {{/is}}
+    
+    </main>

@@ -1,0 +1,529 @@
+@import 'bourbon'
+
+$rs: 16px
+
+$green: #8BE04D
+$blue: #2FC4FC
+$yellow: #FFC803
+$red: #FF5349
+$purple: #A155B7
+$orange: #FF951D
+$navy: #50B0A2
+$tarn: #3BE198
+
+$font-headline: Source Sans Pro
+$font-copy: Source Serif Pro
+
+@mixin respond-to($breakpoint)
+	@media only screen and (min-width: $breakpoint + px)
+		@content
+
+.cf
+	@include clearfix
+	
+/* Styles for blog posts */
+@import post.sass
+/* Styles for static pages */
+@import page.sass
+/* Styles for tag pages */
+@import tag.sass
+	
+body, html
+	padding: 0
+	margin: 0
+	font-size: 12px
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+	font-weight: 400
+	font-style: normal
+	-moz-font-feature-settings: "liga=1, dlig=1"
+	-ms-font-feature-settings: "liga", "dlig"
+	-webkit-font-feature-settings: "liga", "dlig"
+	-o-font-feature-settings: "liga", "dlig"
+	font-feature-settings: "liga", "dlig"
+	@include respond-to(800)
+		font-size: 16px
+	font-family: $font-copy
+	
+.site-wrapper
+	overflow: hidden
+
+.nav
+	display: block
+	padding: 1rem 1rem
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 999
+	.blog-logo
+		display: block
+		width: 3rem
+		height: 3rem
+		border-radius: 0.25rem
+		background-size: cover
+		background-position: center
+		margin: 0 auto
+		text-indent: -9999px
+	.contact
+		display: block
+		width: 3rem
+		height: 3rem
+		float: left
+		padding: 0
+		font-size: 1rem
+		line-height: 3rem
+		text-decoration: none
+		color: #000
+		background-color: #fff
+		border-radius: 0.25rem
+		text-align: center
+		@include transition (all 0.25s ease-in-out)
+		&:hover
+			background-color: $green
+	.menu
+		display: block
+		width: 3rem
+		height: 3rem
+		float: right
+		padding: 0
+		font-size: 1rem
+		line-height: 3rem
+		text-decoration: none
+		color: #000
+		background-color: #fff
+		border-radius: 0.25rem
+		text-align: center
+		@include transition (all 0.25s ease-in-out)
+		&:hover
+			background-color: $yellow
+
+.header
+	position: relative
+	max-height: 700px
+	padding-top: 50%
+	overflow: hidden
+	/* background: radial-gradient(ellipse at bottom center, $yellow, rgba(255,255,255,0.62) 62%), radial-gradient(ellipse at bottom right, $green, rgba(255,255,255,0.62) 38%), radial-gradient(ellipse at bottom left, $purple, rgba(255,255,255,0.62) 38%) */
+	.teaser
+		text-indent: -9999px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		div
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			@include box-sizing(border-box)
+			overflow: hidden
+		.teaser-image-big
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 38%
+			border-right: 1px #fff solid
+			.shoutout
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 1.8rem
+				text-indent: 0
+				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				h1
+					text-align: left
+					padding: 0 0
+					font-size: 3.6rem
+					line-height: 4rem
+					font-family: $font-headline
+					font-weight: 700
+					margin: 0
+					letter-spacing: -0.1rem
+					a
+						color: #fff
+						text-decoration: none
+						&:hover
+							color: $green
+				h2
+					text-align: left
+					font-size: 1.2rem
+					font-family: $font-headline
+					font-weight: 200
+					color: rgba(255,255,255,0.62)
+					padding: 0
+					line-height: 1.8rem
+					margin: 0
+				a
+					color: lighten($green, 15%)
+					&:hover
+						color: $green
+		.teaser-image-small-one
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 38%
+			left: 62%
+			border-bottom: 1px #fff solid
+			.shoutout
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 1.8rem
+				text-indent: 0
+				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				h2
+					text-align: left
+					font-size: 1.2rem
+					font-family: $font-headline
+					font-weight: 700
+					color: #fff
+					padding: 0
+					line-height: 1.8rem
+					margin: 0
+					text-align: right
+					a
+						text-decoration: none
+						color: #fff
+		.teaser-image-smaller-one
+			position: absolute
+			top: 62%
+			right: 0
+			bottom: 0
+			left: 62%
+			overflow: hidden
+			.shoutout
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 1.8rem
+				text-indent: 0
+				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				h2
+					text-align: left
+					font-size: 1.2rem
+					font-family: $font-headline
+					font-weight: 700
+					color: #fff
+					padding: 0
+					line-height: 1.8rem
+					margin: 0
+					text-align: right
+					a
+						text-decoration: none
+						color: #fff
+			
+
+.section-headline
+	width: 90%
+	max-width: 800px
+	margin: 3rem auto 0
+	padding: 3rem 0 3rem
+	line-height: 3rem
+	font-size: 1rem
+	font-family: $font-headline
+	font-weight: 500
+	text-align: center
+	color: #aaa
+	position: relative
+	&.blue
+		color: $navy
+		font-weight: 500
+	&:after
+		content: ""
+		display: block
+		border-top: 1px #eee solid
+		position: absolute
+		top: 4.5rem
+		left: 0
+		right: 0
+		z-index: 1
+	span
+		background-color: #fff
+		z-index: 99
+		position: relative
+		padding: 0 1rem
+		
+.article-spacer
+	width: 38%
+	max-width: 400px
+	margin: 0 auto
+	padding: 1rem 0 1rem
+	@include respond-to(800)
+		padding: 1rem 0 0.9rem
+	line-height: 1.8rem
+	font-size: 1rem
+	font-weight: 100
+	text-align: center
+	color: #eee
+	position: relative
+	@include clearfix
+	&:after
+		content: ""
+		display: block
+		border-top: 1px #eee solid
+		position: absolute
+		top: 0.9rem
+		@include respond-to(800)
+			top: 1.8rem
+		left: 0
+		right: 0
+		z-index: 1
+	span
+		background-color: #fff
+		z-index: 99
+		position: relative
+		padding: 0 1rem
+
+.pitch
+	width: 90%
+	max-width: 800px
+	margin: 0 auto
+	padding: 0 0
+	@include clearfix
+	.item
+		width: 100%
+		float: left
+		@include box-sizing(border-box)
+		padding: 0 1rem 3rem
+		text-align: center
+		@include respond-to(800)
+			width: 33%
+			float: left
+			padding: 0 1rem
+		i
+			font-size: 2rem
+			display: inline-block
+			margin: 0 auto 1rem
+		h3
+			font-size: 2.4rem
+			line-height: 3rem
+			padding: 0
+			margin: 0
+			font-family: $font-headline
+			font-weight: 600
+			letter-spacing: -0.05rem
+		p
+			color: #bbb
+			line-height: 1.2rem
+			font-size: 0.9rem
+		a
+			color: darken($green, 15%)
+			&:hover
+				color: darken($green, 5%)
+
+.author-content
+	display: none
+
+.author-template 
+	header.header
+		display: none
+	.author-content
+		display: block
+
+.content, .author-template .content
+	width: 90%
+	max-width: 800px
+	margin: 0 auto
+	padding: 0 0 3.6rem
+
+
+#content-index, #content-paged
+	padding: 4.8rem 0 0
+	.imaged
+		@include clearfix
+		padding: 1.8rem 0 0
+		.post-image
+			width: 100%
+			padding-top: 38%
+			text-indent: -9999px
+			border-radius: 0.5rem
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			margin-bottom: 1.8rem
+		.post-content
+			width: 100%
+			.post-header
+				h2
+					font-size: 1.8rem
+					line-height: 2.1rem
+					padding: 0
+					margin: 0
+					font-family: $font-headline
+					font-weight: 600
+					a
+						text-decoration: none
+						color: #000
+						&:hover
+							color: darken($blue, 15%)
+			.post-excerpt
+				margin-bottom: 1.8rem
+				p
+					font-size: 1.2rem
+					line-height: 1.8rem
+					color: #999
+					&.read
+						font-family: $font-headline
+						font-size: 0.9rem
+						line-height: 1.2rem
+						.featured
+							color: darken($green, 15%)
+						.read-more
+							color: darken($blue, 15%)
+							text-decoration: none
+							&:hover
+								color: darken($blue, 5%)
+		.post-meta
+			color: #bbb
+			@include clearfix
+			font-size: 0.9rem
+			line-height: 1.2rem
+			padding: 0 0 1.8rem
+			font-family: $font-headline
+			.author-thumb
+				width: 2.4rem
+				height: 2.5rem
+				border-radius: 0.25rem
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				text-indent: -9999px
+				float: left
+				margin-right: 0.6rem
+			a
+				color: $blue
+				text-decoration: none
+			.tags
+				float: right
+				width: 38%
+				text-align: right
+	.post
+		@include clearfix
+		width: 100%
+		padding: 1.8rem 0 0
+		.post-header
+			h2
+				font-size: 1.8rem
+				line-height: 2.1rem
+				padding: 0
+				margin: 0
+				font-family: $font-headline
+				font-weight: 600
+				a
+					text-decoration: none
+					color: #000
+					&:hover
+						color: darken($blue, 15%)
+		.post-excerpt
+			margin-bottom: 1.8rem
+			p
+				font-size: 1.2rem
+				line-height: 1.8rem
+				color: #999
+				&.read
+					font-family: $font-headline
+					font-size: 0.9rem
+					line-height: 1.2rem
+					.featured
+						color: darken($green, 15%)
+					.read-more
+						color: darken($blue, 15%)
+						text-decoration: none
+						&:hover
+							color: darken($blue, 5%)
+		.post-meta
+			color: #bbb
+			@include clearfix
+			font-size: 0.9rem
+			line-height: 1.2rem
+			padding: 0 0 1.8rem
+			font-family: $font-headline
+			.author-thumb
+				width: 2.4rem
+				height: 2.5rem
+				border-radius: 0.25rem
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				text-indent: -9999px
+				float: left
+				margin-right: 0.6rem
+			a
+				color: $blue
+				text-decoration: none
+		.tags
+			float: right
+			width: 38%
+			text-align: right
+	.pagination
+		text-align: center
+		color: #999
+		font-family: $font-headline
+		padding: 0.9rem 0 1.8rem
+		a
+			text-decoration: none
+			color: #000
+			font-size: 0.9rem
+			line-height: 1.2rem
+			&:hover
+				color: darken($blue, 15%)
+	article:last-child
+		.article-spacer
+			display: none
+				
+.paged
+	.header
+		display: none
+	.pitch
+		display: none
+
+.footer
+	background-color: #000
+	color: #fff
+	font-family: $font-headline
+	.wrapper
+		width: 90%
+		max-width: 800px
+		margin: 0 auto
+		padding: 0 0 1.8rem
+		@include clearfix
+		h5
+			color: $yellow
+			font-size: 0.75rem
+			line-height: 2rem
+			text-align: center
+			padding: 2rem 0 0
+			margin: 0
+			font-weight: 300
+		a
+			color: #999
+		nav
+			display: block
+			padding: 1rem 0 2rem
+			text-align: center
+			color: #666
+			a
+				color: #fff
+				text-decoration: none
+				&.nav-current
+					color: $green
+				&:hover
+					color: $yellow
+			span:last-child
+				display: none
+		.copyright
+			float: left
+			padding: 1rem 0
+			width: 50%
+			color: #666
+		.poweredby
+			float: right
+			padding: 1rem 0
+			width: 50%
+			color: #666
+			text-align: right

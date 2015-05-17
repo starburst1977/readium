@@ -1,0 +1,434 @@
+.post-template
+	.content
+		width: 100%
+		max-width: none
+	.wrapper-background
+		background-image: radial-gradient(ellipse at top center, lighten($yellow, 25%), rgba(255,255,255,0.38) 62%), radial-gradient(ellipse at top right, lighten($green, 15%), rgba(255,255,255,0.38) 38%), radial-gradient(ellipse at top left, lighten($blue, 15%), rgba(255,255,255,0.38) 38%)
+
+.highlight-header.post-head
+	margin: 0 auto
+	width: 80%
+	padding-top: 38%
+	max-width: 960px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	text-indent: -9999px
+	border-bottom-left-radius: 0.5rem
+	border-bottom-right-radius: 0.5rem
+
+.post-template
+	.nav
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 9999
+	.wrapper-content
+		width: 90%
+		max-width: 900px
+		margin: 0 auto
+		padding: 0 0 3rem
+	.post-header
+		width: 90%
+		max-width: 900px
+		margin: 0 auto
+		h1
+			text-align: center
+			font-size: 3.6rem
+			font-family: $font-headline
+			font-weight: 700
+			line-height: 4rem
+			padding: 3.6rem 0 1.8rem
+			margin: 0
+			letter-spacing: -0.1rem
+			@include respond-to(800)
+				font-size: 4.8rem
+				line-height: 5rem
+				padding: 6rem 0 1.8rem
+	.post-meta
+		text-align: center
+		font-size: 0.75rem
+		line-height: 1rem
+		color: #ccc
+		padding: 0 0
+		a
+			color: #999
+			&:hover
+				color: darken($green, 15%)
+	.post-content
+		padding: 0 0 1.8rem
+		@include respond-to(800)
+			padding: 1.8rem 0
+		p, div
+			width: 90%
+			max-width: 700px
+			margin: 0 auto
+			font-size: 1.2rem
+			line-height: 1.8rem
+			padding: 0 0 1.8rem
+			color: #444
+		img
+			max-width: 100%
+			position: relative
+			border-radius: 0.5rem
+		figure
+			font-size: 0.9rem
+			line-height: 1.2rem
+			font-style: italic
+			color: #bbb
+			text-align: center
+		div.image-left
+			max-width: 47%
+			float: left
+			margin-right: 3%
+			padding: 0 0 0.9rem
+		div.image-right
+			max-width: 47%
+			float: right
+			margin-left: 3%
+			padding: 0 0 0.9rem
+		ul, ol
+			width: 90%
+			max-width: 700px
+			margin: 0 auto
+			padding: 0 0 1.8rem
+			font-size: 1.2rem
+			font-size: 1.2rem
+			line-height: 1.8rem
+			ul, ol
+				padding: 0 0 0
+			li
+				margin-left: 1.2rem
+				@include respond-to(800)
+					margin-left: 1.8rem
+				color: #444
+				p
+					max-width: 100%
+					margin: 0
+					width: 100%
+		small
+			font-size: 0.9rem
+			line-height: 1.2rem
+			padding: 0 0 9
+			color: #bbb
+			display: block
+		mark
+			display: block
+			padding: 1.8rem 3.6rem
+			background-color: lighten($green, 25%)
+			border-radius: 0.5rem
+			font-weight: 600
+		blockquote
+			font-style: italic
+			font-size: 1.2rem
+			line-height: 1.8rem
+			padding: 0.9rem 0 
+			border-left: 0.9rem $yellow solid
+			margin: 0 0 1.8rem
+			box-sizing: border-box
+			p:last-child
+				padding: 0
+		kbd
+			display: inline-block
+			margin-bottom: 1.8rem
+			padding: 1px 8px
+			border: #ccc 1px solid
+			color: #333
+			font-size: 1rem
+			font-weight: bold
+			background: lighten($yellow, 15%)
+			border-radius: 0.25rem
+		code
+			background-color: #eee
+			color: #000
+			border-color: #eee
+			font-family: Inconsolata, monospace, sans-serif
+			font-size: 1rem
+			border-radius: 0.25rem
+			padding: 0.1rem 0.3rem 0.1rem
+			position: relative
+			top: -1px
+			white-space: nowrap
+			-webkit-hyphens: none
+			-moz-hyphens: none
+			hyphens: none
+		pre > code
+			background-color: #333
+			border-color: #000
+			@include box-sizing(border-box)
+			padding: 1.8rem
+			color: #fff
+			font-size: 0.9rem
+			line-height: 1.5
+			width: 100%
+			display: block
+			white-space: pre
+			overflow: visible
+			border-radius: 0.5rem
+		hr
+			width: 38%
+			max-width: 400px
+			margin: 1.8rem auto
+			border: 0
+			border-top: 1px #eee solid
+		pre
+			padding: 0
+			overflow: visible
+			margin: 1.8rem 0 3.6rem
+			@include box-sizing(border-box)
+		pre code, tt
+			white-space: -moz-pre-wrap
+			white-space: pre-wrap
+			border: none
+		table
+			width: 100%
+			margin: 0 0 3.6rem
+			th
+				border-bottom: 1px #ccc solid
+				padding: 0.5rem 0.5rem
+				text-align: left
+				line-height: 1.8rem
+				font-size: 1.2rem
+				vertical-align: bottom
+			td
+				padding: 0.5rem 0.5rem
+				line-height: 1.8rem
+				font-size: 1.2rem
+				vertical-align: top
+				border-bottom: 1px #eee solid
+				color: #777
+				&:first-child
+					color: #000
+				strong
+					font-weight: 500
+					color: #fff
+					padding: 0 0.25rem
+					border-radius: 0.2rem
+					background-color: darken($green, 10%)
+					font-size: 0.75rem
+					line-height: 1.25rem
+					display: inline-block
+					top: -3px
+					position: relative
+				span
+					font-weight: 500
+					color: #fff
+					padding: 0 0.25rem
+					border-radius: 0.2rem
+					background-color: #bbb
+					font-size: 0.75rem
+					line-height: 1.25rem
+					display: inline-block
+					top: -3px
+					position: relative
+		h1, h2, h3, h4
+			text-align: center
+			color: #000
+			font-family: $font-headline
+			font-weight: 400
+		h1
+			font-size: 2.5rem
+			line-height: 1.1
+			font-weight: 700
+			padding: 1.8rem 0 3.6rem
+			position: relative
+			&:before
+				content: ""
+				display: block
+				border-top: 1px #eee solid
+				position: absolute
+				bottom: 1.8rem
+				z-index: 1
+				width: 38%
+				left: 31%
+			&:after
+				content: "❈"
+				color: #eee
+				font-weight: 700
+				display: inline-block
+				padding: 0 $rs
+				background-color: #fff
+				z-index: 2
+				position: absolute
+				bottom: 1.2rem
+				font-size: 1.2rem
+				left: 50%
+				margin-left: -0.5rem
+		h2
+			font-size: 1.9rem
+			line-height: 2.5rem
+			font-weight: 600
+			position: relative
+			padding: 0 0 3.6rem
+			&:before
+				content: ""
+				display: block
+				border-top: 1px #eee solid
+				position: absolute
+				bottom: 1.8rem
+				z-index: 1
+				width: 38%
+				left: 31%
+			&:after
+				content: "*"
+				color: #eee
+				font-weight: 700
+				display: inline-block
+				padding: 0 $rs
+				background-color: #fff
+				z-index: 2
+				position: absolute
+				bottom: 0.45rem
+				font-size: 1.2rem
+				left: 50%
+				margin-left: -0.5rem
+		h3
+			font-size: 1.5rem
+			line-height: 1.8rem
+			font-weight: 600
+			padding: 0 0 1.8rem
+		h4
+			font-size: 1.5rem
+			line-height: 1.8rem
+			font-weight: 600
+			padding: 0 0 1.8rem
+		a
+			color: $blue
+	.post-footer
+		width: 90%
+		max-width: 600px
+		margin: 0 auto
+		padding: 1.8rem 0
+		.author-image
+			width: 100%
+			margin: 0.25rem 0 1rem
+			padding: 0 0 0
+			@include respond-to(800)
+				float: left
+				width: 7rem
+				margin: 0.25rem 0 0
+				padding: 0
+			a
+				display: block
+				width: 100%
+				padding: 50% 0 0
+				border-radius: 0.5rem
+				background-repeat: no-repeat
+				background-size: cover
+				background-position: center
+				text-indent: -9999px
+				@include respond-to(800)
+					width: 5rem
+					height: 5rem
+					padding: 0
+		.author
+			padding: 0
+			@include respond-to(800)
+				padding-left: 7rem
+			h4
+				font-size: 1.25rem
+				line-height: 2rem
+				padding: 0
+				margin: 0
+				font-weight: 700
+				a
+					color: #000
+					text-decoration: none
+					&:hover
+						color: darken($green, 15%)
+			p
+				font-size: 1rem
+				line-height: 1.5rem
+				color: #999
+				margin: 0
+				padding: 0
+			.author-meta
+				font-size: 1rem
+				line-height: 1.5rem
+				color: #999
+				margin: 0
+				padding: 0
+				a
+					color: #666
+					&:hover
+						color: darken($green, 15%)
+
+.label-optional
+	font-weight: 500
+	color: #fff
+	padding: 0 0.25rem
+	border-radius: 0.2rem
+	background-color: darken($green, 10%)
+	font-size: 0.75rem
+	line-height: 1.25rem
+	display: inline-block
+	top: -3px
+	position: relative
+.label-footnote
+	font-weight: 500
+	color: #fff
+	padding: 0 0.25rem
+	border-radius: 0.2rem
+	background-color: #bbb
+	font-size: 0.75rem
+	line-height: 1.25rem
+	display: inline-block
+	top: -3px
+	position: relative
+
+.read-next
+	width: 90%
+	max-width: 600px
+	margin: 0 auto
+	padding: 0 0 6rem
+	@include clearfix
+	a, div
+		width: 100%
+		@include respond-to(800)
+			width: 50%
+			float: left
+		text-decoration: none
+		@include box-sizing(border-box)
+		&.read-next-story
+			@include respond-to(800)
+				text-align: right
+				padding-right: 2rem
+		&.read-next-story.prev
+			@include respond-to(800)
+				text-align: left
+				padding-left: 2rem
+				border-left: 1px #eee solid
+				float: right
+		h4
+			font-size: 0.75rem
+			line-height: 1.5rem
+			margin: 0
+			padding: 0 0 1rem
+			color: #ccc
+			font-weight: 200
+		h2
+			font-size: 1.5rem
+			line-height: 2rem
+			margin: 0
+			padding: 0 0 1rem
+			color: #333
+			font-family: $font-headline
+			font-weight: 400
+		h5
+			font-size: 1rem
+			line-height: 1.5rem
+			margin: 0
+			padding: 0 0 1rem
+			color: #ddd
+			font-weight: 200
+		p
+			font-size: 1rem
+			line-height: 1.25rem
+			margin: 0
+			padding: 0 0 1rem
+			@include respond-to(800)
+				padding: 0
+			color: #999
+		
+		

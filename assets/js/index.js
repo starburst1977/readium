@@ -2,19 +2,13 @@
  * Main JS file for Casper behaviours
  */
 
-/*globals jQuery, document */
-(function ($) {
+/* globals jQuery, document */
+(function ($, undefined) {
     "use strict";
 
     $(document).ready(function(){
-
+    
         $(".post-content").fitVids();
-        
-        // Calculates Reading Time
-        $('.post-content').readingTime({
-            readingTimeTarget: '.post-reading-time',
-            wordCountTarget: '.post-word-count',
-        });
         
         // Creates Captions from Alt tags
         $(".post-content img").each(function() {
@@ -26,4 +20,4 @@
         
     });
 
-}(jQuery));
+})(jQuery);

@@ -1,0 +1,1 @@
+!function($,t){"use strict";$(document).ready(function(){$(".post-content").fitVids(),$(".post-content img").each(function(){$(this).attr("alt")&&$(this).wrap('<figure class="image"></figure>').after("<figcaption>"+$(this).attr("alt")+"</figcaption>")})})}(jQuery);
