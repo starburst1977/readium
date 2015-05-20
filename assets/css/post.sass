@@ -7,21 +7,28 @@
 
 .highlight-header.post-head
 	margin: 0 auto
-	width: 80%
-	padding-top: 38%
+	width: 100%
+	padding-top: 62%
+	@include respond-to(800)
+		padding-top: 38%
+		width: 80%
+		border-bottom-left-radius: 0.5rem
+		border-bottom-right-radius: 0.5rem
 	max-width: 960px
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
 	text-indent: -9999px
-	border-bottom-left-radius: 0.5rem
-	border-bottom-right-radius: 0.5rem
 	position: relative
+	overflow: hidden
 	.post-header
 		position: absolute
 		bottom: 0
 		left: 0
 		right: 0
+		width: 100%
+		max-width: 100%
+		box-sizing: border-box
 		padding: 2.4rem
 		text-indent: 0
 		background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
@@ -74,7 +81,7 @@
 		width: 90%
 		max-width: 900px
 		margin: 0 auto
-		padding: 0 0 3rem
+		padding: 1.8rem 0 3rem
 	.post-header
 		width: 90%
 		max-width: 900px
