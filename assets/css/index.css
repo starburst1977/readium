@@ -1210,7 +1210,10 @@ body, html {
     #content-index .post .tags, #content-paged .post .tags {
       float: right;
       width: 38%;
-      text-align: right; }
+      text-align: right;
+      height: 2.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis; }
   #content-index .pagination, #content-paged .pagination {
     text-align: center;
     color: #999;
