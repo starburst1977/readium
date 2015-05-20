@@ -12,22 +12,30 @@
         
             {{#if image}}
             <header class="highlight-header post-head" style="background-image: url({{image}})">
-                test
+                <header class="post-header">
+                    <h1 class="post-title">{{title}}</h1>
+                    <section class="post-meta">
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                    </section>
+                </header>
             </header>
+            <br>
             {{else}}
             <br><br><br><br>
-            {{/if}}
-        
             <header class="post-header">
                 <h1 class="post-title">{{title}}</h1>
                 <section class="post-meta">
                     <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
                 </section>
             </header>
+            <h2 class="article-spacer"><span>&#10020;</span></h2>
+            {{/if}}
+        
+            
         </div>
         <div class="wrapper-content">
             
-            <h2 class="article-spacer"><span>&#10020;</span></h2>
+            
             
             <section class="post-content">
                 {{content}}

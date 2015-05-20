@@ -6,28 +6,35 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-{{#if image}}
-<header class="header post-head" style="background-image: url({{image}})">
-    test
-</header>
-{{else}}
-<br><br><br><br>
-{{/if}}
 
 <main class="content" role="main">
     <article class="{{post_class}}">
+        <div class="wrapper-background">
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
+            {{#if image}}
+            <header class="highlight-header post-head" style="background-image: url({{image}})">
+                test
+            </header>
+            {{else}}
+            <br><br><br><br>
+            {{/if}}
 
-        <h2 class="article-spacer"><span>&#10020;</span></h2>
+            <header class="post-header">
+                <h1 class="post-title">{{title}}</h1>
+            </header>
+        </div>
+        <div class="wrapper-content">
 
-        <section class="post-content">
-            {{content}}
-        </section>
+            <h2 class="article-spacer"><span>&#10020;</span></h2>
 
-        <h2 class="article-spacer"><span>&#10020;</span></h2>
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <h2 class="article-spacer"><span>&#10020;</span></h2>
+
+        </div>
+
 
     </article>
 </main>

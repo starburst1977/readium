@@ -32,6 +32,7 @@ body, html
 	padding: 0
 	margin: 0
 	font-size: 12px
+	background-color: #000
 	-webkit-hyphens: auto
 	-moz-hyphens: auto
 	hyphens: auto
@@ -43,15 +44,16 @@ body, html
 	-o-font-feature-settings: "liga", "dlig"
 	font-feature-settings: "liga", "dlig"
 	@include respond-to(800)
-		font-size: 16px
+		font-size: 17px
 	font-family: $font-copy
 	
 .site-wrapper
 	overflow: hidden
+	background-color: #fff
 
 .nav
 	display: block
-	padding: 1rem 1rem
+	padding: 0 1rem
 	position: absolute
 	top: 0
 	left: 0
@@ -61,19 +63,31 @@ body, html
 		display: block
 		width: 3rem
 		height: 3rem
-		border-radius: 0.25rem
-		background-size: cover
-		background-position: center
+		padding-top: 1rem
+		border-bottom-left-radius: 0.25rem
+		border-bottom-right-radius: 0.25rem
 		margin: 0 auto
-		text-indent: -9999px
+		background-color: #000
+		overflow: hidden
+		@include transition (all 0.25s ease-in-out)
+		span
+			text-indent: -9999px
+			background-size: cover
+			background-position: center bottom
+			display: block
+			width: 3rem
+			height: 3rem
+		&:hover
+			padding-top: 1.5rem
 	.contact
 		display: block
 		width: 3rem
 		height: 3rem
 		float: left
 		padding: 0
+		margin-top: 1rem
 		font-size: 1rem
-		line-height: 3rem
+		line-height: 3.2rem
 		text-decoration: none
 		color: #000
 		background-color: #fff
@@ -88,8 +102,9 @@ body, html
 		height: 3rem
 		float: right
 		padding: 0
+		margin-top: 1rem
 		font-size: 1rem
-		line-height: 3rem
+		line-height: 3.2rem
 		text-decoration: none
 		color: #000
 		background-color: #fff
@@ -102,9 +117,9 @@ body, html
 .header
 	position: relative
 	max-height: 700px
-	padding-top: 50%
+	padding-top: 38%
 	overflow: hidden
-	/* background: radial-gradient(ellipse at bottom center, $yellow, rgba(255,255,255,0.62) 62%), radial-gradient(ellipse at bottom right, $green, rgba(255,255,255,0.62) 38%), radial-gradient(ellipse at bottom left, $purple, rgba(255,255,255,0.62) 38%) */
+	background-image: radial-gradient(ellipse at top center, lighten($yellow, 25%), rgba(255,255,255,0.38) 62%), radial-gradient(ellipse at top right, lighten($green, 15%), rgba(255,255,255,0.38) 38%), radial-gradient(ellipse at top left, lighten($blue, 15%), rgba(255,255,255,0.38) 38%)	
 	.teaser
 		text-indent: -9999px
 		position: absolute
@@ -116,107 +131,57 @@ body, html
 			background-size: cover
 			background-repeat: no-repeat
 			background-position: center
-			@include box-sizing(border-box)
+			box-sizing: border-box
 			overflow: hidden
 		.teaser-image-big
-			position: absolute
-			top: 0
-			left: 0
-			bottom: 0
-			right: 38%
-			border-right: 1px #fff solid
+			margin: 0 auto
+			width: 80%
+			padding-top: 38%
+			max-width: 960px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			text-indent: -9999px
+			border-bottom-left-radius: 0.5rem
+			border-bottom-right-radius: 0.5rem
+			position: relative
 			.shoutout
 				position: absolute
 				bottom: 0
 				left: 0
 				right: 0
-				padding: 1.8rem
+				padding: 2.4rem
 				text-indent: 0
-				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
 				h1
-					text-align: left
-					padding: 0 0
-					font-size: 3.6rem
-					line-height: 4rem
+					text-align: center
+					padding: 0 0 1.8rem
+					font-size: 2.4rem
+					line-height: 3rem
 					font-family: $font-headline
 					font-weight: 700
 					margin: 0
+					color: #fff
 					letter-spacing: -0.1rem
-					a
-						color: #fff
-						text-decoration: none
-						&:hover
-							color: $green
+					@include respond-to(800)
+						font-size: 3.6rem
+						line-height: 4rem
 				h2
-					text-align: left
-					font-size: 1.2rem
-					font-family: $font-headline
+					text-align: center
+					font-size: 0.9rem
+					font-family: $font-copy
 					font-weight: 200
 					color: rgba(255,255,255,0.62)
 					padding: 0
-					line-height: 1.8rem
+					line-height: 1.2rem
 					margin: 0
+					@include respond-to(800)
+						font-size: 1.2rem
+						line-height: 1.8rem
 				a
 					color: lighten($green, 15%)
 					&:hover
 						color: $green
-		.teaser-image-small-one
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 38%
-			left: 62%
-			border-bottom: 1px #fff solid
-			.shoutout
-				position: absolute
-				bottom: 0
-				left: 0
-				right: 0
-				padding: 1.8rem
-				text-indent: 0
-				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
-				h2
-					text-align: left
-					font-size: 1.2rem
-					font-family: $font-headline
-					font-weight: 700
-					color: #fff
-					padding: 0
-					line-height: 1.8rem
-					margin: 0
-					text-align: right
-					a
-						text-decoration: none
-						color: #fff
-		.teaser-image-smaller-one
-			position: absolute
-			top: 62%
-			right: 0
-			bottom: 0
-			left: 62%
-			overflow: hidden
-			.shoutout
-				position: absolute
-				bottom: 0
-				left: 0
-				right: 0
-				padding: 1.8rem
-				text-indent: 0
-				background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
-				h2
-					text-align: left
-					font-size: 1.2rem
-					font-family: $font-headline
-					font-weight: 700
-					color: #fff
-					padding: 0
-					line-height: 1.8rem
-					margin: 0
-					text-align: right
-					a
-						text-decoration: none
-						color: #fff
-			
 
 .section-headline
 	width: 90%
@@ -267,7 +232,7 @@ body, html
 		display: block
 		border-top: 1px #eee solid
 		position: absolute
-		top: 0.9rem
+		top: 1.75rem
 		@include respond-to(800)
 			top: 1.8rem
 		left: 0
@@ -288,7 +253,7 @@ body, html
 	.item
 		width: 100%
 		float: left
-		@include box-sizing(border-box)
+		box-sizing: border-box
 		padding: 0 1rem 3rem
 		text-align: center
 		@include respond-to(800)
@@ -311,6 +276,7 @@ body, html
 			color: #bbb
 			line-height: 1.2rem
 			font-size: 0.9rem
+			font-family: $font-headline
 		a
 			color: darken($green, 15%)
 			&:hover
@@ -333,7 +299,7 @@ body, html
 
 
 #content-index, #content-paged
-	padding: 4.8rem 0 0
+	padding: 1.8rem 0 0
 	.imaged
 		@include clearfix
 		padding: 1.8rem 0 0
@@ -346,6 +312,7 @@ body, html
 			background-repeat: no-repeat
 			background-position: center
 			margin-bottom: 1.8rem
+			display: block
 		.post-content
 			width: 100%
 			.post-header
@@ -402,6 +369,9 @@ body, html
 				float: right
 				width: 38%
 				text-align: right
+				height: 2.4rem
+				overflow: hidden
+				text-overflow: ellipsis
 	.post
 		@include clearfix
 		width: 100%

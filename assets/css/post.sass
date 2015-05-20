@@ -16,6 +16,52 @@
 	text-indent: -9999px
 	border-bottom-left-radius: 0.5rem
 	border-bottom-right-radius: 0.5rem
+	position: relative
+	.post-header
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 2.4rem
+		text-indent: 0
+		background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%)
+		h1
+			text-align: center
+			padding: 0 0 1.2rem
+			font-size: 2.4rem
+			line-height: 3rem
+			font-family: $font-headline
+			font-weight: 700
+			margin: 0
+			color: #fff
+			-webkit-hyphens: none
+			-moz-hyphens: none
+			hyphens: none
+			letter-spacing: -0.1rem
+			@include respond-to(800)
+				font-size: 3.6rem
+				line-height: 4rem
+			a
+				color: #fff
+				text-decoration: none
+				&:hover
+					color: $green
+		.post-meta
+			text-align: center
+			font-size: 0.75rem
+			font-family: $font-copy
+			font-weight: 200
+			color: rgba(255,255,255,0.62)
+			padding: 0
+			line-height: 1.2rem
+			margin: 0
+			@include respond-to(800)
+				font-size: 0.9rem
+				line-height: 1.8rem
+		a
+			color: lighten($green, 15%)
+			&:hover
+				color: $green
 
 .post-template
 	.nav
@@ -42,9 +88,12 @@
 			padding: 3.6rem 0 1.8rem
 			margin: 0
 			letter-spacing: -0.1rem
+			-webkit-hyphens: none
+			-moz-hyphens: none
+			hyphens: none
 			@include respond-to(800)
-				font-size: 4.8rem
-				line-height: 5rem
+				font-size: 3.6rem
+				line-height: 4rem
 				padding: 6rem 0 1.8rem
 	.post-meta
 		text-align: center
@@ -156,7 +205,7 @@
 		pre > code
 			background-color: #333
 			border-color: #000
-			@include box-sizing(border-box)
+			box-sizing: border-box
 			padding: 1.8rem
 			color: #fff
 			font-size: 0.9rem
@@ -176,7 +225,7 @@
 			padding: 0
 			overflow: visible
 			margin: 1.8rem 0 3.6rem
-			@include box-sizing(border-box)
+			box-sizing: border-box
 		pre code, tt
 			white-space: -moz-pre-wrap
 			white-space: pre-wrap
@@ -254,7 +303,7 @@
 				bottom: 1.2rem
 				font-size: 1.2rem
 				left: 50%
-				margin-left: -0.5rem
+				margin-left: -1.2rem
 		h2
 			font-size: 1.9rem
 			line-height: 2.5rem
@@ -282,7 +331,7 @@
 				bottom: 0.45rem
 				font-size: 1.2rem
 				left: 50%
-				margin-left: -0.5rem
+				margin-left: -1.2rem
 		h3
 			font-size: 1.5rem
 			line-height: 1.8rem
@@ -301,11 +350,11 @@
 		margin: 0 auto
 		padding: 1.8rem 0
 		.author-image
-			width: 100%
+			width: 4rem
+			float: left
 			margin: 0.25rem 0 1rem
 			padding: 0 0 0
 			@include respond-to(800)
-				float: left
 				width: 7rem
 				margin: 0.25rem 0 0
 				padding: 0
@@ -323,7 +372,7 @@
 					height: 5rem
 					padding: 0
 		.author
-			padding: 0
+			padding: 0 0 0 5rem
 			@include respond-to(800)
 				padding-left: 7rem
 			h4
@@ -389,7 +438,7 @@
 			width: 50%
 			float: left
 		text-decoration: none
-		@include box-sizing(border-box)
+		box-sizing: border-box
 		&.read-next-story
 			@include respond-to(800)
 				text-align: right

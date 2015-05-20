@@ -44,66 +44,38 @@
 {{! The big featured header }}
 <header class="header {{#if @blog.cover}}">
     
-    
-    
     <div class="teaser">
         <div class="teaser-image-big" style="background-image: url({{@blog.cover}}){{else}}blah{{/if}}">
             <div class="shoutout">
-                <h1 class="page-title"><a href="/about">{{@blog.title}}</a></h1>
-                <h2 class="page-description">{{@blog.description}}&nbsp;&nbsp;·&nbsp;&nbsp;<a href="/about">Read more here</a></h2>
+                <h1 class="page-title">{{@blog.title}}</h1>
+                <h2 class="page-description">{{@blog.description}}&nbsp;<a href="/about">Read more here</a></h2>
             </div>
         </div>
-        {{#foreach posts}}
-            {{#if image}}
-                {{#if @first}}
-                    <div class="teaser-image-small-one" style="background-image: url({{image}})">
-                        <div class="shoutout">
-                            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-                        </div>
-                    </div>
-                {{else}}
-                    {{#if @last}}
-                        <div class="teaser-image-smaller-one" style="background-image: url({{image}})">
-                            <div class="shoutout">
-                                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-                            </div>
-                        </div>
-                    {{else}}
-                        <div class="teaser-image-smaller-one" style="background-color: #eee">
-                            <div class="shoutout">
-                                <h2 class="post-title"></h2>
-                            </div>
-                        </div>
-                    {{/if}}
-                {{/if}}
-            {{/if}}
-        {{/foreach}}
     </div>
     
-    <!--<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>-->
 </header>
 
 <!-- Pitch Part -->
 
 
 <section class="pitch">
-    <h2 class="section-headline"><span>Tell me more</span></h2>
+    <h2 class="section-headline"><span>What about Me?</span></h2>
     <div class="item">
         <i class="fa fa-hdd-o"></i>
         <h3>OmSense</h3>
         <p>Flexible. Distributed. Modular. All connected PDUs are automatically displayed with the most important parameter displayed on the main screen.</p>
-        <a href="/hardware/">Check out OmSense.</a>
+        <a href="http://www.omsense.de" target="_blank">Check out OmSense</a>
     </div>
     <div class="item">
         <i class="fa fa-list-alt"></i>
         <h3>Readium</h3>
         <p>The Open Source Ghost Theme I use for this blog. It is the essence of my previous themes, Chiara and Phantome Times. Feel free to make the most of it yourself.</p>
-        <a href="/architecture/">Check out the blog post.</a>
+        <a href="https://github.com/starburst1977/readium" target="_blank">Show me the Github Repo</a>
     </div>
     <div class="item">
         <i class="fa fa-diamond"></i>
         <h3>About Me</h3>
-        <p>Who I am and what I do? Check in here to get to know more about me and what I do. And on where and how to get in touch.</p>
+        <p>Wondering who I am and what I do? Probably not. But if you are, check in here to get to know more about me and what I do. Looking forward on hearing from you.</p>
         <a href="/about/">About me</a>
     </div>
 </section>

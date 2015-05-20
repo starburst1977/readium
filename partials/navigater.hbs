@@ -10,8 +10,8 @@
     </a>
     <!-- Blog Logo -->
     {{#if @blog.logo}}
-        <a class="blog-logo" href="/" style="background-image: url({{@blog.logo}})" >
-            {{@blog.title}}
+        <a class="blog-logo" href="/">
+            <span style="background-image: url({{@blog.logo}})" >{{@blog.title}}</span>
         </a>
     {{/if}}
     

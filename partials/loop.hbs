@@ -4,7 +4,7 @@
     
     {{! The main content area on the index page }}
     <main id="content-index" class="content" role="main">
-        <h2 class="section-headline"><span>Writing</span></h2>
+        <h2 class="section-headline"><span>Stuff I Write</span></h2>
         {{! This is the post loop - each post will be output using this markup }}
         {{#foreach posts}}
             {{#if featured}}
@@ -26,17 +26,15 @@
                                  <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
                                  
                             </footer>
-                            
-                            <div class="post-image" style="background-image: url({{image}})">
+                            <a class="post-image" style="background-image: url({{image}})" href="{{url}}">
                                 {{{title}}}
-                            </div>
-                            
+                            </a>
                             <div class="post-content">
                                 <header class="post-header">
                                      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                                  </header>
                                  <section class="post-excerpt">
-                                    <p>{{excerpt words="40"}} </p>
+                                    <p>{{excerpt words="40"}} ... </p>
                                     <p class="read">
                                         <a class="read-more" href="{{url}}">Continue reading</a>
                                         &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -73,7 +71,7 @@
                          </header>
                          
                          <section class="post-excerpt">
-                             <p>{{excerpt words="80"}} </p>
+                             <p>{{excerpt words="80"}} ... </p>
                              <p class="read">
                                  <a class="read-more" href="{{url}}">Continue reading</a>
                                  &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -103,15 +101,15 @@
                                  <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
                                  
                             </footer>
-                            <div class="post-image" style="background-image: url({{image}})">
+                            <a class="post-image" style="background-image: url({{image}})" href="{{url}}">
                                 {{{title}}}
-                            </div>
+                            </a>
                             <div class="post-content">
                                 <header class="post-header">
                                      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                                  </header>
                                  <section class="post-excerpt">
-                                     <p>{{excerpt words="40"}}</p>
+                                     <p>{{excerpt words="40"}} ... </p>
                                      <p class="read">
                                          <a class="read-more" href="{{url}}">Continue reading</a>
                                      </p>
@@ -144,7 +142,7 @@
                              <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                          </header>
                          <section class="post-excerpt">
-                             <p>{{excerpt words="80"}}</p>
+                             <p>{{excerpt words="80"}} ... </p>
                              <p class="read">
                                  <a class="read-more" href="{{url}}">Continue reading</a>
                              </p>
