@@ -31,11 +31,11 @@ If you give your images an alt text, it gets added automatically as figcaption b
 #### Half Images
 
 While writing your article you decide it would be nice if the image wouldn't be full width. Half would be enough, text flowing around it. Well, we got you covered. Just surround your image with the following HTML code while writing inside the editor:
-'''
+```
 	<div class="image-left">
 		![First load of beverages getting shipped to our location.](/content/images/2014/Jul/2014-07-11-11-45-01.jpg)
 	</div>
-'''
+```
 A DIV with the class "image-left" makes your image float left and only take up 50% of the space. Same goes btw for "image-right" as well :).
 
 #### Things to better not forget
